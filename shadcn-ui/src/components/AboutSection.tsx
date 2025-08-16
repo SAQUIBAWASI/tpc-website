@@ -2,6 +2,12 @@ import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Award, CheckCircle, Truck, Users } from 'lucide-react';
 
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import { Autoplay, Navigation, Pagination } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
+
 export default function AboutSection() {
   const achievements = [
     { icon: Users, value: '100+', label: 'Satisfied Clients' },
@@ -17,6 +23,15 @@ export default function AboutSection() {
     'Reliable delivery network across multiple regions',
     'Comprehensive quality assurance and testing',
     '24/7 customer support and emergency services'
+  ];
+
+  // ✅ Added missing companies list
+  const companies = [
+    { name: "Company A", logo: "https://via.placeholder.com/120x50?text=Logo+A" },
+    { name: "Company B", logo: "https://via.placeholder.com/120x50?text=Logo+B" },
+    { name: "Company C", logo: "https://via.placeholder.com/120x50?text=Logo+C" },
+    { name: "Company D", logo: "https://via.placeholder.com/120x50?text=Logo+D" },
+    { name: "Company E", logo: "https://via.placeholder.com/120x50?text=Logo+E" },
   ];
 
   return (
@@ -72,7 +87,7 @@ export default function AboutSection() {
               {/* Main Image */}
               <div className="relative rounded-2xl overflow-hidden shadow-2xl">
                 <img
-                  src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2831&q=80"
+                  src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=2831&q=80"
                   alt="Construction materials warehouse"
                   className="w-full h-96 object-cover"
                 />
@@ -98,6 +113,57 @@ export default function AboutSection() {
               </div>
             </div>
           </div>
+        </div>
+      </div>
+
+      {/* ✅ Trusted Companies Carousel */}
+      <div className="max-w-7xl mx-auto flex items-center px-4 mt-20">
+        {/* Left text */}
+        <div className="w-1/4 pr-6 hidden md:block">
+          <h3 className="text-xl font-bold text-gray-800 leading-snug">
+            Trusted by <br /> Top Companies
+          </h3>
+          <div className="mt-4 text-gray-400">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="80"
+              height="80"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              className="opacity-20"
+            >
+              <path d="M10 10 L70 70 M70 10 L10 70" />
+            </svg>
+          </div>
+        </div>
+
+        {/* Carousel */}
+        <div className="w-full md:w-3/4">
+          <Swiper
+            modules={[Navigation, Pagination, Autoplay]}
+            spaceBetween={30}
+            slidesPerView={3}
+            navigation
+            pagination={{ clickable: true }}
+            autoplay={{ delay: 3000 }}
+            loop
+            className="flex items-center"
+          >
+            {companies.map((c, idx) => (
+              <SwiperSlide key={idx}>
+                <div className="flex justify-center">
+                  <div className="bg-white shadow-md rounded-lg p-6 w-52 h-28 flex items-center justify-center">
+                    <img
+                      src={c.logo}
+                      alt={c.name}
+                      className="max-h-16 object-contain"
+                    />
+                  </div>
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
         </div>
       </div>
     </section>
