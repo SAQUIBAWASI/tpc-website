@@ -1,13 +1,13 @@
-import { useState } from 'react';
 import { Button } from '@/components/ui/button';
-import { Menu, X, Phone, Mail } from 'lucide-react';
+import { Menu, Phone, X } from 'lucide-react';
+import { useState } from 'react';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navItems = [
     { name: 'Home', href: '#home' },
-    { name: 'Services', href: '#services' },
+    { name: 'Services', href: '#services-overview' },
     { name: 'About', href: '#about' },
     { name: 'Products', href: '#products' },
     { name: 'Contact', href: '#contact' },
@@ -19,10 +19,10 @@ export default function Header() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center space-x-2">
-            <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-xl">DS</span>
+            <div className="w-10 h-10 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg flex items-center justify-center">
+              <span className="text-white font-bold text-xl">TPC</span>
             </div>
-            <span className="text-xl font-bold text-gray-900">DSK Supply</span>
+            <span className="text-xl font-bold text-gray-900">TPC Supply</span>
           </div>
 
           {/* Desktop Navigation */}
@@ -31,7 +31,7 @@ export default function Header() {
               <a
                 key={item.name}
                 href={item.href}
-                className="text-gray-700 hover:text-blue-600 transition-colors duration-200 font-medium"
+                className="text-gray-700 hover:text-green-600 transition-colors duration-200 font-medium"
               >
                 {item.name}
               </a>
@@ -44,7 +44,7 @@ export default function Header() {
               <Phone className="w-4 h-4" />
               <span>+1 (555) 123-4567</span>
             </div>
-            <Button className="bg-blue-600 hover:bg-blue-700">
+            <Button className="bg-green-600 hover:bg-green-700">
               Get Quote
             </Button>
           </div>
@@ -66,7 +66,7 @@ export default function Header() {
                 <a
                   key={item.name}
                   href={item.href}
-                  className="text-gray-700 hover:text-blue-600 transition-colors duration-200 font-medium"
+                  className="text-gray-700 hover:text-green-600 transition-colors duration-200 font-medium"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.name}
@@ -77,7 +77,7 @@ export default function Header() {
                   <Phone className="w-4 h-4" />
                   <span>+1 (555) 123-4567</span>
                 </div>
-                <Button className="w-full bg-blue-600 hover:bg-blue-700">
+                <Button className="w-full bg-green-600 hover:bg-green-700">
                   Get Quote
                 </Button>
               </div>

@@ -1,5 +1,6 @@
 import { Button } from '@/components/ui/button';
-import { Play, ArrowRight, Award, Users, Truck } from 'lucide-react';
+import { ArrowRight, Award, Play, Truck, Users } from 'lucide-react';
+import bgVideo from '../t.mp4'; // <-- local video import
 
 export default function HeroSection() {
   return (
@@ -13,10 +14,7 @@ export default function HeroSection() {
           playsInline
           className="w-full h-full object-cover"
         >
-          <source
-            src="https://player.vimeo.com/external/434045526.sd.mp4?s=c27eecc69a27dbc4ff2b87d38afc35f1a8c4c8c4&profile_id=165&oauth2_token_id=57447761"
-            type="video/mp4"
-          />
+          <source src={bgVideo} type="video/mp4" />
           {/* Fallback background */}
           <div className="w-full h-full bg-gradient-to-r from-blue-900 to-indigo-900"></div>
         </video>
@@ -29,14 +27,14 @@ export default function HeroSection() {
           <div className="mb-6 flex justify-center">
             <div className="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 text-sm">
               <Award className="w-4 h-4" />
-              <span>Premium Quality Materials Since 1995</span>
+              {/* <span>Premium Quality Materials Since 1995</span> */}
             </div>
           </div>
           
           <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
             Building Dreams with
-            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
-              Premium Materials
+            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-400">
+              TPC Digital Marketing Agency
             </span>
           </h1>
           
@@ -46,7 +44,7 @@ export default function HeroSection() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-            <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-lg px-8 py-4">
+            <Button size="lg" className="bg-green-600 hover:bg-green-700 text-lg px-8 py-4">
               Explore Our Products
               <ArrowRight className="ml-2 w-5 h-5" />
             </Button>

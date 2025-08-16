@@ -71,12 +71,12 @@ export default function ProductsSection() {
     <section id="products" className="py-20 bg-gray-50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <Badge variant="secondary" className="mb-4 bg-blue-100 text-blue-800">
+          <Badge variant="secondary" className="mb-4 bg-green-100 text-green-800">
             Our Products
           </Badge>
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             Premium Construction
-            <span className="block text-blue-600">Materials & Tools</span>
+            <span className="block text-green-600">Materials & Tools</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Discover our comprehensive range of high-quality construction materials, 
@@ -110,7 +110,7 @@ export default function ProductsSection() {
                     {product.category}
                   </Badge>
                 </div>
-                <CardTitle className="text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors">
+                <CardTitle className="text-xl font-bold text-gray-900 group-hover:text-green-600 transition-colors">
                   {product.name}
                 </CardTitle>
                 <p className="text-gray-600 text-sm">
@@ -122,7 +122,7 @@ export default function ProductsSection() {
                 <ul className="space-y-1 mb-6">
                   {product.features.map((feature, idx) => (
                     <li key={idx} className="flex items-center text-sm text-gray-700">
-                      <div className="w-1.5 h-1.5 bg-blue-600 rounded-full mr-2"></div>
+                      <div className="w-1.5 h-1.5 bg-green-600 rounded-full mr-2"></div>
                       {feature}
                     </li>
                   ))}
@@ -132,7 +132,7 @@ export default function ProductsSection() {
                   <Button variant="outline" size="sm" className="flex-1 mr-2">
                     Get Quote
                   </Button>
-                  <Button size="sm" className="bg-blue-600 hover:bg-blue-700">
+                  <Button size="sm" className="bg-green-600 hover:bg-green-700">
                     <ArrowRight className="w-4 h-4" />
                   </Button>
                 </div>
@@ -142,7 +142,7 @@ export default function ProductsSection() {
         </div>
 
         <div className="text-center">
-          <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-lg px-8">
+          <Button size="lg" className="bg-green-600 hover:bg-green-700 text-lg px-8">
             View All Products
             <ArrowRight className="ml-2 w-5 h-5" />
           </Button>

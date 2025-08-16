@@ -1,12 +1,12 @@
-import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { CheckCircle, Award, Users, Truck, ArrowRight } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { ArrowRight, Award, CheckCircle, Truck, Users } from 'lucide-react';
 
 export default function AboutSection() {
   const achievements = [
-    { icon: Users, value: '500+', label: 'Satisfied Clients' },
-    { icon: Truck, value: '1000+', label: 'Projects Delivered' },
-    { icon: Award, value: '25+', label: 'Years of Excellence' },
+    { icon: Users, value: '100+', label: 'Satisfied Clients' },
+    { icon: Truck, value: '100+', label: 'Projects Delivered' },
+    { icon: Award, value: '5+', label: 'Years of Excellence' },
     { icon: CheckCircle, value: '99%', label: 'On-Time Delivery' }
   ];
 
@@ -26,15 +26,15 @@ export default function AboutSection() {
           {/* Content */}
           <div className="order-2 lg:order-1">
             <div className="mb-6">
-              <Badge variant="secondary" className="mb-4 bg-blue-100 text-blue-800">
-                About DSK Supply
+              <Badge variant="secondary" className="mb-4 bg-green-100 text-green-800">
+                About TPC Supply
               </Badge>
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
                 Building Trust Through
-                <span className="block text-blue-600">Quality & Service</span>
+                <span className="block text-green-600">Quality & Service</span>
               </h2>
               <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                For over 25 years, DSK Supply has been the cornerstone of construction excellence, 
+                For over 5 years, TPC Supply has been the cornerstone of construction excellence, 
                 providing premium materials and unmatched service to builders, contractors, and 
                 developers across the region.
               </p>
@@ -56,7 +56,7 @@ export default function AboutSection() {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button size="lg" className="bg-blue-600 hover:bg-blue-700">
+              <Button size="lg" className="bg-green-600 hover:bg-green-700">
                 Learn More About Us
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
@@ -86,8 +86,8 @@ export default function AboutSection() {
                     const IconComponent = achievement.icon;
                     return (
                       <div key={index} className="text-center">
-                        <div className="inline-flex items-center justify-center w-12 h-12 bg-blue-100 rounded-lg mb-2">
-                          <IconComponent className="w-6 h-6 text-blue-600" />
+                        <div className="inline-flex items-center justify-center w-12 h-12 bg-green-100 rounded-lg mb-2">
+                          <IconComponent className="w-6 h-6 text-green-600" />
                         </div>
                         <div className="text-2xl font-bold text-gray-900">{achievement.value}</div>
                         <div className="text-xs text-gray-600">{achievement.label}</div>

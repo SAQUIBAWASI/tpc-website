@@ -1,191 +1,74 @@
-import { Button } from '@/components/ui/button';
-import { Separator } from '@/components/ui/separator';
-import { 
-  Facebook, 
-  Twitter, 
-  Instagram, 
-  Linkedin, 
-  Phone, 
-  Mail, 
-  MapPin,
-  ArrowRight
-} from 'lucide-react';
-
-export default function Footer() {
-  const quickLinks = [
-    { name: 'About Us', href: '#about' },
-    { name: 'Our Services', href: '#services' },
-    { name: 'Products', href: '#products' },
-    { name: 'Contact', href: '#contact' },
-    { name: 'Careers', href: '#' },
-    { name: 'News & Updates', href: '#' }
-  ];
-
-  const services = [
-    { name: 'Construction Materials', href: '#' },
-    { name: 'Steel & Cement', href: '#' },
-    { name: 'Tools & Equipment', href: '#' },
-    { name: 'Roofing Solutions', href: '#' },
-    { name: 'Bulk Orders', href: '#' },
-    { name: 'Consultation', href: '#' }
-  ];
-
-  const socialLinks = [
-    { icon: Facebook, href: '#', label: 'Facebook' },
-    { icon: Twitter, href: '#', label: 'Twitter' },
-    { icon: Instagram, href: '#', label: 'Instagram' },
-    { icon: Linkedin, href: '#', label: 'LinkedIn' }
-  ];
-
+export default function LocationSection() {
   return (
-    <footer className="bg-gray-900 text-white">
-      {/* Newsletter Section */}
-      <div className="bg-blue-600 py-12">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-col md:flex-row items-center justify-between">
-            <div className="mb-6 md:mb-0">
-              <h3 className="text-2xl font-bold mb-2">Stay Updated</h3>
-              <p className="text-blue-100">Get the latest news, offers, and construction tips delivered to your inbox.</p>
-            </div>
-            <div className="flex flex-col sm:flex-row gap-4 w-full md:w-auto">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="px-4 py-3 rounded-lg text-gray-900 w-full sm:min-w-[300px] focus:outline-none focus:ring-2 focus:ring-white"
-              />
-              <Button className="bg-white text-blue-600 hover:bg-gray-100 px-6">
-                Subscribe
-                <ArrowRight className="ml-2 w-4 h-4" />
-              </Button>
-            </div>
-          </div>
+    <section className="bg-[#6cd94f] py-10">
+      {/* Top Row - Image + Map */}
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 px-4">
+        {/* Image */}
+        <div className="overflow-hidden rounded-lg shadow-lg">
+          <img
+            src="/images/T-Hub.jpg"
+            alt="T-Hub Building"
+            className="w-full h-full object-cover"
+          />
+        </div>
+
+        {/* Google Map Embed */}
+        <div className="overflow-hidden rounded-lg shadow-lg">
+          <iframe
+            title="T-Hub Location"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.458824680569!2d78.38522587493324!3d17.44624910359061!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb93ecaae114fd%3A0x6c4cb1124c596cb!2sT-Hub%20Phase%202!5e0!3m2!1sen!2sin!4v1693049591032!5m2!1sen!2sin"
+            width="100%"
+            height="100%"
+            style={{ border: 0 }}
+            allowFullScreen=""
+            loading="lazy"
+          ></iframe>
         </div>
       </div>
 
-      {/* Main Footer */}
-      <div className="py-16">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
-            {/* Company Info */}
-            <div className="lg:col-span-1">
-              <div className="flex items-center space-x-2 mb-6">
-                <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-lg flex items-center justify-center">
-                  <span className="text-white font-bold text-xl">DS</span>
-                </div>
-                <span className="text-xl font-bold">DSK Supply</span>
-              </div>
-              <p className="text-gray-400 mb-6 leading-relaxed">
-                Your trusted partner for premium construction materials and expert supply chain solutions. 
-                Building excellence since 1995.
-              </p>
-              <div className="space-y-3">
-                <div className="flex items-center space-x-3">
-                  <Phone className="w-5 h-5 text-blue-400" />
-                  <span className="text-gray-300">+1 (555) 123-4567</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <Mail className="w-5 h-5 text-blue-400" />
-                  <span className="text-gray-300">info@dsksupply.com</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <MapPin className="w-5 h-5 text-blue-400" />
-                  <span className="text-gray-300">123 Industrial Avenue, CD 12345</span>
-                </div>
-              </div>
-            </div>
+      {/* Footer Section */}
+      <footer className="bg-black text-white py-12 mt-10">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 px-4">
+          {/* Logo */}
+          <div className="flex flex-col items-center md:items-start">
+            <img src="/images/GateCT.jpg" alt="The Patterns Company" className="w-20 mb-4" />
+            <h3 className="text-lg font-bold">THE PATTERNS COMPANY</h3>
+          </div>
 
-            {/* Quick Links */}
-            <div>
-              <h4 className="text-lg font-semibold mb-6">Quick Links</h4>
-              <ul className="space-y-3">
-                {quickLinks.map((link, index) => (
-                  <li key={index}>
-                    <a
-                      href={link.href}
-                      className="text-gray-400 hover:text-white transition-colors duration-200 flex items-center group"
-                    >
-                      <ArrowRight className="w-4 h-4 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
-                      {link.name}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
+          {/* Quick Links */}
+          <div>
+            <h4 className="text-green-400 font-bold mb-4">Quick Links</h4>
+            <ul className="space-y-2">
+              <li>Home</li>
+              <li>About</li>
+              <li>Services</li>
+              <li>Blog</li>
+              <li>Gallery</li>
+              <li>Careers</li>
+              <li>Contact</li>
+            </ul>
+          </div>
 
-            {/* Services */}
-            <div>
-              <h4 className="text-lg font-semibold mb-6">Our Services</h4>
-              <ul className="space-y-3">
-                {services.map((service, index) => (
-                  <li key={index}>
-                    <a
-                      href={service.href}
-                      className="text-gray-400 hover:text-white transition-colors duration-200 flex items-center group"
-                    >
-                      <ArrowRight className="w-4 h-4 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
-                      {service.name}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
+          {/* Services */}
+          <div>
+            <h4 className="text-green-400 font-bold mb-4">Our Services</h4>
+            <ul className="space-y-2">
+              <li>Web Development</li>
+              <li>App Development</li>
+              <li>Social Media Marketing</li>
+              <li>Search Engine Optimization</li>
+              <li>E-Commerce</li>
+              <li>Graphic Designing</li>
+              <li>Google Ads</li>
+            </ul>
+          </div>
 
-            {/* Business Hours & Social */}
-            <div>
-              <h4 className="text-lg font-semibold mb-6">Business Hours</h4>
-              <div className="space-y-2 mb-8">
-                <div className="flex justify-between">
-                  <span className="text-gray-400">Monday - Friday</span>
-                  <span className="text-white">7:00 AM - 7:00 PM</span>
-                </div>
-                <div className="flex justify-between">
-                  <span className="text-gray-400">Saturday</span>
-                  <span className="text-white">8:00 AM - 4:00 PM</span>
-                </div>
-                <div className="flex justify-between">
-                  <span className="text-gray-400">Sunday</span>
-                  <span className="text-white">Closed</span>
-                </div>
-              </div>
-
-              <h4 className="text-lg font-semibold mb-4">Follow Us</h4>
-              <div className="flex space-x-4">
-                {socialLinks.map((social, index) => {
-                  const IconComponent = social.icon;
-                  return (
-                    <a
-                      key={index}
-                      href={social.href}
-                      aria-label={social.label}
-                      className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-blue-600 transition-colors duration-200"
-                    >
-                      <IconComponent className="w-5 h-5" />
-                    </a>
-                  );
-                })}
-              </div>
-            </div>
+          {/* Monument */}
+          <div className="flex justify-center md:justify-end">
+            <img src="/images/GateCT.jpg" alt="Charminar" className="w-80" />
           </div>
         </div>
-      </div>
-
-      <Separator className="bg-gray-800" />
-
-      {/* Bottom Footer */}
-      <div className="py-6">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-col md:flex-row items-center justify-between">
-            <p className="text-gray-400 text-sm mb-4 md:mb-0">
-              © 2024 DSK Supply. All rights reserved. Built with excellence.
-            </p>
-            <div className="flex space-x-6 text-sm">
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">Privacy Policy</a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">Terms of Service</a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">Cookie Policy</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
+      </footer>
+    </section>
   );
 }
