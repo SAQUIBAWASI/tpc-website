@@ -1,11 +1,11 @@
 import AboutSection from '@/components/AboutSection';
+import CareersSection from '@/components/CareerSection';
 import ContactSection from '@/components/ContactSection';
 import Footer from '@/components/Footer';
+import Gallery from '@/components/Gallery';
 import Header from '@/components/Header';
 import HeroSection from '@/components/HeroSection';
 import History from '@/components/History';
-import ProductsSection from '@/components/ProductsSection';
-import Services from '@/components/Service';
 import ServicesSection from '@/components/ServicesSection';
 import Testimonial from '@/components/Testimonial';
 
@@ -16,10 +16,10 @@ export default function Index() {
       <HeroSection />
       <ServicesSection />
       <AboutSection />
-      <Services />
       <Testimonial />
-      <ProductsSection />
+      <CareersSection />
       <History />
+       <Gallery />
       <ContactSection />
       <Footer />
     </div>
