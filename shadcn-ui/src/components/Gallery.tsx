@@ -32,7 +32,7 @@ export default function TeamSection() {
         <div className="flex">
           {/* Left Big Text */}
           <div className="w-1/4 flex items-center justify-center">
-            <h1 className="text-[120px] font-extrabold leading-none text-black">
+            <h1 className="text-[100px] font-extrabold leading-none text-black">
               Te<br />am
             </h1>
           </div>

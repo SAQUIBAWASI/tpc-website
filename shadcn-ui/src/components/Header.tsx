@@ -1,18 +1,30 @@
 import { Button } from "@/components/ui/button";
 import { Menu, MessageCircle, Phone, Search, X } from "lucide-react";
 import { useState } from "react";
+import { Link } from "react-scroll";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isServicesOpen, setIsServicesOpen] = useState(false);
 
   const navItems = [
-    { name: "Home", href: "#home" },
-    { name: "Services", href: "#services" },
-    { name: "About", href: "#about" },
-    { name: "Career", href: "#career" },
-    { name: "Gallery", href: "#gallery" },
-    { name: "Contact", href: "#contact" },
-    
+    { name: "Home", href: "home" },
+    { name: "Services", href: "services" },
+    { name: "Blogs", href: "blogs" },
+    { name: "About", href: "about" },
+    { name: "Career", href: "career" },
+    { name: "Gallery", href: "gallery" },
+    { name: "Contact", href: "contact" },
+  ];
+
+  const serviceItems = [
+    { name: "App Development", href: "app-dev" },
+    { name: "Web Development", href: "web-dev" },
+    { name: "Digital Marketing", href: "digital-marketing" },
+    { name: "AI Development", href: "ai-dev" },
+    { name: "E-Commerce", href: "ecommerce" },
+    { name: "Graphics Designing", href: "graphics" },
+    { name: "Google Ads", href: "google-ads" },
   ];
 
   return (
@@ -22,23 +34,60 @@ export default function Header() {
           {/* Logo */}
           <div className="flex items-center space-x-2">
             <img
-              src="/images/logo.PNG" // 🔹 Replace with your logo
+              src="/images/logo.PNG"
               alt="TPC Logo"
               className="h-12"
             />
-            {/* <span className="text-xl font-bold">TPC Supply</span> */}
           </div>
 
           {/* Desktop Nav */}
           <nav className="hidden md:flex space-x-8 text-lg font-medium">
             {navItems.map((item) => (
-              <a
+              <div
                 key={item.name}
-                href={item.href}
-                className="hover:text-green-500 transition-colors"
+                className="relative"
+                onMouseEnter={() =>
+                  item.name === "Services" && setIsServicesOpen(true)
+                }
+                onMouseLeave={() =>
+                  item.name === "Services" && setIsServicesOpen(false)
+                }
               >
-                {item.name}
-              </a>
+                <Link
+                  to={item.href}
+                  smooth={true}
+                  duration={500}
+                  className="hover:text-green-500 transition-colors cursor-pointer"
+                  onClick={(e) => {
+                    if (item.name === "Services") {
+                      e.preventDefault();
+                      setIsServicesOpen(!isServicesOpen);
+                      document
+                        .getElementById(item.href)
+                        ?.scrollIntoView({ behavior: "smooth" });
+                    }
+                  }}
+                >
+                  {item.name}
+                </Link>
+
+                {/* Services Dropdown */}
+                {item.name === "Services" && isServicesOpen && (
+                  <div className="absolute left-0 mt-2 w-56 bg-white text-black shadow-lg rounded-lg overflow-hidden">
+                    {serviceItems.map((service) => (
+                      <Link
+                        key={service.name}
+                        to={service.href}
+                        smooth={true}
+                        duration={500}
+                        className="block px-4 py-2 cursor-pointer hover:bg-green-100 hover:text-green-600"
+                      >
+                        {service.name}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
             ))}
           </nav>
 
@@ -69,9 +118,11 @@ export default function Header() {
             </button>
 
             {/* CTA */}
-            <Button className="bg-green-600 hover:bg-green-700 hidden lg:flex">
-              Get Quote
-            </Button>
+            <Link to="contact" smooth={true} duration={500}>
+              <Button className="bg-green-600 hover:bg-green-700 hidden lg:flex">
+                Get Quote
+              </Button>
+            </Link>
 
             {/* Mobile Menu Toggle */}
             <button
@@ -92,21 +143,45 @@ export default function Header() {
           <div className="md:hidden py-4 border-t border-gray-200">
             <nav className="flex flex-col space-y-4 text-green-600">
               {navItems.map((item) => (
-                <a
-                  key={item.name}
-                  href={item.href}
-                  className="hover:text-green-500"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  {item.name}
-                </a>
+                <div key={item.name} className="relative">
+                  <Link
+                    to={item.href}
+                    smooth={true}
+                    duration={500}
+                    className="hover:text-green-500 cursor-pointer"
+                    onClick={() => {
+                      if (item.name === "Services") {
+                        setIsServicesOpen(!isServicesOpen);
+                      } else {
+                        setIsMenuOpen(false);
+                      }
+                    }}
+                  >
+                    {item.name}
+                  </Link>
+
+                  {/* Mobile Services Dropdown */}
+                  {item.name === "Services" && isServicesOpen && (
+                    <div className="pl-4">
+                      {serviceItems.map((service) => (
+                        <Link
+                          key={service.name}
+                          to={service.href}
+                          smooth={true}
+                          duration={500}
+                          className="block px-4 py-2 cursor-pointer hover:bg-green-100 hover:text-green-600"
+                          onClick={() => setIsMenuOpen(false)}
+                        >
+                          {service.name}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                </div>
               ))}
 
               <div className="pt-4 border-t border-gray-200 space-y-3">
-                <a
-                  href="tel:+15551234567"
-                  className="flex items-center space-x-2"
-                >
+                <a href="tel:+15551234567" className="flex items-center space-x-2">
                   <Phone className="w-5 h-5" />
                   <span>+1 (555) 123-4567</span>
                 </a>

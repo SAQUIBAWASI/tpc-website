@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
-import { ArrowRight, Code2, Globe, Minus, Move, Plus, ShoppingBag, Smartphone, Store } from "lucide-react";
+import { ArrowRight, Brain, Code2, Globe, Minus, Move, Plus, ShoppingBag, Smartphone, Store } from "lucide-react";
 import { useEffect, useState } from "react";
 import { useInView } from "react-intersection-observer";
 
@@ -8,7 +8,7 @@ import { useInView } from "react-intersection-observer";
 const APP_DEV_IMG = "/images/salon3.jpg";
 const WEB_DEV_IMG = "/images/salon4.jpg";
 const DIGITAL_MARKETING_IMG = "/images/salon5.jpg";
-const SMM_IMG = "/images/salon6.jpg";
+const AI_DEV_IMG = "/images/ai.jpg"; // 🔹 Add your AI dev image
 const SEO_IMG = "/images/salon7.jpg";
 
 function Spec({ label, value, unit }: { label: string; value: string; unit?: string }) {
@@ -142,6 +142,7 @@ function ServicesStrip() {
     { name: "ECOMMERCE DEVELOPMENT", icon: <Store className="w-8 h-8" /> },
     { name: "SOFTWARE DEVELOPMENT", icon: <Code2 className="w-8 h-8" /> },
     { name: "SHOPIFY DEVELOPMENT", icon: <ShoppingBag className="w-8 h-8" /> },
+    { name: "AI DEVELOPMENT", icon: <Brain className="w-8 h-8" /> }, // 🔹 Added
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -154,7 +155,7 @@ function ServicesStrip() {
     return () => clearInterval(interval);
   }, [services.length]);
 
-  // Show 3 at a time
+  // Show 4 at a time
   const visibleServices = [
     services[currentIndex],
     services[(currentIndex + 1) % services.length],
@@ -235,17 +236,18 @@ export default function Products() {
           link="/files/digital-marketing.pdf"
         />
 
+        {/* 🔹 AI Development instead of SMM */}
         <DroneCard
-          title="Social Media Marketing"
-          subtitle="SMM"
-          description="Boost your brand presence with engaging social media strategies and content."
+          title="AI Development"
+          subtitle="Artificial Intelligence"
+          description="Innovative AI-powered solutions including chatbots, predictive analytics, and automation tools."
           specs={[
-            { label: "Platforms", value: "6", unit: "+" },
-            { label: "Engagement rate", value: "25", unit: "%" }
+            { label: "Models delivered", value: "10", unit: "+" },
+            { label: "Accuracy", value: "95", unit: "%" }
           ]}
-          img={SMM_IMG}
+          img={AI_DEV_IMG}
           bgColor="bg-[#4dc7ff]"
-          link="/files/smm.pdf"
+          link="/files/ai-dev.pdf"
         />
 
         <DroneCard
