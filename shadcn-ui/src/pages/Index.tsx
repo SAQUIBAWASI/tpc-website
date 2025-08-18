@@ -1,4 +1,5 @@
 import AboutSection from '@/components/AboutSection';
+import Blogs from '@/components/Blogs';
 import CareersSection from '@/components/CareerSection';
 import ContactSection from '@/components/ContactSection';
 import Footer from '@/components/Footer';
@@ -17,9 +18,10 @@ export default function Index() {
       <ServicesSection />
       <AboutSection />
       <Testimonial />
+      <Gallery />
       <CareersSection />
       <History />
-       <Gallery />
+       <Blogs />
       <ContactSection />
       <Footer />
     </div>

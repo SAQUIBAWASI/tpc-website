@@ -1,6 +1,7 @@
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Award, Play, Truck, Users } from 'lucide-react';
-import bgVideo from '../t.mp4'; // <-- local video import
+import { Link } from 'react-scroll'; // scroll navigation ke liye
+import bgVideo from '../t.mp4';
 
 export default function HeroSection() {
   return (
@@ -15,8 +16,6 @@ export default function HeroSection() {
           className="w-full h-full object-cover"
         >
           <source src={bgVideo} type="video/mp4" />
-          {/* Fallback background */}
-          <div className="w-full h-full bg-gradient-to-r from-blue-900 to-indigo-900"></div>
         </video>
         <div className="absolute inset-0 bg-black/50"></div>
       </div>
@@ -27,7 +26,6 @@ export default function HeroSection() {
           <div className="mb-6 flex justify-center">
             <div className="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 text-sm">
               <Award className="w-4 h-4" />
-              {/* <span>Premium Quality Materials Since 1995</span> */}
             </div>
           </div>
           
@@ -43,42 +41,48 @@ export default function HeroSection() {
             Building excellence, one project at a time.
           </p>
 
+          {/* Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-            <Button size="lg" className="bg-green-600 hover:bg-green-700 text-lg px-8 py-4">
-              Explore Our Products
-              <ArrowRight className="ml-2 w-5 h-5" />
-            </Button>
-            <Button 
-              variant="outline" 
-              size="lg" 
-              className="text-white border-white hover:bg-white hover:text-gray-900 text-lg px-8 py-4"
-            >
-              <Play className="mr-2 w-5 h-5" />
-              Watch Our Story
-            </Button>
+            <Link to="services" smooth={true} duration={800}>
+              <Button size="lg" className="bg-green-600 hover:bg-green-700 text-lg px-8 py-4">
+                Explore Our Services
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </Button>
+            </Link>
+
+            <Link to="gallery" smooth={true} duration={800}>
+              <Button 
+                variant="outline" 
+                size="lg" 
+                className=" text-white border-green-600 bg-green-300 hover:text-gray-900 text-lg px-8 py-4"
+              >
+                <Play className="mr-2 w-5 h-5" />
+                Watch Our Story
+              </Button>
+            </Link>
           </div>
 
           {/* Stats */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
             <div className="text-center">
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-600/20 rounded-full mb-4">
-                <Users className="w-8 h-8 text-blue-400" />
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-green-600/20 rounded-full mb-4">
+                <Users className="w-8 h-8 text-green-400" />
               </div>
               <div className="text-3xl font-bold mb-2">500+</div>
               <div className="text-gray-300">Happy Clients</div>
             </div>
             <div className="text-center">
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-600/20 rounded-full mb-4">
-                <Truck className="w-8 h-8 text-blue-400" />
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-green-600/20 rounded-full mb-4">
+                <Truck className="w-8 h-8 text-green-400" />
               </div>
               <div className="text-3xl font-bold mb-2">1000+</div>
               <div className="text-gray-300">Projects Completed</div>
             </div>
             <div className="text-center">
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-600/20 rounded-full mb-4">
-                <Award className="w-8 h-8 text-blue-400" />
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-green-400/20 rounded-full mb-4">
+                <Award className="w-8 h-8 text-green-400" />
               </div>
-              <div className="text-3xl font-bold mb-2">25+</div>
+              <div className="text-3xl font-bold mb-2">5+</div>
               <div className="text-gray-300">Years Experience</div>
             </div>
           </div>

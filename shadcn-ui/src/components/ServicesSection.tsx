@@ -5,11 +5,11 @@ import { useEffect, useState } from "react";
 import { useInView } from "react-intersection-observer";
 
 // Service images
-const APP_DEV_IMG = "/images/salon3.jpg";
-const WEB_DEV_IMG = "/images/salon4.jpg";
-const DIGITAL_MARKETING_IMG = "/images/salon5.jpg";
-const AI_DEV_IMG = "/images/ai.jpg"; // 🔹 Add your AI dev image
-const SEO_IMG = "/images/salon7.jpg";
+const APP_DEV_IMG = "/images/App-Dev.jpg";
+const WEB_DEV_IMG = "/images/Web-Dev.jpeg";
+const DIGITAL_MARKETING_IMG = "/images/Digital-marketing.jpg";
+const AI_DEV_IMG = "/images/AI.jpg"; // 🔹 Add your AI dev image
+const SEO_IMG = "/images/Seo.jpg";
 
 function Spec({ label, value, unit }: { label: string; value: string; unit?: string }) {
   return (

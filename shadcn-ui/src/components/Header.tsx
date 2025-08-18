@@ -19,7 +19,7 @@ export default function Header() {
 
   const serviceItems = [
     { name: "App Development", href: "app-dev" },
-    { name: "Web Development", href: "web-dev" },
+    { name: "Web Development", href: "Web-Development" },
     { name: "Digital Marketing", href: "digital-marketing" },
     { name: "AI Development", href: "ai-dev" },
     { name: "E-Commerce", href: "ecommerce" },

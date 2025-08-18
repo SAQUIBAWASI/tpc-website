@@ -27,11 +27,11 @@ export default function AboutSection() {
 
   // ✅ Added missing companies list
   const companies = [
-    { name: "Company A", logo: "https://via.placeholder.com/120x50?text=Logo+A" },
-    { name: "Company B", logo: "https://via.placeholder.com/120x50?text=Logo+B" },
-    { name: "Company C", logo: "https://via.placeholder.com/120x50?text=Logo+C" },
-    { name: "Company D", logo: "https://via.placeholder.com/120x50?text=Logo+D" },
-    { name: "Company E", logo: "https://via.placeholder.com/120x50?text=Logo+E" },
+    { name: "Company A", logo: "/images/img.jpg" },
+    { name: "Company B", logo: "/images/images.jpeg" },
+    { name: "Company C", logo: "/images/image.jpeg" },
+    { name: "Company D", logo: "/images/imag.png" },
+    { name: "Company E", logo: "/images/images.png" },
   ];
 
   return (
@@ -123,7 +123,7 @@ export default function AboutSection() {
           <h3 className="text-xl font-bold text-gray-800 leading-snug">
             Trusted by <br /> Top Companies
           </h3>
-          <div className="mt-4 text-gray-400">
+          {/* <div className="mt-4 text-gray-400">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="80"
@@ -135,7 +135,7 @@ export default function AboutSection() {
             >
               <path d="M10 10 L70 70 M70 10 L10 70" />
             </svg>
-          </div>
+          </div> */}
         </div>
 
         {/* Carousel */}
