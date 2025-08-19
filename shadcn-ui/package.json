@@ -5,7 +5,7 @@
   "packageManager": "pnpm@8.10.0",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "react-scripts build",
     "lint": "eslint --quiet ./src",
     "preview": "vite preview",
     "predeploy": "npm run build",
