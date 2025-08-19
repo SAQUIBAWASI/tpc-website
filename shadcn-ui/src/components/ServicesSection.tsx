@@ -8,7 +8,7 @@ import { useInView } from "react-intersection-observer";
 const APP_DEV_IMG = "/images/App-Dev.jpg";
 const WEB_DEV_IMG = "/images/Web-Dev.jpeg";
 const DIGITAL_MARKETING_IMG = "/images/Digital-marketing.jpg";
-const AI_DEV_IMG = "/images/AI.jpg"; // 🔹 Add your AI dev image
+const AI_DEV_IMG = "/images/AI.jpg";
 const SEO_IMG = "/images/Seo.jpg";
 
 function Spec({ label, value, unit }: { label: string; value: string; unit?: string }) {
@@ -49,7 +49,6 @@ function DroneCard({
       transition={{ duration: 0.6 }}
       className={`relative grid overflow-hidden rounded-[30px] ${bgColor} p-4 sm:p-6 md:p-8 shadow-xl`}
     >
-      {/* Decorative glyphs (desktop only) */}
       <div className="pointer-events-none absolute right-6 top-6 hidden md:block select-none text-black/70">
         <div className="flex items-center gap-8 text-sm font-semibold">
           <span className="inline-flex items-center gap-1"><Move size={18} />⌃</span>
@@ -119,8 +118,6 @@ function DroneCard({
             >
               <a
                 href={link}
-                target="_blank"
-                rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-3"
               >
                 More details
@@ -134,7 +131,7 @@ function DroneCard({
   );
 }
 
-// 🔹 Services Strip Component with Auto Sliding Carousel
+// Services Strip Component
 function ServicesStrip() {
   const services = [
     { name: "APP DEVELOPMENT", icon: <Smartphone className="w-8 h-8" /> },
@@ -142,12 +139,11 @@ function ServicesStrip() {
     { name: "ECOMMERCE DEVELOPMENT", icon: <Store className="w-8 h-8" /> },
     { name: "SOFTWARE DEVELOPMENT", icon: <Code2 className="w-8 h-8" /> },
     { name: "SHOPIFY DEVELOPMENT", icon: <ShoppingBag className="w-8 h-8" /> },
-    { name: "AI DEVELOPMENT", icon: <Brain className="w-8 h-8" /> }, // 🔹 Added
+    { name: "AI DEVELOPMENT", icon: <Brain className="w-8 h-8" /> },
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  // Auto slide every 3s
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % services.length);
@@ -155,7 +151,6 @@ function ServicesStrip() {
     return () => clearInterval(interval);
   }, [services.length]);
 
-  // Show 4 at a time
   const visibleServices = [
     services[currentIndex],
     services[(currentIndex + 1) % services.length],
@@ -207,7 +202,7 @@ export default function Products() {
           ]}
           img={APP_DEV_IMG}
           bgColor="bg-[#A8EB66]"
-          link="/files/app-dev.pdf"
+          link="/appdevelopment"
         />
 
         <DroneCard
@@ -220,7 +215,7 @@ export default function Products() {
           ]}
           img={WEB_DEV_IMG}
           bgColor="bg-[#ff6b01]"
-          link="/files/web-dev.pdf"
+          link="/webdevelopment"
         />
 
         <DroneCard
@@ -233,10 +228,9 @@ export default function Products() {
           ]}
           img={DIGITAL_MARKETING_IMG}
           bgColor="bg-[#e7c132]"
-          link="/files/digital-marketing.pdf"
+          link="/digitalmarketing"
         />
 
-        {/* 🔹 AI Development instead of SMM */}
         <DroneCard
           title="AI Development"
           subtitle="Artificial Intelligence"
@@ -247,7 +241,7 @@ export default function Products() {
           ]}
           img={AI_DEV_IMG}
           bgColor="bg-[#4dc7ff]"
-          link="/files/ai-dev.pdf"
+          link="/aidevelopment"
         />
 
         <DroneCard
@@ -260,11 +254,11 @@ export default function Products() {
           ]}
           img={SEO_IMG}
           bgColor="bg-[#9b59b6]"
-          link="/files/seo.pdf"
+          link="/seo"
         />
       </div>
 
-      {/* 🔹 Services Strip Carousel */}
+      {/* Services Strip Carousel */}
       <ServicesStrip />
     </section>
   );

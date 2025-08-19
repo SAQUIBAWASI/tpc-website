@@ -2,7 +2,7 @@ import { ArrowRight } from "lucide-react";
 
 export default function HistorySection() {
   return (
-    <section className="bg-[#A7F070] py-16 px-6 md:px-20 overflow-hidden">
+    <section className="bg-[#16A34A] py-16 px-6 md:px-20 overflow-hidden">
       {/* Top Heading */}
       <div className="text-center max-w-4xl mx-auto">
         <div className="flex justify-center mb-4">
