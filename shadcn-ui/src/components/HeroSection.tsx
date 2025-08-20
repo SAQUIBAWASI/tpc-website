@@ -1,12 +1,12 @@
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Award, Play, Truck, Users } from 'lucide-react';
-import bgVideo from '../t.mp4'; // <-- local video import
+// import bgVideo from '../t.mp4';
 
 export default function HeroSection() {
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Video Background */}
-      <div className="absolute inset-0 z-0">
+      {/* <div className="absolute inset-0 z-0">
         <video
           autoPlay
           muted
@@ -15,11 +15,11 @@ export default function HeroSection() {
           className="w-full h-full object-cover"
         >
           <source src={bgVideo} type="video/mp4" />
-          {/* Fallback background */}
+         
           <div className="w-full h-full bg-gradient-to-r from-blue-900 to-indigo-900"></div>
         </video>
         <div className="absolute inset-0 bg-black/50"></div>
-      </div>
+      </div> */}
 
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 text-center text-white">
