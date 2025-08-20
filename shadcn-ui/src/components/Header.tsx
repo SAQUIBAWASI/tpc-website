@@ -1,26 +1,47 @@
 import { Button } from "@/components/ui/button";
-import { Menu, MessageCircle, Phone, Search, X, ChevronDown } from "lucide-react";
-import { useState } from "react";
+import { Menu, MessageCircle, Phone, Search, X } from "lucide-react";
+import { useRef, useState } from "react";
+import { Link as RouterLink } from "react-router-dom";
+import { Link as ScrollLink } from "react-scroll";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [openSubMenu, setOpenSubMenu] = useState(null); // which submenu is open (mobile)
+  const [isServicesOpen, setIsServicesOpen] = useState(false);
+
+  // ✅ Ref for timeout
+  const timeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   const navItems = [
-    { name: "Home", href: "#home" },
-    { name: "About", href: "#about" },
-    {
-      name: "Services",
-      href: "#services",
-      children: [
-        { name: "Website Design", href: "#website-design" },
-        { name: "App Development", href: "#app-development" },
-      ],
-    },
-    { name: "Career", href: "#career" },
-    { name: "Gallery", href: "#gallery" },
-    { name: "Contact", href: "#contact" },
+    { name: "Home", href: "herosection" },
+    { name: "Services", href: "services" },
+    { name: "Blogs", href: "blogs" },
+    { name: "About", href: "about" },
+    { name: "Career", href: "career" },
+    { name: "Gallery", href: "gallery" },
+    { name: "Contact", href: "contact" },
   ];
+
+  const serviceItems = [
+    { name: "App Development", href: "/app-development", isPage: true },
+    { name: "Web Development", href: "/web-development", isPage: true },
+    { name: "Digital Marketing", href: "/digital-marketing", isPage: true },
+    { name: "AI Development", href: "/ai-development", isPage: true },
+    { name: "E-Commerce", href: "/e-commerce", isPage: true },
+    { name: "Graphics Designing", href: "/graphics-designing", isPage: true },
+    { name: "Google Ads", href: "/google-ads", isPage: true },
+  ];
+
+  // ✅ Functions for dropdown open/close delay
+  const handleServicesEnter = () => {
+    if (timeoutRef.current) clearTimeout(timeoutRef.current);
+    setIsServicesOpen(true);
+  };
+
+  const handleServicesLeave = () => {
+    timeoutRef.current = setTimeout(() => {
+      setIsServicesOpen(false);
+    }, 3000); // 3 sec baad hide
+  };
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-black text-green-600 shadow-md">
@@ -32,41 +53,82 @@ export default function Header() {
           </div>
 
           {/* Desktop Nav */}
-          <nav className="hidden md:flex space-x-8 text-lg font-medium relative">
+          <nav className="hidden md:flex space-x-8 text-lg font-medium">
             {navItems.map((item) => (
-              <div key={item.name} className="relative group">
-                <a
-                  href={item.href}
-                  className="hover:text-green-500 transition-colors flex items-center"
+              <div
+                key={item.name}
+                className="relative"
+                onMouseEnter={() =>
+                  item.name === "Services" && handleServicesEnter()
+                }
+                onMouseLeave={() =>
+                  item.name === "Services" && handleServicesLeave()
+                }
+              >
+                <ScrollLink
+                  to={item.href}
+                  smooth={true}
+                  duration={500}
+                  className="hover:text-green-500 transition-colors cursor-pointer"
+                  onClick={(e) => {
+                    if (item.name === "Services") {
+                      e.preventDefault();
+                      handleServicesEnter();
+                      document
+                        .getElementById(item.href)
+                        ?.scrollIntoView({ behavior: "smooth" });
+                    }
+                  }}
                 >
                   {item.name}
-                  {item.children && <ChevronDown className="w-4 h-4 ml-1" />}
-                </a>
+                </ScrollLink>
 
-                {/* Desktop Dropdown */}
-                {item.children && (
-                  <div className="absolute left-0 mt-2 hidden group-hover:block bg-white text-black rounded shadow-lg w-48">
-                    {item.children.map((child) => (
-                      <a
-                        key={child.name}
-                        href={child.href}
-                        className="block px-4 py-2 hover:bg-gray-200"
-                      >
-                        {child.name}
-                      </a>
-                    ))}
+                {/* ✅ Services Dropdown */}
+                {item.name === "Services" && isServicesOpen && (
+                  <div
+                    className="absolute left-0 mt-2 w-56 bg-white text-black shadow-lg rounded-lg overflow-hidden"
+                    onMouseEnter={handleServicesEnter}
+                    onMouseLeave={handleServicesLeave}
+                  >
+                    {serviceItems.map((service) =>
+                      service.isPage ? (
+                        <RouterLink
+                          key={service.name}
+                          to={service.href}
+                          className="block px-4 py-2 cursor-pointer hover:bg-green-100 hover:text-green-600"
+                          onClick={() => setIsServicesOpen(false)} // ✅ select karte hi close
+                        >
+                          {service.name}
+                        </RouterLink>
+                      ) : (
+                        <ScrollLink
+                          key={service.name}
+                          to={service.href}
+                          smooth={true}
+                          duration={500}
+                          className="block px-4 py-2 cursor-pointer hover:bg-green-100 hover:text-green-600"
+                          onClick={() => setIsServicesOpen(false)}
+                        >
+                          {service.name}
+                        </ScrollLink>
+                      )
+                    )}
                   </div>
                 )}
               </div>
             ))}
           </nav>
 
-          {/* Icons + CTA */}
+          {/* Right Section */}
           <div className="flex items-center space-x-6">
             <a href="tel:+15551234567">
               <Phone className="w-7 h-7 hover:text-green-500 cursor-pointer" />
             </a>
-            <a href="https://wa.me/15551234567" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://wa.me/15551234567"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <MessageCircle className="w-7 h-7 text-green-500 cursor-pointer" />
             </a>
             <button
@@ -77,12 +139,12 @@ export default function Header() {
             >
               <Search className="w-7 h-7 hover:text-green-500 cursor-pointer" />
             </button>
-
-            <Button className="bg-green-600 hover:bg-green-700 hidden lg:flex">
-              Get Quote
-            </Button>
-
-            {/* Mobile Menu Toggle */}
+            <ScrollLink to="contact" smooth={true} duration={500}>
+              <Button className="bg-green-600 hover:bg-green-700 hidden lg:flex">
+                Get Quote
+              </Button>
+            </ScrollLink>
+            {/* Mobile Menu Button */}
             <button
               className="md:hidden p-2"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -91,55 +153,55 @@ export default function Header() {
             </button>
           </div>
         </div>
-
-        {/* Mobile Menu */}
-        {isMenuOpen && (
-          <div className="md:hidden py-4 border-t border-gray-200">
-            <nav className="space-y-2 text-lg font-medium">
-              {navItems.map((item) => (
-                <div key={item.name}>
-                  {/* Parent link (clickable if no children) */}
-                  <button
-                    onClick={() =>
-                      item.children
-                        ? setOpenSubMenu(openSubMenu === item.name ? null : item.name)
-                        : setIsMenuOpen(false)
-                    }
-                    className="w-full flex justify-between items-center px-2 py-2 hover:text-green-500"
-                  >
-                    {item.name}
-                    {item.children && (
-                      <ChevronDown
-                        className={`w-4 h-4 ml-1 transition-transform ${
-                          openSubMenu === item.name ? "rotate-180" : ""
-                        }`}
-                      />
-                    )}
-                  </button>
-
-                  {/* Submenu for mobile */}
-                  {item.children && openSubMenu === item.name && (
-                    <div className="ml-4 mt-1 space-y-1">
-                      {item.children.map((child) => (
-                        <a
-                          key={child.name}
-                          href={child.href}
-                          className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-200 rounded"
-                          onClick={() => setIsMenuOpen(false)}
-                        >
-                          {child.name}
-                        </a>
-                      ))}
-                    </div>
-                  )}
-                </div>
-              ))}
-            </nav>
-          </div>
-        )}
       </div>
+
+      {/* ✅ Mobile Menu Drawer */}
+      {isMenuOpen && (
+        <div className="md:hidden bg-black text-white px-6 py-4 space-y-4">
+          {navItems.map((item) => (
+            <ScrollLink
+              key={item.name}
+              to={item.href}
+              smooth={true}
+              duration={500}
+              className="block py-2 text-lg hover:text-green-400"
+              onClick={() => setIsMenuOpen(false)} // close after click
+            >
+              {item.name}
+            </ScrollLink>
+          ))}
+
+          {/* Services Dropdown in Mobile */}
+          <div className="mt-2">
+            <p className="text-green-400 font-semibold">Services</p>
+            <div className="pl-4 mt-2 space-y-2">
+              {serviceItems.map((service) =>
+                service.isPage ? (
+                  <RouterLink
+                    key={service.name}
+                    to={service.href}
+                    className="block py-1 hover:text-green-400"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    {service.name}
+                  </RouterLink>
+                ) : (
+                  <ScrollLink
+                    key={service.name}
+                    to={service.href}
+                    smooth={true}
+                    duration={500}
+                    className="block py-1 hover:text-green-400"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    {service.name}
+                  </ScrollLink>
+                )
+              )}
+            </div>
+          </div>
+        </div>
+      )}
     </header>
   );
 }
-
-

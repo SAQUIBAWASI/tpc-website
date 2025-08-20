@@ -18,9 +18,9 @@ export default function Index() {
       <AboutSection />
       <Testimonial />
       <CareersSection />
+      <Gallery />
       <History />
-       <Gallery />
-      <ContactSection />
+       <ContactSection />
       <Footer />
     </div>
   );

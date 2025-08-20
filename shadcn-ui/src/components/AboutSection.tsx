@@ -27,11 +27,11 @@ export default function AboutSection() {
 
   // ✅ Added missing companies list
   const companies = [
-    { name: "Company A", logo: "https://via.placeholder.com/120x50?text=Logo+A" },
-    { name: "Company B", logo: "https://via.placeholder.com/120x50?text=Logo+B" },
-    { name: "Company C", logo: "https://via.placeholder.com/120x50?text=Logo+C" },
-    { name: "Company D", logo: "https://via.placeholder.com/120x50?text=Logo+D" },
-    { name: "Company E", logo: "https://via.placeholder.com/120x50?text=Logo+E" },
+    { name: "Company A", logo: "/images/Client1.jpg" },
+    { name: "Company B", logo: "/images/Client2.jpg" },
+    { name: "Company C", logo: "/images/Client3.jpg" },
+    { name: "Company D", logo: "/images/Client4.jpg" },
+    { name: "Company E", logo: "/images/Client5.jpg" },
   ];
 
   return (
