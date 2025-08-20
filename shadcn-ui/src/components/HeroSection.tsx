@@ -1,12 +1,12 @@
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Award, Play, Truck, Users } from 'lucide-react';
-// import bgVideo from '../t.mp4';
+import bgVideo from '../T.mp4'; // ✅ src ke andar T.mp4 hai to is tarah import karo
 
 export default function HeroSection() {
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section id="herosection" className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Video Background */}
-      {/* <div className="absolute inset-0 z-0">
+      <div className="absolute inset-0 z-0">
         <video
           autoPlay
           muted
@@ -14,12 +14,12 @@ export default function HeroSection() {
           playsInline
           className="w-full h-full object-cover"
         >
-          <source src={bgVideo} type="video/mp4" />
-         
-          <div className="w-full h-full bg-gradient-to-r from-blue-900 to-indigo-900"></div>
+          <source src={bgVideo} type="video/mp4" /> 
+          Your browser does not support the video tag.
         </video>
+        {/* Overlay for dark effect */}
         <div className="absolute inset-0 bg-black/50"></div>
-      </div> */}
+      </div>
 
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 text-center text-white">
@@ -45,13 +45,13 @@ export default function HeroSection() {
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
             <Button size="lg" className="bg-green-600 hover:bg-green-700 text-lg px-8 py-4">
-              Explore Our Products
+              Explore Our Services
               <ArrowRight className="ml-2 w-5 h-5" />
             </Button>
             <Button 
               variant="outline" 
               size="lg" 
-              className="text-white border-white hover:bg-white hover:text-gray-900 text-lg px-8 py-4"
+              className="text-white border border-green-400 bg-green-400 hover:text-gray-900 text-lg px-8 py-4"
             >
               <Play className="mr-2 w-5 h-5" />
               Watch Our Story
@@ -61,25 +61,25 @@ export default function HeroSection() {
           {/* Stats */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
             <div className="text-center">
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-600/20 rounded-full mb-4">
-                <Users className="w-8 h-8 text-blue-400" />
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-green-600/20 rounded-full mb-4">
+                <Users className="w-8 h-8 text-green-400" />
               </div>
               <div className="text-3xl font-bold mb-2">500+</div>
-              <div className="text-gray-300">Happy Clients</div>
+              <div className="text-gray-200">Happy Clients</div>
             </div>
             <div className="text-center">
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-600/20 rounded-full mb-4">
-                <Truck className="w-8 h-8 text-blue-400" />
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-green-600/20 rounded-full mb-4">
+                <Truck className="w-8 h-8 text-green-400" />
               </div>
               <div className="text-3xl font-bold mb-2">1000+</div>
-              <div className="text-gray-300">Projects Completed</div>
+              <div className="text-gray-200">Projects Completed</div>
             </div>
             <div className="text-center">
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-600/20 rounded-full mb-4">
-                <Award className="w-8 h-8 text-blue-400" />
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-green-600/20 rounded-full mb-4">
+                <Award className="w-8 h-8 text-green-400" />
               </div>
               <div className="text-3xl font-bold mb-2">25+</div>
-              <div className="text-gray-300">Years Experience</div>
+              <div className="text-gray-200">Years Experience</div>
             </div>
           </div>
         </div>

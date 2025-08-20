@@ -1,23 +1,23 @@
 import { Button } from "@/components/ui/button";
 import { Menu, MessageCircle, Phone, Search, X } from "lucide-react";
 import { useRef, useState } from "react";
-import { Link as RouterLink } from "react-router-dom";
+import { Link as RouterLink, useLocation } from "react-router-dom";
 import { Link as ScrollLink } from "react-scroll";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
-
-  // ✅ Ref for timeout
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
+
+  const location = useLocation(); // ✅ current route track karne ke liye
 
   const navItems = [
     { name: "Home", href: "herosection" },
     { name: "Services", href: "services" },
-    { name: "Blogs", href: "blogs" },
     { name: "About", href: "about" },
     { name: "Career", href: "career" },
     { name: "Gallery", href: "gallery" },
+    { name: "Blogs", href: "blogs" },
     { name: "Contact", href: "contact" },
   ];
 
@@ -31,7 +31,6 @@ export default function Header() {
     { name: "Google Ads", href: "/google-ads", isPage: true },
   ];
 
-  // ✅ Functions for dropdown open/close delay
   const handleServicesEnter = () => {
     if (timeoutRef.current) clearTimeout(timeoutRef.current);
     setIsServicesOpen(true);
@@ -40,19 +39,19 @@ export default function Header() {
   const handleServicesLeave = () => {
     timeoutRef.current = setTimeout(() => {
       setIsServicesOpen(false);
-    }, 3000); // 3 sec baad hide
+    }, 2000);
   };
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-black text-green-600 shadow-md">
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between h-20">
-          {/* Logo */}
-          <div className="flex items-center space-x-2">
+          {/* ✅ Logo */}
+          <RouterLink to="/" className="flex items-center space-x-2">
             <img src="/images/logo.PNG" alt="TPC Logo" className="h-12" />
-          </div>
+          </RouterLink>
 
-          {/* Desktop Nav */}
+          {/* ✅ Desktop Nav */}
           <nav className="hidden md:flex space-x-8 text-lg font-medium">
             {navItems.map((item) => (
               <div
@@ -65,23 +64,23 @@ export default function Header() {
                   item.name === "Services" && handleServicesLeave()
                 }
               >
-                <ScrollLink
-                  to={item.href}
-                  smooth={true}
-                  duration={500}
-                  className="hover:text-green-500 transition-colors cursor-pointer"
-                  onClick={(e) => {
-                    if (item.name === "Services") {
-                      e.preventDefault();
-                      handleServicesEnter();
-                      document
-                        .getElementById(item.href)
-                        ?.scrollIntoView({ behavior: "smooth" });
-                    }
-                  }}
-                >
-                  {item.name}
-                </ScrollLink>
+                {location.pathname === "/" ? (
+                  <ScrollLink
+                    to={item.href}
+                    smooth={true}
+                    duration={500}
+                    className="hover:text-green-500 transition-colors cursor-pointer"
+                  >
+                    {item.name}
+                  </ScrollLink>
+                ) : (
+                  <RouterLink
+                    to={`/#${item.href}`}
+                    className="hover:text-green-500 transition-colors"
+                  >
+                    {item.name}
+                  </RouterLink>
+                )}
 
                 {/* ✅ Services Dropdown */}
                 {item.name === "Services" && isServicesOpen && (
@@ -96,7 +95,7 @@ export default function Header() {
                           key={service.name}
                           to={service.href}
                           className="block px-4 py-2 cursor-pointer hover:bg-green-100 hover:text-green-600"
-                          onClick={() => setIsServicesOpen(false)} // ✅ select karte hi close
+                          onClick={() => setIsServicesOpen(false)}
                         >
                           {service.name}
                         </RouterLink>
@@ -119,7 +118,7 @@ export default function Header() {
             ))}
           </nav>
 
-          {/* Right Section */}
+          {/* ✅ Right Section */}
           <div className="flex items-center space-x-6">
             <a href="tel:+15551234567">
               <Phone className="w-7 h-7 hover:text-green-500 cursor-pointer" />
@@ -144,34 +143,50 @@ export default function Header() {
                 Get Quote
               </Button>
             </ScrollLink>
-            {/* Mobile Menu Button */}
+
+            {/* ✅ Mobile Menu Toggle */}
             <button
               className="md:hidden p-2"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
-              {isMenuOpen ? <X className="w-8 h-8" /> : <Menu className="w-8 h-8" />}
+              {isMenuOpen ? (
+                <X className="w-8 h-8" />
+              ) : (
+                <Menu className="w-8 h-8" />
+              )}
             </button>
           </div>
         </div>
       </div>
 
-      {/* ✅ Mobile Menu Drawer */}
+      {/* ✅ Mobile Drawer */}
       {isMenuOpen && (
         <div className="md:hidden bg-black text-white px-6 py-4 space-y-4">
-          {navItems.map((item) => (
-            <ScrollLink
-              key={item.name}
-              to={item.href}
-              smooth={true}
-              duration={500}
-              className="block py-2 text-lg hover:text-green-400"
-              onClick={() => setIsMenuOpen(false)} // close after click
-            >
-              {item.name}
-            </ScrollLink>
-          ))}
+          {navItems.map((item) =>
+            location.pathname === "/" ? (
+              <ScrollLink
+                key={item.name}
+                to={item.href}
+                smooth={true}
+                duration={500}
+                className="block py-2 text-lg hover:text-green-400"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                {item.name}
+              </ScrollLink>
+            ) : (
+              <RouterLink
+                key={item.name}
+                to={`/#${item.href}`}
+                className="block py-2 text-lg hover:text-green-400"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                {item.name}
+              </RouterLink>
+            )
+          )}
 
-          {/* Services Dropdown in Mobile */}
+          {/* ✅ Mobile Services Dropdown */}
           <div className="mt-2">
             <p className="text-green-400 font-semibold">Services</p>
             <div className="pl-4 mt-2 space-y-2">
