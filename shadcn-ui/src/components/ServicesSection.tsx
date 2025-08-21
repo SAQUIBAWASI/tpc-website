@@ -1,8 +1,19 @@
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
-import { ArrowRight, Code2, Globe, Minus, Move, Plus, ShoppingBag, Smartphone, Store } from "lucide-react";
+import {
+  ArrowRight,
+  Code2,
+  Globe,
+  Minus,
+  Move,
+  Plus,
+  ShoppingBag,
+  Smartphone,
+  Store
+} from "lucide-react";
 import { useEffect, useState } from "react";
 import { useInView } from "react-intersection-observer";
+import { Link } from "react-router-dom"; // ✅ import Link
 
 // Service images
 const APP_DEV_IMG = "/images/App-Dev.jpg";
@@ -117,15 +128,14 @@ function DroneCard({
               className="w-full md:w-auto rounded-full bg-black text-white hover:bg-black/90 shadow-md hover:shadow-lg"
               asChild
             >
-              <a
-                href={link}
-                target="_blank"
-                rel="noopener noreferrer"
+              {/* ✅ Internal navigation */}
+              <Link
+                to={link}
                 className="inline-flex items-center justify-center gap-3"
               >
                 More details
                 <ArrowRight size={22} className="transition-transform duration-300 group-hover:translate-x-1" />
-              </a>
+              </Link>
             </Button>
           </div>
         </div>
@@ -163,7 +173,7 @@ function ServicesStrip() {
   ];
 
   return (
-    <section className="bg-[#16a34a] py-6 mt-16 rounded-2xl overflow-hidden">
+    <section className="bg-[#7ED957] py-6 mt-16 rounded-2xl overflow-hidden">
       <div className="container mx-auto flex justify-center items-center gap-12 text-white transition-all duration-700">
         {visibleServices.map((service, index) => (
           <div key={index} className="flex items-center space-x-3">
@@ -188,14 +198,14 @@ export default function Products() {
           inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
         }`}
       >
-        <h2 className="font-display text-2xl sm:text-3xl md:text-5xl">Our Services</h2>
+        <h1 className="font-display text-6xl sm:text-6xl md:text-5xl">Our Services</h1>
         <p className="mt-3 md:mt-4 text-muted-foreground">
           Explore our lineup of technology and marketing services to grow your business.
         </p>
       </div>
 
       {/* Cards */}
-      <div className="mt-12 md:mt-20 space-y-12 md:space-y-20 max-w-6xl mx-auto px-4">
+      <div className="mt-12 md:mt-20 space-y-12 md:space-y-18 max-w-8xl mx-auto px-4">
         <DroneCard
           title="App Development"
           subtitle="Mobile App"
@@ -205,8 +215,8 @@ export default function Products() {
             { label: "Team size", value: "5", unit: "devs" }
           ]}
           img={APP_DEV_IMG}
-          bgColor="bg-[#A8EB66]"
-          link="/files/app-dev.pdf"
+          bgColor="bg-[#ff6b01]"
+          link="/app-development"   // ✅ updated
         />
 
         <DroneCard
@@ -218,8 +228,8 @@ export default function Products() {
             { label: "Pages included", value: "10", unit: "+" }
           ]}
           img={WEB_DEV_IMG}
-          bgColor="bg-[#ff6b01]"
-          link="/files/web-dev.pdf"
+          bgColor="bg-[#A8EB66]"
+          link="/web-development"   // ✅ updated
         />
 
         <DroneCard
@@ -232,11 +242,11 @@ export default function Products() {
           ]}
           img={DIGITAL_MARKETING_IMG}
           bgColor="bg-[#e7c132]"
-          link="/files/digital-marketing.pdf"
+          link="/digital-marketing"   // ✅ updated
         />
 
         <DroneCard
-          title="Social Media Marketing"
+          title="AI Development"
           subtitle="SMM"
           description="Boost your brand presence with engaging social media strategies and content."
           specs={[
@@ -245,7 +255,7 @@ export default function Products() {
           ]}
           img={SMM_IMG}
           bgColor="bg-[#4dc7ff]"
-          link="/files/smm.pdf"
+          link="/ai-development"   // ✅ updated
         />
 
         <DroneCard
@@ -258,7 +268,7 @@ export default function Products() {
           ]}
           img={SEO_IMG}
           bgColor="bg-[#9b59b6]"
-          link="/files/seo.pdf"
+          link="/seo"   // ✅ updated
         />
       </div>
 

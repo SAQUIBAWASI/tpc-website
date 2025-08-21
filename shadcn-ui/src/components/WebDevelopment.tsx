@@ -30,7 +30,7 @@ export default function WebDevelopment() {
 
           {/* giant title over gallery */}
           <motion.h1
-            className="pointer-events-none select-none text-center leading-tight font-extrabold text-white absolute inset-x-0 top-8 md:top-12 text-4xl md:text-6xl lg:text-7xl drop-shadow-[0_2px_8px_rgba(0,0,0,0.6)]"
+            className="pointer-events-none select-none text-center leading-tight font-extrabold text-white absolute inset-x-0 top-8 md:top-8 text-4xl md:text-6xl lg:text-4xl drop-shadow-[0_2px_8px_rgba(0,0,0,0.6)]"
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}

@@ -26,7 +26,7 @@ export default function AiDevelopment() {
           {/* center content */}
           <div className="relative z-10 max-w-6xl mx-auto px-6 py-16">
             <motion.h1
-              className="text-center leading-tight font-extrabold text-white text-4xl md:text-6xl lg:text-7xl mb-8 drop-shadow-[0_2px_8px_rgba(0,0,0,0.6)]"
+              className="text-center leading-tight font-extrabold text-white text-4xl md:text-6xl lg:text-4xl mb-8 drop-shadow-[0_2px_8px_rgba(0,0,0,0.6)]"
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
@@ -39,7 +39,7 @@ export default function AiDevelopment() {
             {/* hero image */}
             <div className="flex justify-center">
               <img
-                src="/images/ai1.jpg"
+                src="/images/AI.jpg"
                 alt="AI Development"
                 className="w-full md:w-4/5 rounded-xl shadow-2xl border border-gray-800"
               />

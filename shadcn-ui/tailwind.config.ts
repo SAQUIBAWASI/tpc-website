@@ -1,10 +1,15 @@
+import tailwindcssAspectRatio from "@tailwindcss/aspect-ratio";
 import type { Config } from "tailwindcss";
 import tailwindcssAnimate from "tailwindcss-animate";
-import tailwindcssAspectRatio from "@tailwindcss/aspect-ratio";
 
 export default {
   darkMode: ["class"],
-  content: ["./pages/**/*.{ts,tsx}", "./components/**/*.{ts,tsx}", "./app/**/*.{ts,tsx}", "./src/**/*.{ts,tsx}"],
+  content: [
+    "./pages/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "./app/**/*.{ts,tsx}",
+    "./src/**/*.{ts,tsx}",
+  ],
   prefix: "",
   theme: {
     container: {
@@ -59,6 +64,23 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+
+        // ✅ Full custom green palette
+        green: {
+          100: "#E6F9E6",
+          200: "#C2F0C2",
+          300: "#99E699",
+          400: "#7ED957", // custom
+          500: "#4DB84D",
+          600: "#339933",
+          700: "#267326",
+          800: "#195C19",
+          900: "#0D330D",
+        },
+
+        // ✅ Custom black (your requested color)
+        black: "#1C1C1C",
+        dark: "#1C1C1C", // optional alias
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -67,20 +89,12 @@ export default {
       },
       keyframes: {
         "accordion-down": {
-          from: {
-            height: "0",
-          },
-          to: {
-            height: "var(--radix-accordion-content-height)",
-          },
+          from: { height: "0" },
+          to: { height: "var(--radix-accordion-content-height)" },
         },
         "accordion-up": {
-          from: {
-            height: "var(--radix-accordion-content-height)",
-          },
-          to: {
-            height: "0",
-          },
+          from: { height: "var(--radix-accordion-content-height)" },
+          to: { height: "0" },
         },
       },
       animation: {

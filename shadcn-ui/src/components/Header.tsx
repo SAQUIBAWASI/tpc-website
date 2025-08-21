@@ -43,7 +43,7 @@ export default function Header() {
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-black text-green-600 shadow-md">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-black text-green-400 shadow-md">
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between h-20">
           {/* ✅ Logo */}
@@ -69,14 +69,14 @@ export default function Header() {
                     to={item.href}
                     smooth={true}
                     duration={500}
-                    className="hover:text-green-500 transition-colors cursor-pointer"
+                    className="hover:text-green-400 transition-colors cursor-pointer"
                   >
                     {item.name}
                   </ScrollLink>
                 ) : (
                   <RouterLink
                     to={`/#${item.href}`}
-                    className="hover:text-green-500 transition-colors"
+                    className="hover:text-green-400 transition-colors"
                   >
                     {item.name}
                   </RouterLink>
@@ -94,7 +94,7 @@ export default function Header() {
                         <RouterLink
                           key={service.name}
                           to={service.href}
-                          className="block px-4 py-2 cursor-pointer hover:bg-green-100 hover:text-green-600"
+                          className="block px-4 py-2 cursor-pointer hover:bg-green-100 hover:text-green-400"
                           onClick={() => setIsServicesOpen(false)}
                         >
                           {service.name}
@@ -105,7 +105,7 @@ export default function Header() {
                           to={service.href}
                           smooth={true}
                           duration={500}
-                          className="block px-4 py-2 cursor-pointer hover:bg-green-100 hover:text-green-600"
+                          className="block px-4 py-2 cursor-pointer hover:bg-green-100 hover:text-green-400"
                           onClick={() => setIsServicesOpen(false)}
                         >
                           {service.name}
@@ -121,14 +121,14 @@ export default function Header() {
           {/* ✅ Right Section */}
           <div className="flex items-center space-x-6">
             <a href="tel:+15551234567">
-              <Phone className="w-7 h-7 hover:text-green-500 cursor-pointer" />
+              <Phone className="w-7 h-7 hover:text-green-400 cursor-pointer" />
             </a>
             <a
               href="https://wa.me/15551234567"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <MessageCircle className="w-7 h-7 text-green-500 cursor-pointer" />
+              <MessageCircle className="w-7 h-7 text-green-400 cursor-pointer" />
             </a>
             <button
               onClick={() => {
@@ -136,10 +136,10 @@ export default function Header() {
                 if (query) alert(`Searching for: ${query}`);
               }}
             >
-              <Search className="w-7 h-7 hover:text-green-500 cursor-pointer" />
+              <Search className="w-7 h-7 hover:text-green-400 cursor-pointer" />
             </button>
             <ScrollLink to="contact" smooth={true} duration={500}>
-              <Button className="bg-green-600 hover:bg-green-700 hidden lg:flex">
+              <Button className="bg-green-400 hover:bg-green-400 hidden lg:flex">
                 Get Quote
               </Button>
             </ScrollLink>

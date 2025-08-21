@@ -1,11 +1,11 @@
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Award, CheckCircle, Truck, Users } from 'lucide-react';
-
+import { Link } from "react-router-dom";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import { Autoplay, Navigation, Pagination } from "swiper/modules";
+import { Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 export default function AboutSection() {
@@ -41,12 +41,12 @@ export default function AboutSection() {
           {/* Content */}
           <div className="order-2 lg:order-1">
             <div className="mb-6">
-              <Badge variant="secondary" className="mb-4 bg-green-100 text-green-800">
+              <Badge variant="secondary" className="mb-4 bg-green-100 text-green-400">
                 About TPC Supply
               </Badge>
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
                 Building Trust Through
-                <span className="block text-green-600">Quality & Service</span>
+                <span className="block text-green-400">Quality & Service</span>
               </h2>
               <p className="text-lg text-gray-600 mb-6 leading-relaxed">
                 For over 5 years, TPC Supply has been the cornerstone of construction excellence, 
@@ -64,17 +64,19 @@ export default function AboutSection() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
               {features.map((feature, index) => (
                 <div key={index} className="flex items-start space-x-3">
-                  <CheckCircle className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" />
+                  <CheckCircle className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" />
                   <span className="text-gray-700 text-sm">{feature}</span>
                 </div>
               ))}
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button size="lg" className="bg-green-600 hover:bg-green-700">
-                Learn More About Us
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </Button>
+              <Link to="/about-us">
+                <Button size="lg" className="bg-green-400 hover:bg-green-400">
+                  Learn More About Us
+                  <ArrowRight className="ml-2 w-5 h-5" />
+                </Button>
+              </Link>
               <Button variant="outline" size="lg">
                 Download Catalog
               </Button>
@@ -102,7 +104,7 @@ export default function AboutSection() {
                     return (
                       <div key={index} className="text-center">
                         <div className="inline-flex items-center justify-center w-12 h-12 bg-green-100 rounded-lg mb-2">
-                          <IconComponent className="w-6 h-6 text-green-600" />
+                          <IconComponent className="w-6 h-6 text-green-400" />
                         </div>
                         <div className="text-2xl font-bold text-gray-900">{achievement.value}</div>
                         <div className="text-xs text-gray-600">{achievement.label}</div>
@@ -123,29 +125,14 @@ export default function AboutSection() {
           <h3 className="text-xl font-bold text-gray-800 leading-snug">
             Trusted by <br /> Top Companies
           </h3>
-          <div className="mt-4 text-gray-400">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="80"
-              height="80"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              className="opacity-20"
-            >
-              <path d="M10 10 L70 70 M70 10 L10 70" />
-            </svg>
-          </div>
         </div>
 
         {/* Carousel */}
         <div className="w-full md:w-3/4">
           <Swiper
-            modules={[Navigation, Pagination, Autoplay]}
+            modules={[Autoplay]}
             spaceBetween={30}
             slidesPerView={3}
-            navigation
-            pagination={{ clickable: true }}
             autoplay={{ delay: 3000 }}
             loop
             className="flex items-center"
@@ -153,7 +140,7 @@ export default function AboutSection() {
             {companies.map((c, idx) => (
               <SwiperSlide key={idx}>
                 <div className="flex justify-center">
-                  <div className="bg-white shadow-md rounded-lg p-6 w-52 h-28 flex items-center justify-center">
+                  <div className="bg-black shadow-md rounded-lg p-6 w-52 h-28 flex items-center justify-center">
                     <img
                       src={c.logo}
                       alt={c.name}

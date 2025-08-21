@@ -18,12 +18,12 @@ export default function ContactSection() {
       <div className="container mx-auto px-4">
         {/* Heading */}
         <div className="text-center mb-16">
-          <Badge variant="secondary" className="mb-4 bg-green-100 text-green-800">
+          <Badge variant="secondary" className="mb-4 bg-green-100 text-green-400">
             Get In Touch
           </Badge>
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             Ready to Start Your
-            <span className="block text-green-600">Next Project?</span>
+            <span className="block text-green-400">Next Project?</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Contact our team of experts for personalized consultation, quotes, and project support. 
@@ -39,7 +39,7 @@ export default function ContactSection() {
               <Card key={index} className="text-center hover:shadow-lg transition-shadow">
                 <CardContent className="pt-6">
                   <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <IconComponent className="w-8 h-8 text-green-600" />
+                    <IconComponent className="w-8 h-8 text-green-400" />
                   </div>
                   <h3 className="text-lg font-semibold text-gray-900 mb-2">{service.title}</h3>
                   <p className="text-gray-600 text-sm">{service.description}</p>
@@ -66,37 +66,37 @@ export default function ContactSection() {
             <input
               type="text"
               placeholder="Name"
-              className="w-full rounded-xl bg-[#9bf074] px-4 py-3 text-gray-700 focus:outline-none"
+              className="w-full rounded-xl bg-[#7ED957] px-4 py-3 text-gray-700 focus:outline-none"
             />
 
             <div className="flex gap-4">
               <input
                 type="text"
                 placeholder="Phone number"
-                className="w-1/2 rounded-xl bg-[#9bf074] px-4 py-3 text-gray-700 focus:outline-none"
+                className="w-1/2 rounded-xl bg-[#7ED957] px-4 py-3 text-gray-700 focus:outline-none"
               />
               <input
                 type="email"
                 placeholder="E-mail"
-                className="w-1/2 rounded-xl bg-[#9bf074] px-4 py-3 text-gray-700 focus:outline-none"
+                className="w-1/2 rounded-xl bg-[#7ED957] px-4 py-3 text-gray-700 focus:outline-none"
               />
             </div>
 
             <input
               type="text"
               placeholder="Country"
-              className="w-full rounded-xl bg-[#9bf074] px-4 py-3 text-gray-700 focus:outline-none"
+              className="w-full rounded-xl bg-[#7ED957] px-4 py-3 text-gray-700 focus:outline-none"
             />
 
             <textarea
               placeholder="Here you can provide details. Tell us about your company and we will prepare a suitable offer."
               rows={4}
-              className="w-full rounded-xl bg-[#9bf074] px-4 py-3 text-gray-700 focus:outline-none"
+              className="w-full rounded-xl bg-[#7ED957] px-4 py-3 text-gray-700 focus:outline-none"
             ></textarea>
 
             <button
               type="submit"
-              className="w-full rounded-xl bg-[#103e0f] text-[#9bf074] py-3 text-lg font-semibold hover:opacity-90 transition"
+              className="w-full rounded-xl bg-[#103e0f] text-[#7ED957] py-3 text-lg font-semibold hover:opacity-90 transition"
             >
               Send
             </button>

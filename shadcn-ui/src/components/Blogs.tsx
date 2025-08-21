@@ -1,21 +1,21 @@
 
 export default function BlogsSection() {
   return (
-    <section id="blogs" className="bg-black text-green-600 py-16 px-6 md:px-12">
+    <section id="blogs" className="bg-black text-green-400 py-16 px-6 md:px-12">
       <div className="max-w-7xl mx-auto">
         {/* Heading */}
         <h2 className="text-5xl font-bold mb-4 tracking-wide">
           OUR BLOGS
         </h2>
-        <div className="w-40 h-0.5 bg-green-600 border-b-2 border-dotted mb-10"></div>
+        <div className="w-40 h-0.5 bg-green-400 border-b-2 border-dotted mb-10"></div>
 
         {/* Content */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {/* Left News Section */}
-          <div className="bg-green-600 text-white p-6 flex flex-col gap-6 rounded-xl">
+          <div className="bg-green-400 text-white p-6 flex flex-col gap-6 rounded-xl">
             <h3 className="text-2xl font-bold">In the news</h3>
 
-            <div className="border-t border-green-300 pt-4 cursor-pointer hover:underline">
+            <div className="border-t border-green-400 pt-4 cursor-pointer hover:underline">
               <p>
                 The Patterns Company delivers innovative e-commerce website
                 designs to elevate your online business.
@@ -23,7 +23,7 @@ export default function BlogsSection() {
               <span className="block mt-2 text-right">→</span>
             </div>
 
-            <div className="border-t border-green-300 pt-4 cursor-pointer hover:underline">
+            <div className="border-t border-green-400 pt-4 cursor-pointer hover:underline">
               <p>
                 The Patterns Company offers expert social media marketing
                 services to enhance your brand's online presence and engagement.
@@ -31,7 +31,7 @@ export default function BlogsSection() {
               <span className="block mt-2 text-right">→</span>
             </div>
 
-            <div className="border-t border-green-300 pt-4 cursor-pointer hover:underline">
+            <div className="border-t border-green-400 pt-4 cursor-pointer hover:underline">
               <p>
                 The Patterns Company creates intuitive and visually stunning UI
                 designs to deliver exceptional user experiences.
@@ -39,7 +39,7 @@ export default function BlogsSection() {
               <span className="block mt-2 text-right">→</span>
             </div>
 
-            <div className="border-t border-green-300 pt-4 cursor-pointer hover:underline">
+            <div className="border-t border-green-400 pt-4 cursor-pointer hover:underline">
               <p>
                 The Patterns Company provides tailored B2B solutions to drive
                 growth and strengthen business partnerships.

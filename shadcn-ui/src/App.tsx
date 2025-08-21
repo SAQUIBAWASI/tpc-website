@@ -11,10 +11,14 @@ import Index from './pages/Index';
 import NotFound from './pages/NotFound';
 
 // ✅ Service Components (ye sab aapke components folder ke andar hai)
+import AboutUs from '@/components/AboutUs';
 import AIDevelopment from '@/components/AiDevelopment';
 import AppDevelopment from '@/components/AppDevelopment';
 import DigitalMarketing from '@/components/DigitalMarketing';
+import Gallery from "@/components/Gallery";
+import ServicesSection from "@/components/ServicesSection";
 import WebDevelopment from '@/components/WebDevelopment';
+
 
 
 const queryClient = new QueryClient();
@@ -32,6 +36,10 @@ const App = () => (
           <Route path="*" element={<NotFound />} />
 
           {/* ✅ Services Routes */}
+
+        <Route path="/services" element={<ServicesSection />} />
+        <Route path="/gallery" element={<Gallery />} />
+        <Route path="/about-us" element={<AboutUs />} />
           <Route path="/app-development" element={<AppDevelopment />} />
           <Route path="/web-development" element={<WebDevelopment />} />
           <Route path="/digital-marketing" element={<DigitalMarketing />} />
