@@ -34,7 +34,7 @@ export default function HeroSection() {
           <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
             Building Dreams with
             <span className="block text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-400">
-              TPC Digital Marketing Agency
+              Tpc Digital Marketing Agency
             </span>
           </h1>
           
