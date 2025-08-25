@@ -121,14 +121,14 @@ export default function Header() {
           {/* ✅ Right Section */}
           <div className="flex items-center space-x-6">
             <a href="tel:+15551234567">
-              <Phone className="w-7 h-7 hover:text-green-400 cursor-pointer" />
+              <Phone className="w-7 h-7  text-white hover:text-green-400 cursor-pointer" />
             </a>
             <a
               href="https://wa.me/15551234567"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <MessageCircle className="w-7 h-7 text-green-400 cursor-pointer" />
+              <MessageCircle className="w-7 h-7 text-white hover:text-green-400 cursor-pointer" />
             </a>
             <button
               onClick={() => {
@@ -136,7 +136,7 @@ export default function Header() {
                 if (query) alert(`Searching for: ${query}`);
               }}
             >
-              <Search className="w-7 h-7 hover:text-green-400 cursor-pointer" />
+              <Search className="w-7 h-7  text-white hover:text-green-400 cursor-pointer" />
             </button>
             <ScrollLink to="contact" smooth={true} duration={500}>
               <Button className="bg-green-400 hover:bg-green-400 hidden lg:flex">

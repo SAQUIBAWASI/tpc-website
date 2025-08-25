@@ -9,6 +9,7 @@ import HeroSection from '@/components/HeroSection';
 import History from '@/components/History';
 import ServicesSection from '@/components/ServicesSection';
 import Testimonial from '@/components/Testimonial';
+import Location from '@/components/location';
 
 export default function Index() {
   return (
@@ -22,6 +23,7 @@ export default function Index() {
       <Gallery />
       <History />
       <Blogs />
+      <Location />
        <ContactSection />
       <Footer />
     </div>

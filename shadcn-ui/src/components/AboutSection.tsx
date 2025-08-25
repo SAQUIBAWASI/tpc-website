@@ -140,7 +140,7 @@ export default function AboutSection() {
             {companies.map((c, idx) => (
               <SwiperSlide key={idx}>
                 <div className="flex justify-center">
-                  <div className="bg-black shadow-md rounded-lg p-6 w-52 h-28 flex items-center justify-center">
+                  <div className="bg-green-400 shadow-md rounded-lg p-10 w-52 h-20 flex items-center justify-center">
                     <img
                       src={c.logo}
                       alt={c.name}

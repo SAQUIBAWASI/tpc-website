@@ -13,48 +13,56 @@ export default function AiDevelopment() {
   }, []);
 
   return (
-    <div className="bg-black text-white">
+    <div className="bg-black text-white font-sans">
       <Header />
 
-      <main className="pt-24">
+      <main className="pt-10">
         {/* ================= HERO ================= */}
-        <section className="relative overflow-hidden">
-          {/* orange side bars */}
-          <div className="hidden md:block absolute inset-y-0 left-0 w-[12vw] bg-[#22c55e]" />
-          <div className="hidden md:block absolute inset-y-0 right-0 w-[12vw] bg-[#22c55e]" />
+        <section className="relative overflow-hidden bg-gradient-to-r from-green-500/10 to-purple-700/10">
+          {/* Glow background */}
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(34,197,94,0.15),transparent_50%),radial-gradient(circle_at_bottom_right,rgba(168,85,247,0.15),transparent_50%)]" />
 
-          {/* center content */}
-          <div className="relative z-10 max-w-6xl mx-auto px-6 py-16">
+          {/* Content */}
+          <div className="relative z-10 max-w-7xl mx-auto px-6 py-20 text-center">
             <motion.h1
-              className="text-center leading-tight font-extrabold text-white text-4xl md:text-6xl lg:text-4xl mb-8 drop-shadow-[0_2px_8px_rgba(0,0,0,0.6)]"
+              className="text-4xl md:text-6xl font-extrabold leading-tight bg-clip-text text-transparent bg-gradient-to-r from-green-400 to-purple-400 drop-shadow-lg"
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              AI Development
+              Next-Gen AI Development
               <br />
-              Solutions for Businesses
+              For Future-Ready Businesses
             </motion.h1>
 
-            {/* hero image */}
-            <div className="flex justify-center">
-              <img
-                src="/images/AI.jpg"
-                alt="AI Development"
-                className="w-full md:w-4/5 rounded-xl shadow-2xl border border-gray-800"
-              />
-            </div>
+            <motion.p
+              className="mt-6 text-lg md:text-xl text-gray-300 max-w-2xl mx-auto"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+            >
+              Harness the power of AI with cutting-edge solutions in Machine Learning, NLP, and Automation to accelerate innovation.
+            </motion.p>
+
+            <motion.img
+              src="/images/AI.jpg"
+              alt="AI Development"
+              className="mt-5 w-full md:w-2/4 lg:w-2/3 mx-auto rounded-2xl shadow-2xl border border-gray-700"
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.7, delay: 0.3 }}
+            />
           </div>
         </section>
 
         {/* ================= STATS ================= */}
-        <section className="bg-black py-14 border-t border-gray-800">
+         <section className="bg-black py-14 border-t border-gray-800">
           <div className="max-w-6xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-10 text-center">
             {[
-              { value: "200+", label: "AI Projects Delivered" },
-              { value: "15+", label: "Industries Served" },
-              { value: "98%", label: "Client Satisfaction" },
-              { value: "24/7", label: "AI Support" },
+              { value: "800+", label: "Successful Campaigns" },
+              { value: "1000+", label: "Leads Generated" },
+              { value: "10+", label: "Years of Experience" },
+              { value: "50+", label: "Digital Experts" },
             ].map((s, i) => (
               <motion.div
                 key={s.label}
@@ -69,22 +77,46 @@ export default function AiDevelopment() {
             ))}
           </div>
         </section>
+         {/* ================= AI NEW FEATURES ================= */}
+<section className="bg-black py-20">
+<div className="max-w-7xl mx-auto px-6">
+<h2 className="text-3xl md:text-4xl font-bold text-center mb-12 bg-clip-text text-transparent bg-gradient-to-r from-green-400 to-purple-400">
+Cutting-Edge AI Features
+</h2>
+<div className="grid md:grid-cols-3 gap-10">
+{[
+{ title: "Generative AI", desc: "Create text, images, and insights automatically with advanced generative AI models." },
+{ title: "Predictive Analytics", desc: "Forecast trends and customer behaviors using intelligent prediction systems." },
+{ title: "AI Personalization", desc: "Deliver tailored experiences for every user with dynamic AI-driven personalization." },
+].map((f, i) => (
+<motion.div
+key={i}
+className="p-6 rounded-xl bg-gradient-to-br from-green-500/10 to-purple-500/10 hover:scale-105 transition-transform shadow-xl"
+initial={{ opacity: 0, y: 20 }}
+whileInView={{ opacity: 1, y: 0 }}
+transition={{ duration: 0.5, delay: i * 0.2 }}
+viewport={{ once: true }}
+>
+<h3 className="text-xl font-semibold mb-4 text-green-400">{f.title}</h3>
+<p className="text-gray-300 leading-7">{f.desc}</p>
+</motion.div>
+))}
+</div>
+</div>
+</section>
 
         {/* ================= ABOUT AI ================= */}
-        <section className="bg-[#5f8686] text-white py-16">
-          <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-center">
+        <section className="bg-gradient-to-r from-green-600/20 to-purple-800/20 py-20">
+          <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <p className="text-lg leading-8">
-                At <span className="font-semibold text-green-300">Patterns</span>, we
-                design intelligent AI solutions with{" "}
-                <span className="text-green-300">Machine Learning, NLP</span>, and{" "}
-                <span className="text-green-300">Automation</span> that enhance business
-                efficiency and decision-making.
+              <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-green-400 to-purple-400">
+                Transforming Businesses with AI
+              </h2>
+              <p className="text-lg leading-8 text-gray-200">
+                At <span className="text-green-400 font-semibold">Patterns</span>, we craft intelligent AI systems integrating <span className="text-green-300">Machine Learning, NLP, and Automation</span> to streamline workflows and unlock new growth opportunities.
               </p>
-              <p className="text-lg leading-8 mt-6">
-                From smart chatbots to predictive analytics, our team of AI engineers
-                integrates advanced algorithms into your workflows—unlocking
-                productivity, accuracy, and growth opportunities.
+              <p className="text-lg leading-8 text-gray-200 mt-6">
+                From predictive analytics to smart virtual assistants, our AI solutions bring futuristic capabilities to your business operations.
               </p>
             </div>
 
@@ -100,55 +132,43 @@ export default function AiDevelopment() {
           </div>
         </section>
 
-        {/* ================= SERVICES: Machine Learning ================= */}
-        <section className="bg-[#e6773d] text-white">
-          <div className="max-w-7xl mx-auto px-6 py-20 grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-3xl md:text-4xl font-extrabold mb-6">
-                <span className="border-b-4 border-black/60 pb-1">
-                  Machine Learning
-                </span>
-              </h2>
-              <p className="leading-8 text-white/95">
-                We build ML-powered systems that learn from your business data and
-                provide insights to optimize operations. From recommendation engines to
-                fraud detection, our ML models adapt and evolve with your business
-                needs.
-              </p>
+        {/* ================= SERVICES ================= */}
+        <section className="bg-black py-20 space-y-24">
+          {[{
+            title: "Machine Learning",
+            desc: "ML-driven systems that analyze your data, generate insights, and evolve with your business for smarter decision-making.",
+            img: "/images/ai3.jpg",
+            reverse: false,
+            color: "from-green-500/20 to-green-700/10"
+          }, {
+            title: "AI Chatbots",
+            desc: "Conversational AI bots powered by NLP to automate customer interactions and enhance user experience 24/7.",
+            img: "/images/ai2.jpg",
+            reverse: true,
+            color: "from-purple-500/20 to-purple-700/10"
+          }].map((s, i) => (
+            <div key={i} className={`max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center ${s.reverse ? 'md:flex-row-reverse' : ''}`}>
+              <motion.img
+                src={s.img}
+                alt={s.title}
+                className="rounded-xl shadow-2xl w-full object-cover"
+                initial={{ opacity: 0, x: s.reverse ? 50 : -50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+              />
+              <div>
+                <h2 className={`text-3xl md:text-4xl font-extrabold mb-6 bg-clip-text text-transparent bg-gradient-to-r ${s.color}`}>
+                  {s.title}
+                </h2>
+                <p className="leading-8 text-gray-300">{s.desc}</p>
+              </div>
             </div>
-
-            <img
-              src="/images/ai3.jpg"
-              alt="Machine Learning"
-              className="rounded-xl shadow-xl w-full object-cover"
-            />
-          </div>
-        </section>
-
-        {/* ================= SERVICES: Chatbots ================= */}
-        <section className="bg-[#3f5bf6] text-white">
-          <div className="max-w-7xl mx-auto px-6 py-20 grid md:grid-cols-2 gap-12 items-center">
-            <img
-              src="/images/ai2.jpg"
-              alt="AI Chatbots"
-              className="rounded-xl shadow-xl w-full object-cover"
-            />
-            <div>
-              <h2 className="text-3xl md:text-4xl font-extrabold mb-6">
-                <span className="border-b-4 border-green-300 pb-1">AI Chatbots</span>
-              </h2>
-              <p className="leading-8 text-white/95">
-                Automate customer interactions with natural language processing-based
-                chatbots. Provide instant responses, reduce workload, and increase
-                customer satisfaction with our intelligent virtual assistants.
-              </p>
-            </div>
-          </div>
+          ))}
         </section>
       </main>
 
-      {/* ================ Floating Buttons ================= */}
-      {/* WhatsApp */}
+      {/* Floating WhatsApp Button */}
       <a
         href="https://wa.me/91837416160?text=Hello%2C%20I%27m%20interested%20in%20AI%20Development"
         className="fixed bottom-6 right-6 z-50 inline-flex items-center justify-center w-14 h-14 rounded-full bg-green-500 hover:bg-green-600 shadow-xl focus:outline-none"
@@ -160,7 +180,7 @@ export default function AiDevelopment() {
         </svg>
       </a>
 
-      {/* Scroll to top */}
+      {/* Scroll to Top */}
       {showTop && (
         <button
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}

@@ -198,18 +198,18 @@ export default function Products() {
           inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
         }`}
       >
-        <h1 className="font-display text-6xl sm:text-6xl md:text-5xl">Our Services</h1>
+        <h1 className="text-4xl md:text-5xl font-bold">Our Services</h1>
         <p className="mt-3 md:mt-4 text-muted-foreground">
           Explore our lineup of technology and marketing services to grow your business.
         </p>
       </div>
 
       {/* Cards */}
-      <div className="mt-12 md:mt-20 space-y-12 md:space-y-18 max-w-8xl mx-auto px-4">
+      <div className="mt-12 md:mt-20 space-y-12 md:space-y-18 max-w-7xl mx-auto px-4">
         <DroneCard
           title="App Development"
           subtitle="Mobile App"
-          description="Custom mobile applications designed for scalability, performance, and great user experience."
+          description="Transforming ideas into seamless digital solutions through expert app development Services in Hyderabad at Patterns Company. "
           specs={[
             { label: "Delivery time", value: "3", unit: "months" },
             { label: "Team size", value: "5", unit: "devs" }
@@ -222,7 +222,7 @@ export default function Products() {
         <DroneCard
           title="Web Development"
           subtitle="Website Development"
-          description="Responsive and SEO-friendly websites tailored to your business needs."
+          description="Patterns Company specializes in delivering bespoke Web Development Services In Hyderabad tailored to your unique needs and aspirations. "
           specs={[
             { label: "Delivery time", value: "2", unit: "months" },
             { label: "Pages included", value: "10", unit: "+" }

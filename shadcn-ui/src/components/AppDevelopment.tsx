@@ -16,7 +16,7 @@ export default function AppDevelopment() {
     <div className="bg-black text-white">
       <Header />
 
-      <main className="pt-24">
+      <main className="pt-10">
         {/* ================= HERO (orange side bars + black center) ================= */}
         <section className="relative overflow-hidden">
           {/* orange side bars */}
@@ -41,7 +41,7 @@ export default function AppDevelopment() {
               <img
                 src="/images/App-Dev.jpg"
                 alt="App Dev Mockup"
-                className="w-full md:w-4/5 rounded-xl shadow-2xl border border-gray-800"
+                className="w-full md:w-2/5 rounded-xl shadow-2xl border border-gray-800"
               />
             </div>
           </div>

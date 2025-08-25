@@ -1,4 +1,4 @@
-import LocationSection from "@/components/Footer";
+import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import { motion } from "framer-motion";
 
@@ -11,7 +11,7 @@ export default function AboutUs() {
         {/* ===== HERO SECTION ===== */}
         <section className="relative">
           <img
-            src="/images/handshake.jpg"
+            src="/images/aboutus.jpg"
             alt="About Us Banner"
             className="w-full h-[400px] object-cover"
           />
@@ -51,13 +51,54 @@ export default function AboutUs() {
           </div>
         </section>
 
-        {/* ===== ABOUT CONTENT ===== */}
+        {/* ===== ABOUT US WITH ROBOT ===== */}
+        <section className="bg-gray-100 text-black py-20">
+          <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+            <motion.img
+              src="/images/robo.png"
+              alt="Robot"
+              className="w-full rounded-xl shadow-xl"
+              initial={{ opacity: 0, x: -40 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+            />
+            <div>
+              <h2 className="text-3xl font-bold text-green-600 mb-6">About Us</h2>
+              <p className="text-gray-700 leading-relaxed">
+                At Patterns Company, we make digital transformation simple and
+                excellent. For over five years, we've been experts in digital
+                marketing, websites, and social media. We create custom solutions
+                so your brand stands out and connects with people.
+              </p>
+              <p className="text-gray-700 mt-6 leading-relaxed">
+                Our goal at Patterns goes beyond providing a service; it’s a
+                social journey to your success. With more than five years of
+                hands-on experience, we empower businesses to thrive in the
+                digital landscape.
+              </p>
+            </div>
+          </div>
+        </section>
+        {/* ===== DIGITAL MARKETING AGENCY SECTION ===== */}
+        <section className="bg-black text-white py-20">
+          <div className="max-w-7xl mx-auto px-6">
+            <h2 className="text-4xl font-bold text-center mb-12">
+              Top Digital Marketing Agency in Hyderabad
+            </h2>
+            <img
+              src="/images/patterns11.jpg"
+              alt="Digital Marketing Agency"
+              className="w-full rounded-xl shadow-xl"
+            />
+          </div>
+        </section>
+      </main>
+        {/* ===== WHO WE ARE ===== */}
         <section className="bg-[#0e1a1a] py-16">
           <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">
-                Who We Are
-              </h2>
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">Who We Are</h2>
               <p className="text-gray-300 leading-relaxed">
                 We are a team of passionate innovators committed to transforming
                 businesses through technology. Over the years, we’ve worked with
@@ -82,7 +123,19 @@ export default function AboutUs() {
             />
           </div>
         </section>
-      </main>
+
+        {/* ===== OUR 6-D PROCESS ===== */}
+        <section className="bg-white text-black py-20">
+          <div className="max-w-7xl mx-auto px-6 text-center">
+            <h2 className="text-4xl font-bold mb-12">Our 6-D Process</h2>
+            <img
+              src="/images/3055a8b9-f23c-4c4f-a828-c8e408f66c5e.png"
+              alt="Our 6-D Process"
+              className="mx-auto rounded-xl shadow-lg"
+            />
+          </div>
+        </section>
+
 
       {/* ===== Floating WhatsApp Button ===== */}
       <a
@@ -101,7 +154,8 @@ export default function AboutUs() {
         </svg>
       </a>
 
-      <LocationSection />
+      {/* ===== FOOTER ===== */}
+      <Footer />
     </div>
   );
 }

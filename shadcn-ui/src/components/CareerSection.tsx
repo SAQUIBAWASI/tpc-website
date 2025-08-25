@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-
+import { Link } from "react-router-dom";
 export default function CareersSection() {
   return (
     <section id="career"className="bg-white text-green-400 py-16">
@@ -30,9 +30,11 @@ export default function CareersSection() {
         <h3 className="text-2xl font-semibold mb-6">
           Find Opportunities For You
         </h3>
-        <Button className="bg-green-400 hover:bg-green-400 text-white text-lg px-6 py-3 rounded-lg">
-          Explore Careers
-        </Button>
+        <Link to="/careers">
+          <Button className="bg-green-400 hover:bg-green-400 text-white text-lg px-6 py-3 rounded-lg">
+            Explore Careers
+          </Button>
+        </Link>
       </div>
     </section>
   );
