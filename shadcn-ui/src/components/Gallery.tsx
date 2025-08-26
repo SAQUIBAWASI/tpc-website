@@ -54,22 +54,22 @@ export default function TeamSection() {
   return (
     <>
       {/* Team Section */}
-<section id="gallery" className="py-20 bg-[#7ED957]">
-  <div className="container mx-auto px-6">
-    {/* Title */}
-    <div className="text-center mb-12">
-      <h2 className="text-4xl font-extrabold text-white mb-4">
-        Meet Our <span className="text-yellow-300">Expert Team</span>
-      </h2>
-      <p className="text-gray-100 max-w-2xl mx-auto">
-        A passionate group of innovators, designers, developers, and
-        strategists working together to build exceptional digital
-        experiences.
-      </p>
-    </div>
+      <section id="gallery" className="py-20 bg-[#7ED957]">
+        <div className="container mx-auto px-6">
+          {/* Title */}
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-extrabold text-white mb-4">
+              Meet Our <span className="text-yellow-300">Expert Team</span>
+            </h2>
+            <p className="text-gray-100 max-w-2xl mx-auto">
+              A passionate group of innovators, designers, developers, and
+              strategists working together to build exceptional digital
+              experiences.
+            </p>
+          </div>
 
-          {/* Team Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10">
+          {/* ✅ Team Grid (2 columns on mobile) */}
+          <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10">
             {teamMembers.map((member, index) => (
               <div
                 key={index}
@@ -101,33 +101,32 @@ export default function TeamSection() {
             Expertise in all Major Platforms
           </h2>
 
-         {/* Swiper Carousel */}
-<Swiper
-  modules={[Autoplay]}
-  spaceBetween={30}
-  slidesPerView={3}
-  loop={true}
-  autoplay={{ delay: 2000, disableOnInteraction: false }}
-  breakpoints={{
-    640: { slidesPerView: 2 },
-    768: { slidesPerView: 3 },
-    1024: { slidesPerView: 4 },
-  }}
-  className="pb-10"
->
-  {partners.map((partner, index) => (
-    <SwiperSlide key={index}>
-      <div className="bg-white rounded-xl shadow-md p-6 flex items-center justify-center h-32">
-        <img
-          src={partner.logo}
-          alt={partner.name}
-          className="max-h-20 object-contain"
-        />
-      </div>
-    </SwiperSlide>
-  ))}
-</Swiper>
-
+          {/* ✅ Swiper Carousel */}
+          <Swiper
+            modules={[Autoplay]}
+            spaceBetween={30}
+            slidesPerView={2} // ✅ default 2 (for mobile)
+            loop={true}
+            autoplay={{ delay: 2000, disableOnInteraction: false }}
+            breakpoints={{
+              640: { slidesPerView: 2 },
+              768: { slidesPerView: 3 },
+              1024: { slidesPerView: 4 },
+            }}
+            className="pb-10"
+          >
+            {partners.map((partner, index) => (
+              <SwiperSlide key={index}>
+                <div className="bg-white rounded-xl shadow-md p-6 flex items-center justify-center h-32">
+                  <img
+                    src={partner.logo}
+                    alt={partner.name}
+                    className="max-h-20 object-contain"
+                  />
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
         </div>
       </section>
     </>
