@@ -16,7 +16,10 @@ import AIDevelopment from '@/components/AiDevelopment';
 import AppDevelopment from '@/components/AppDevelopment';
 import CareerDetails from '@/components/CareerDetails';
 import DigitalMarketing from '@/components/DigitalMarketing';
+import ECommerce from '@/components/ECommerce';
 import Gallery from "@/components/Gallery";
+import GoogleAds from '@/components/GoogleAds';
+import GraphicDesigning from '@/components/GraphicDesigning';
 import ServicesSection from "@/components/ServicesSection";
 import WebDevelopment from '@/components/WebDevelopment';
 
@@ -45,7 +48,11 @@ const App = () => (
           <Route path="/web-development" element={<WebDevelopment />} />
           <Route path="/digital-marketing" element={<DigitalMarketing />} />
           <Route path="/ai-development" element={<AIDevelopment />} />
+          <Route path="/e-commerce" element={<ECommerce />} />
+          <Route path="/google-ads" element={<GoogleAds />} />
+          <Route path="/graphic-designing" element={<GraphicDesigning />} />
           <Route path="/careers" element={<CareerDetails />} />
+          
 
         </Routes>
       </BrowserRouter>
