@@ -27,7 +27,7 @@ export default function Header() {
     { name: "Digital Marketing", href: "/digital-marketing", isPage: true },
     { name: "AI Development", href: "/ai-development", isPage: true },
     { name: "E-Commerce", href: "/e-commerce", isPage: true },
-    { name: "Graphics Designing", href: "/graphics-designing", isPage: true },
+    { name: "Graphics Designing", href: "/graphic-designing", isPage: true },
     { name: "Google Ads", href: "/google-ads", isPage: true },
   ];
 
