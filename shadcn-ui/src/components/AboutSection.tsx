@@ -119,40 +119,7 @@ export default function AboutSection() {
       </div>
 
       {/* ✅ Trusted Companies Carousel */}
-      <div className="max-w-7xl mx-auto flex items-center px-4 mt-20">
-        {/* Left text */}
-        <div className="w-1/4 pr-6 hidden md:block">
-          <h3 className="text-xl font-bold text-gray-800 leading-snug">
-            Trusted by <br /> Top Companies
-          </h3>
-        </div>
-
-        {/* Carousel */}
-        <div className="w-full md:w-3/4">
-          <Swiper
-            modules={[Autoplay]}
-            spaceBetween={30}
-            slidesPerView={3}
-            autoplay={{ delay: 3000 }}
-            loop
-            className="flex items-center"
-          >
-            {companies.map((c, idx) => (
-              <SwiperSlide key={idx}>
-                <div className="flex justify-center">
-                  <div className="bg-green-400 shadow-md rounded-lg p-10 w-52 h-20 flex items-center justify-center">
-                    <img
-                      src={c.logo}
-                      alt={c.name}
-                      className="max-h-16 object-contain"
-                    />
-                  </div>
-                </div>
-              </SwiperSlide>
-            ))}
-          </Swiper>
-        </div>
-      </div>
+     
     </section>
   );
 }

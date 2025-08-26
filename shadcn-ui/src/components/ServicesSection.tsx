@@ -244,20 +244,6 @@ export default function Products() {
           bgColor="bg-[#e7c132]"
           link="/digital-marketing"   // ✅ updated
         />
-
-        <DroneCard
-          title="AI Development"
-          subtitle="SMM"
-          description="Boost your brand presence with engaging social media strategies and content."
-          specs={[
-            { label: "Platforms", value: "6", unit: "+" },
-            { label: "Engagement rate", value: "25", unit: "%" }
-          ]}
-          img={SMM_IMG}
-          bgColor="bg-[#4dc7ff]"
-          link="/ai-development"   // ✅ updated
-        />
-
         <DroneCard
           title="Search Engine Optimization"
           subtitle="SEO"
@@ -269,6 +255,19 @@ export default function Products() {
           img={SEO_IMG}
           bgColor="bg-[#9b59b6]"
           link="/seo"   // ✅ updated
+        />
+
+           <DroneCard
+          title="AI Development"
+          subtitle="SMM"
+          description="Boost your brand presence with engaging social media strategies and content."
+          specs={[
+            { label: "Platforms", value: "6", unit: "+" },
+            { label: "Engagement rate", value: "25", unit: "%" }
+          ]}
+          img={SMM_IMG}
+          bgColor="bg-[#4dc7ff]"
+          link="/ai-development"   // ✅ updated
         />
       </div>
 

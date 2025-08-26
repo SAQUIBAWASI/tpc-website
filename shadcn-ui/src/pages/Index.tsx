@@ -18,13 +18,14 @@ export default function Index() {
       <HeroSection />
       <ServicesSection />
       <AboutSection />
+      <Gallery />
       <Testimonial />
       <CareersSection />
-      <Gallery />
-      <History />
+      
+      {/* <History /> */}
       <Blogs />
       <Location />
-       <ContactSection />
+       {/* <ContactSection /> */}
       <Footer />
     </div>
   );

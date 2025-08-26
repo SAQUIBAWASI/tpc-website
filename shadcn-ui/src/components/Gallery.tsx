@@ -28,26 +28,15 @@ const teamMembers = [
 ];
 
 const partners = [
-  {
-    name: "NitroPack",
-    logo: "https://nitropack.io/images/logo-dark.svg",
-  },
-  {
-    name: "WordPress",
-    logo: "https://s.w.org/style/images/about/WordPress-logotype-wmark.png",
-  },
-  {
-    name: "AWS Certified",
-    logo: "https://d1.awsstatic.com/training-and-certification/Certification%20Badges/AWS-Certified-logo_horiz_RGB.9d022c1d30f03e3f2dbb3c9f883f0d51f9939e4a.png",
-  },
-  {
-    name: "Dreamscape Networks",
-    logo: "https://seeklogo.com/images/D/dreamscape-logo-BD5083C5E7-seeklogo.com.png",
-  },
-  {
-    name: "Google Workspace",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/5/5f/Google_Workspace_Logo.svg",
-  },
+  { name: "HTML5", logo: "https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg" },
+  { name: "CSS3", logo: "https://upload.wikimedia.org/wikipedia/commons/6/62/CSS3_logo.svg" },
+  { name: "JavaScript", logo: "https://upload.wikimedia.org/wikipedia/commons/9/99/Unofficial_JavaScript_logo_2.svg" },
+  { name: "React", logo: "https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" },
+  { name: "Node.js", logo: "https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg" },
+  { name: "WordPress", logo: "https://s.w.org/style/images/about/WordPress-logotype-wmark.png" },
+  { name: "GoDaddy", logo: "https://upload.wikimedia.org/wikipedia/commons/3/3a/GoDaddy_logo.svg" },
+  { name: "Cloudflare", logo: "https://upload.wikimedia.org/wikipedia/commons/6/6b/Cloudflare_Logo.png" },
+  { name: "Vercel", logo: "https://upload.wikimedia.org/wikipedia/commons/a/a1/Vercel_logo_black.svg" },
 ];
 
 export default function TeamSection() {
