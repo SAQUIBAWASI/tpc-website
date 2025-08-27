@@ -2,6 +2,8 @@ import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import {
   ArrowRight,
+  Brush // ✅ Branding icon
+  ,
   Code2,
   Globe,
   Minus,
@@ -21,6 +23,7 @@ const WEB_DEV_IMG = "/images/Web-Dev.jpeg";
 const DIGITAL_MARKETING_IMG = "/images/Digital-marketing.jpg";
 const SMM_IMG = "/images/AI.jpg";
 const SEO_IMG = "/images/Seo.jpg";
+const BRANDING_IMG = "/images/Branding.jpg";  // ✅ new
 
 function Spec({ label, value, unit }: { label: string; value: string; unit?: string }) {
   return (
@@ -152,6 +155,7 @@ function ServicesStrip() {
     { name: "ECOMMERCE DEVELOPMENT", icon: <Store className="w-8 h-8" /> },
     { name: "SOFTWARE DEVELOPMENT", icon: <Code2 className="w-8 h-8" /> },
     { name: "SHOPIFY DEVELOPMENT", icon: <ShoppingBag className="w-8 h-8" /> },
+    { name: "BRANDING", icon: <Brush className="w-8 h-8" /> },  // ✅ new branding
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -164,7 +168,7 @@ function ServicesStrip() {
     return () => clearInterval(interval);
   }, [services.length]);
 
-  // Show 3 at a time
+  // Show 4 at a time
   const visibleServices = [
     services[currentIndex],
     services[(currentIndex + 1) % services.length],
@@ -216,7 +220,7 @@ export default function Products() {
           ]}
           img={APP_DEV_IMG}
           bgColor="bg-[#ff6b01]"
-          link="/app-development"   // ✅ updated
+          link="/app-development"
         />
 
         <DroneCard
@@ -229,7 +233,7 @@ export default function Products() {
           ]}
           img={WEB_DEV_IMG}
           bgColor="bg-[#A8EB66]"
-          link="/web-development"   // ✅ updated
+          link="/web-development"
         />
 
         <DroneCard
@@ -242,8 +246,9 @@ export default function Products() {
           ]}
           img={DIGITAL_MARKETING_IMG}
           bgColor="bg-[#e7c132]"
-          link="/digital-marketing"   // ✅ updated
+          link="/digital-marketing"
         />
+
         <DroneCard
           title="Search Engine Optimization"
           subtitle="SEO"
@@ -254,10 +259,10 @@ export default function Products() {
           ]}
           img={SEO_IMG}
           bgColor="bg-[#9b59b6]"
-          link="/seo"   // ✅ updated
+          link="/seo"
         />
 
-           <DroneCard
+        <DroneCard
           title="AI Development"
           subtitle="SMM"
           description="Boost your brand presence with engaging social media strategies and content."
@@ -267,7 +272,21 @@ export default function Products() {
           ]}
           img={SMM_IMG}
           bgColor="bg-[#4dc7ff]"
-          link="/ai-development"   // ✅ updated
+          link="/ai-development"
+        />
+
+        {/* ✅ New Branding Card */}
+        <DroneCard
+          title="Branding"
+          subtitle="Creative Branding"
+          description="Build a strong and memorable identity for your business with our expert branding solutions, from logo design to complete brand strategy."
+          specs={[
+            { label: "Brand projects", value: "50", unit: "+" },
+            { label: "Satisfaction rate", value: "98", unit: "%" }
+          ]}
+          img={BRANDING_IMG}
+          bgColor="bg-[#f39c12]"
+          link="/branding"
         />
       </div>
 
