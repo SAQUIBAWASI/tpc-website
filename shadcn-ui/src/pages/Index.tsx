@@ -23,6 +23,7 @@ export default function Index() {
       <CareersSection />
       
       {/* <History /> */}
+      
       <Blogs />
       <Location />
        {/* <ContactSection /> */}

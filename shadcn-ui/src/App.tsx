@@ -22,6 +22,9 @@ import GoogleAds from '@/components/GoogleAds';
 import GraphicDesigning from '@/components/GraphicDesigning';
 import ServicesSection from "@/components/ServicesSection";
 import WebDevelopment from '@/components/WebDevelopment';
+import About from './components/About';
+import Job from './components/Careers';
+import Blog from "./components/Blog";
 
 
 
@@ -41,9 +44,9 @@ const App = () => (
 
           {/* ✅ Services Routes */}
 
-        <Route path="/services" element={<ServicesSection />} />
-        <Route path="/gallery" element={<Gallery />} />
-        <Route path="/about-us" element={<AboutUs />} />
+          <Route path="/services" element={<ServicesSection />} />
+          <Route path="/gallery" element={<Gallery />} />
+          <Route path="/about-us" element={<AboutUs />} />
           <Route path="/app-development" element={<AppDevelopment />} />
           <Route path="/web-development" element={<WebDevelopment />} />
           <Route path="/digital-marketing" element={<DigitalMarketing />} />
@@ -52,7 +55,14 @@ const App = () => (
           <Route path="/google-ads" element={<GoogleAds />} />
           <Route path="/graphic-designing" element={<GraphicDesigning />} />
           <Route path="/careers" element={<CareerDetails />} />
+          <Route path="/about" element={<About/>}/>
+          <Route path="/career" element={<Job />} />
+          <Route path="/blog" element={<Blog />} />
           
+        
+        
+          
+
 
         </Routes>
       </BrowserRouter>

@@ -121,7 +121,7 @@ viewport={{ once: true }}
             </div>
 
             <motion.img
-              src="/images/ai2.jpg"
+              src="/images/ai-img.jpg"
               alt="AI Illustration"
               className="rounded-xl shadow-2xl w-full object-cover"
               initial={{ opacity: 0, scale: 0.96 }}
@@ -133,17 +133,17 @@ viewport={{ once: true }}
         </section>
 
         {/* ================= SERVICES ================= */}
-        <section className="bg-black py-20 space-y-24">
+        <section className="bg-black py-20 space-y-24 h-200px">
           {[{
             title: "Machine Learning",
             desc: "ML-driven systems that analyze your data, generate insights, and evolve with your business for smarter decision-making.",
-            img: "/images/ai3.jpg",
+            img: "/images/machine-learning.jpg",
             reverse: false,
             color: "from-green-500/20 to-green-700/10"
           }, {
             title: "AI Chatbots",
             desc: "Conversational AI bots powered by NLP to automate customer interactions and enhance user experience 24/7.",
-            img: "/images/ai2.jpg",
+            img: "/images/aI-chatbots.jpg ",
             reverse: true,
             color: "from-purple-500/20 to-purple-700/10"
           }].map((s, i) => (

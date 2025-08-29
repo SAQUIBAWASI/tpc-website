@@ -1,24 +1,21 @@
 import { Button } from "@/components/ui/button";
 import { Menu, MessageCircle, Phone, Search, X } from "lucide-react";
 import { useRef, useState } from "react";
-import { Link as RouterLink, useLocation } from "react-router-dom";
-import { Link as ScrollLink } from "react-scroll";
+import { Link as RouterLink } from "react-router-dom";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isServicesOpen, setIsServicesOpen] = useState(false);
-  const timeoutRef = useRef<NodeJS.Timeout | null>(null);
-
-  const location = useLocation(); // ✅ current route track karne ke liye
+  const [isServicesOpen, setIsServicesOpen] = useState(false)
+  const timeoutRef = useRef(null);
 
   const navItems = [
-    { name: "Home", href: "herosection" },
-    { name: "Services", href: "services" },
-    { name: "About", href: "about" },
-    { name: "Career", href: "career" },
-    { name: "Gallery", href: "gallery" },
-    { name: "Blogs", href: "blogs" },
-    { name: "Contact", href: "contact" },
+    { name: "Home", href: "/", isPage: true },
+    { name: "Services", href: "" },
+    { name: "AboutUs", href: "/about", isPage: true },
+    { name: "Career", href: "/career", isPage: true },
+    { name: "Gallery", href: "/gallery", isPage: true },
+    { name: "Blog", href: "/blog", isPage: true },
+    { name: "Contact", href: "/contact", isPage: true },
   ];
 
   const serviceItems = [
@@ -64,22 +61,17 @@ export default function Header() {
                   item.name === "Services" && handleServicesLeave()
                 }
               >
-                {location.pathname === "/" ? (
-                  <ScrollLink
-                    to={item.href}
-                    smooth={true}
-                    duration={500}
-                    className="hover:text-green-400 transition-colors cursor-pointer"
-                  >
-                    {item.name}
-                  </ScrollLink>
-                ) : (
+                {item.isPage ? (
                   <RouterLink
-                    to={`/#${item.href}`}
+                    to={item.href}
                     className="hover:text-green-400 transition-colors"
                   >
                     {item.name}
                   </RouterLink>
+                ) : (
+                  <span className="hover:text-green-400 cursor-pointer">
+                    {item.name}
+                  </span>
                 )}
 
                 {/* ✅ Services Dropdown */}
@@ -89,29 +81,16 @@ export default function Header() {
                     onMouseEnter={handleServicesEnter}
                     onMouseLeave={handleServicesLeave}
                   >
-                    {serviceItems.map((service) =>
-                      service.isPage ? (
-                        <RouterLink
-                          key={service.name}
-                          to={service.href}
-                          className="block px-4 py-2 cursor-pointer hover:bg-green-100 hover:text-green-400"
-                          onClick={() => setIsServicesOpen(false)}
-                        >
-                          {service.name}
-                        </RouterLink>
-                      ) : (
-                        <ScrollLink
-                          key={service.name}
-                          to={service.href}
-                          smooth={true}
-                          duration={500}
-                          className="block px-4 py-2 cursor-pointer hover:bg-green-100 hover:text-green-400"
-                          onClick={() => setIsServicesOpen(false)}
-                        >
-                          {service.name}
-                        </ScrollLink>
-                      )
-                    )}
+                    {serviceItems.map((service) => (
+                      <RouterLink
+                        key={service.name}
+                        to={service.href}
+                        className="block px-4 py-2 hover:bg-green-100 hover:text-green-400"
+                        onClick={() => setIsServicesOpen(false)}
+                      >
+                        {service.name}
+                      </RouterLink>
+                    ))}
                   </div>
                 )}
               </div>
@@ -121,7 +100,7 @@ export default function Header() {
           {/* ✅ Right Section */}
           <div className="flex items-center space-x-6">
             <a href="tel:+15551234567">
-              <Phone className="w-7 h-7  text-white hover:text-green-400 cursor-pointer" />
+              <Phone className="w-7 h-7 text-white hover:text-green-400 cursor-pointer" />
             </a>
             <a
               href="https://wa.me/15551234567"
@@ -136,13 +115,14 @@ export default function Header() {
                 if (query) alert(`Searching for: ${query}`);
               }}
             >
-              <Search className="w-7 h-7  text-white hover:text-green-400 cursor-pointer" />
+              <Search className="w-7 h-7 text-white hover:text-green-400 cursor-pointer" />
             </button>
-            <ScrollLink to="contact" smooth={true} duration={500}>
+
+            <RouterLink to="/contact">
               <Button className="bg-green-400 hover:bg-green-400 hidden lg:flex">
                 Get Quote
               </Button>
-            </ScrollLink>
+            </RouterLink>
 
             {/* ✅ Mobile Menu Toggle */}
             <button
@@ -163,26 +143,22 @@ export default function Header() {
       {isMenuOpen && (
         <div className="md:hidden bg-black text-white px-6 py-4 space-y-4">
           {navItems.map((item) =>
-            location.pathname === "/" ? (
-              <ScrollLink
-                key={item.name}
-                to={item.href}
-                smooth={true}
-                duration={500}
-                className="block py-2 text-lg hover:text-green-400"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                {item.name}
-              </ScrollLink>
-            ) : (
+            item.isPage ? (
               <RouterLink
                 key={item.name}
-                to={`/#${item.href}`}
+                to={item.href}
                 className="block py-2 text-lg hover:text-green-400"
                 onClick={() => setIsMenuOpen(false)}
               >
                 {item.name}
               </RouterLink>
+            ) : (
+              <span
+                key={item.name}
+                className="block py-2 text-lg hover:text-green-400"
+              >
+                {item.name}
+              </span>
             )
           )}
 
@@ -190,29 +166,16 @@ export default function Header() {
           <div className="mt-2">
             <p className="text-green-400 font-semibold">Services</p>
             <div className="pl-4 mt-2 space-y-2">
-              {serviceItems.map((service) =>
-                service.isPage ? (
-                  <RouterLink
-                    key={service.name}
-                    to={service.href}
-                    className="block py-1 hover:text-green-400"
-                    onClick={() => setIsMenuOpen(false)}
-                  >
-                    {service.name}
-                  </RouterLink>
-                ) : (
-                  <ScrollLink
-                    key={service.name}
-                    to={service.href}
-                    smooth={true}
-                    duration={500}
-                    className="block py-1 hover:text-green-400"
-                    onClick={() => setIsMenuOpen(false)}
-                  >
-                    {service.name}
-                  </ScrollLink>
-                )
-              )}
+              {serviceItems.map((service) => (
+                <RouterLink
+                  key={service.name}
+                  to={service.href}
+                  className="block py-1 hover:text-green-400"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {service.name}
+                </RouterLink>
+              ))}
             </div>
           </div>
         </div>
@@ -220,3 +183,5 @@ export default function Header() {
     </header>
   );
 }
+
+
