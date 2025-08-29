@@ -56,7 +56,7 @@ export default function AiDevelopment() {
         </section>
 
         {/* ================= STATS ================= */}
-         <section className="bg-black py-14 border-t border-gray-800">
+        <section className="bg-black py-14 border-t border-gray-800">
           <div className="max-w-6xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-10 text-center">
             {[
               { value: "800+", label: "Successful Campaigns" },
@@ -77,33 +77,33 @@ export default function AiDevelopment() {
             ))}
           </div>
         </section>
-         {/* ================= AI NEW FEATURES ================= */}
-<section className="bg-black py-20">
-<div className="max-w-7xl mx-auto px-6">
-<h2 className="text-3xl md:text-4xl font-bold text-center mb-12 bg-clip-text text-transparent bg-gradient-to-r from-green-400 to-purple-400">
-Cutting-Edge AI Features
-</h2>
-<div className="grid md:grid-cols-3 gap-10">
-{[
-{ title: "Generative AI", desc: "Create text, images, and insights automatically with advanced generative AI models." },
-{ title: "Predictive Analytics", desc: "Forecast trends and customer behaviors using intelligent prediction systems." },
-{ title: "AI Personalization", desc: "Deliver tailored experiences for every user with dynamic AI-driven personalization." },
-].map((f, i) => (
-<motion.div
-key={i}
-className="p-6 rounded-xl bg-gradient-to-br from-green-500/10 to-purple-500/10 hover:scale-105 transition-transform shadow-xl"
-initial={{ opacity: 0, y: 20 }}
-whileInView={{ opacity: 1, y: 0 }}
-transition={{ duration: 0.5, delay: i * 0.2 }}
-viewport={{ once: true }}
->
-<h3 className="text-xl font-semibold mb-4 text-green-400">{f.title}</h3>
-<p className="text-gray-300 leading-7">{f.desc}</p>
-</motion.div>
-))}
-</div>
-</div>
-</section>
+        {/* ================= AI NEW FEATURES ================= */}
+        <section className="bg-black py-20">
+          <div className="max-w-7xl mx-auto px-6">
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 bg-clip-text text-transparent bg-gradient-to-r from-green-400 to-purple-400">
+              Cutting-Edge AI Features
+            </h2>
+            <div className="grid md:grid-cols-3 gap-10">
+              {[
+                { title: "Generative AI", desc: "Create text, images, and insights automatically with advanced generative AI models." },
+                { title: "Predictive Analytics", desc: "Forecast trends and customer behaviors using intelligent prediction systems." },
+                { title: "AI Personalization", desc: "Deliver tailored experiences for every user with dynamic AI-driven personalization." },
+              ].map((f, i) => (
+                <motion.div
+                  key={i}
+                  className="p-6 rounded-xl bg-gradient-to-br from-green-500/10 to-purple-500/10 hover:scale-105 transition-transform shadow-xl"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: i * 0.2 }}
+                  viewport={{ once: true }}
+                >
+                  <h3 className="text-xl font-semibold mb-4 text-green-400">{f.title}</h3>
+                  <p className="text-gray-300 leading-7">{f.desc}</p>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
 
         {/* ================= ABOUT AI ================= */}
         <section className="bg-gradient-to-r from-green-600/20 to-purple-800/20 py-20">

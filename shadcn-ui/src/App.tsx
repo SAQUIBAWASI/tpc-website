@@ -55,15 +55,9 @@ const App = () => (
           <Route path="/google-ads" element={<GoogleAds />} />
           <Route path="/graphic-designing" element={<GraphicDesigning />} />
           <Route path="/careers" element={<CareerDetails />} />
-          <Route path="/about" element={<About/>}/>
+          <Route path="/about" element={<About />} />
           <Route path="/career" element={<Job />} />
           <Route path="/blog" element={<Blog />} />
-          
-        
-        
-          
-
-
         </Routes>
       </BrowserRouter>
     </TooltipProvider>
