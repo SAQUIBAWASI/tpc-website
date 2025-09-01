@@ -47,6 +47,8 @@ export default function Contact() {
             >
               Have questions or ideas? Let’s build something amazing together.
             </motion.p>
+
+
           </div>
         </section>
 
