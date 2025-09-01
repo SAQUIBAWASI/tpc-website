@@ -3,6 +3,9 @@ import Header from "@/components/Header";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
+
+
+
 export default function Blogs() {
     const [showTop, setShowTop] = useState(false);
 
@@ -16,22 +19,22 @@ export default function Blogs() {
         {
             title: "Top 5 Digital Marketing Trends in 2025",
             desc: "Stay ahead of the curve with the latest digital marketing trends — from AI automation to voice search optimization.",
-            img: "/images/blog1.jpg",
+            img: "/images/digital.jpg",
         },
         {
             title: "Why Every Business Needs SEO in 2025",
             desc: "Discover how SEO continues to be the backbone of digital growth and why local SEO is more important than ever.",
-            img: "/images/blog2.jpg",
+            img: "/images/blog-2.jpg",
         },
         {
             title: "The Rise of AI in Digital Marketing",
             desc: "AI is transforming customer targeting, ad campaigns, and personalization. Here’s how your business can benefit.",
-            img: "/images/blog3.jpg",
+            img: "/images/blog-3.jpg",
         },
         {
             title: "Social Media Strategies That Drive ROI",
             desc: "From TikTok to LinkedIn — learn how to create platform-specific strategies that maximize engagement and conversions.",
-            img: "/images/blog4.jpg",
+            img: "/images/blog-4.jpg",
         },
     ];
 

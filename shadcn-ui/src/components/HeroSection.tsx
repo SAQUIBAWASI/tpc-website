@@ -1,7 +1,7 @@
 import { Button } from '@/components/ui/button';
-import { ArrowRight, Award, Play, Truck, Users } from 'lucide-react';
+import { ArrowRight, Award, Truck, Users } from 'lucide-react';
 import { Link } from "react-router-dom";
- // ✅ Link import kiya
+// ✅ Link import kiya
 import bgVideo from '../T.mp4';
 
 export default function HeroSection() {
@@ -32,12 +32,20 @@ export default function HeroSection() {
             </div>
           </div>
 
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
-            Building Dreams with
+          {/* <h1 className=" font-bold md:text-4xl">
             <span className="block text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-green-400">
-              Tpc Digital Marketing Agency
+              Best Digital Marketing & Web Development in Hyderabad
+            </span>
+          </h1> */}
+
+          <h1 className="font-bold text-2xl sm:text-3xl md:text-4xl leading-relaxed px-4 text-center">
+            <span className="inline-block text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-green-600 pb-2">
+              Best Digital Marketing & Web Development in Hyderabad
             </span>
           </h1>
+
+
+
 
           <p className="text-xl md:text-2xl mb-8 text-gray-200 max-w-3xl mx-auto leading-relaxed">
             Your trusted partner for high-quality construction materials, tools, and expert supply chain solutions.
@@ -45,24 +53,25 @@ export default function HeroSection() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-  <Link to="/services">
-    <Button size="lg" className="bg-green-400 hover:bg-green-500 text-lg px-8 py-4">
-      Explore Our Services
-      <ArrowRight className="ml-2 w-5 h-5" />
-    </Button>
-  </Link>
+            <Link to="/services">
+              <Button size="lg" className="bg-green-400 hover:bg-green-500 text-lg px-8 py-4">
+                Explore Our Services
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </Button>
+            </Link>
 
-  <Link to="/gallery">
-    <Button
-      variant="outline"
-      size="lg"
-      className="text-white border border-green-400 bg-green-400 hover:text-gray-900 text-lg px-8 py-4"
-    >
-      <Play className="mr-2 w-5 h-5" />
-      Watch Our Story
-    </Button>
-  </Link>
-</div>
+            <Link to="/contact">
+              <Button
+                variant="outline"
+                size="lg"
+                className="text-white border border-green-400 bg-green-400 hover:text-gray-900 text-lg px-8 py-4"
+              >
+                Get In Touch
+              </Button>
+
+
+            </Link>
+          </div>
 
 
           {/* Stats */}

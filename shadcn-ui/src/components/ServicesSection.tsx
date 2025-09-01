@@ -24,6 +24,7 @@ const DIGITAL_MARKETING_IMG = "/images/Digital-marketing.jpg";
 const SMM_IMG = "/images/AI.jpg";
 const SEO_IMG = "/images/Seo.jpg";
 const BRANDING_IMG = "/images/Branding.jpg";  // ✅ new
+const Brand = "/images/branding.jpg"
 
 function Spec({ label, value, unit }: { label: string; value: string; unit?: string }) {
   return (
@@ -284,7 +285,7 @@ export default function Products() {
             { label: "Brand projects", value: "50", unit: "+" },
             { label: "Satisfaction rate", value: "98", unit: "%" }
           ]}
-          img={BRANDING_IMG}
+          img={Brand}
           bgColor="bg-[#f39c12]"
           link="/branding"
         />

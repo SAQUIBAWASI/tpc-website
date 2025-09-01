@@ -13,7 +13,7 @@ export default function Header() {
     { name: "Services", href: "" },
     { name: "AboutUs", href: "/about", isPage: true },
     { name: "Career", href: "/career", isPage: true },
-    { name: "Gallery", href: "/gallery", isPage: true },
+    { name: "Team", href: "/Team", isPage: true },
     { name: "Blog", href: "/blog", isPage: true },
     { name: "Contact", href: "/contact", isPage: true },
   ];

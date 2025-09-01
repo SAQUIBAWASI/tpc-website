@@ -31,8 +31,8 @@ export default function LocationSection() {
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 px-4">
           {/* Logo */}
           <div className="flex flex-col items-center md:items-start">
-            <img src="/images/GateCT.jpg" alt="The Patterns Company" className="w-20 mb-4" />
-            <h3 className="text-lg font-bold">THE PATTERNS COMPANY</h3>
+            <img src="/images/logo.PNG" alt="The Patterns Company" className="w-20 mb-4" />
+            <p className="text-lg font-bold">THE PATTERNS COMPANY</p>
           </div>
 
           {/* Quick Links */}
@@ -65,7 +65,7 @@ export default function LocationSection() {
 
           {/* Monument */}
           <div className="flex justify-center md:justify-end">
-            <img src="/images/GateCT.jpg" alt="Charminar" className="w-80" />
+            <img src="/images/char222.png" alt="Charminar" className="w-80" />
           </div>
         </div>
       </footer>

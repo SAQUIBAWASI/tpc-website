@@ -17,7 +17,7 @@ import AppDevelopment from '@/components/AppDevelopment';
 import CareerDetails from '@/components/CareerDetails';
 import DigitalMarketing from '@/components/DigitalMarketing';
 import ECommerce from '@/components/ECommerce';
-import Gallery from "@/components/Gallery";
+// import Gallery from "@/components/Gallery";
 import GoogleAds from '@/components/GoogleAds';
 import GraphicDesigning from '@/components/GraphicDesigning';
 import ServicesSection from "@/components/ServicesSection";
@@ -25,6 +25,8 @@ import WebDevelopment from '@/components/WebDevelopment';
 import About from './components/About';
 import Job from './components/Careers';
 import Blog from "./components/Blog";
+import Contact from './components/Contact';
+import Team from'./components/team';
 
 
 
@@ -45,7 +47,7 @@ const App = () => (
           {/* ✅ Services Routes */}
 
           <Route path="/services" element={<ServicesSection />} />
-          <Route path="/gallery" element={<Gallery />} />
+          {/* <Route path="/gallery" element={<Gallery />} /> */}
           <Route path="/about-us" element={<AboutUs />} />
           <Route path="/app-development" element={<AppDevelopment />} />
           <Route path="/web-development" element={<WebDevelopment />} />
@@ -58,6 +60,9 @@ const App = () => (
           <Route path="/about" element={<About />} />
           <Route path="/career" element={<Job />} />
           <Route path="/blog" element={<Blog />} />
+          <Route path ="/contact" element={<Contact/>}/>
+          <Route path="/team" element={<Team />} />
+
         </Routes>
       </BrowserRouter>
     </TooltipProvider>
