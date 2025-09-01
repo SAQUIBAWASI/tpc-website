@@ -1,3 +1,5 @@
+
+import { Link } from "react-router-dom";
 export default function LocationSection() {
   return (
     <section className="bg-[#7ED957] py-10">
@@ -39,13 +41,24 @@ export default function LocationSection() {
           <div>
             <h4 className="text-green-400 font-bold mb-4">Quick Links</h4>
             <ul className="space-y-2">
-              <li>Home</li>
-              <li>About</li>
-              <li>Services</li>
-              <li>Blog</li>
-              <li>Gallery</li>
-              <li>Careers</li>
-              <li>Contact</li>
+              <li>
+              <Link to="/"> Home</Link>
+              </li>
+              <li>
+              <Link to="/about">About</Link>
+              </li>
+              <li>
+              <Link to="/blog">Blog</Link>
+              </li>
+                <li>
+              <Link to="/team">Team</Link>
+              </li>
+                <li>
+              <Link to="/career">Career</Link>
+              </li>
+               <li>
+              <Link to="/contact">Contact</Link>
+              </li>
             </ul>
           </div>
 
@@ -58,7 +71,6 @@ export default function LocationSection() {
               <li>Social Media Marketing</li>
               <li>Search Engine Optimization</li>
               <li>E-Commerce</li>
-              <li>Graphic Designing</li>
               <li>Google Ads</li>
             </ul>
           </div>
