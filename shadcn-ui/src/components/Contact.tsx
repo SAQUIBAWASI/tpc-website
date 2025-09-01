@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import Header from "@/components/Header";
 import LocationSection from "@/components/Footer";
 import { useState } from "react";
+import {Helmet} from "react-helmet";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -24,6 +25,11 @@ export default function Contact() {
   return (
     <div className="bg-black text-white font-sans min-h-screen flex flex-col">
       <Header />
+
+        <Helmet>
+         <title>Contact Us | Get in Touch with Our Team</title>
+           <meta name="description" content="Contact our team for digital marketing, web development, AI solutions, graphic design, and e-commerce services. We are here to help your business grow." />
+      </Helmet>
 
       <main className="flex-grow pt-20">
         {/* ============= HERO ============= */}

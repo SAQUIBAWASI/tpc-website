@@ -1,11 +1,19 @@
 import LocationSection from "@/components/Footer";
 import Header from "@/components/Header";
 import { motion } from "framer-motion";
+import { Helmet } from "react-helmet";
 
 export default function EcommerceHyderabad() {
   return (
     <div className="bg-white text-black">
       <Header />
+       <Helmet>
+        <title>Graphic Design Services | Creative Branding & Visual Solutions</title>
+        <meta
+          name="description"
+          content="Professional graphic design services offering logos, branding, brochures, social media creatives, and visual designs that enhance your business identity and engagement."
+        />
+      </Helmet>
 
       <main className="pt-24">
         {/* ===== HERO ===== */}

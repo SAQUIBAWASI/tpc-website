@@ -2,6 +2,7 @@ import LocationSection from "@/components/Footer";
 import Header from "@/components/Header";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
+import { Helmet } from "react-helmet";
 
 
 
@@ -41,6 +42,10 @@ export default function Blogs() {
     return (
         <div className="bg-black text-white font-sans">
             <Header />
+            <Helmet>
+                <title>Blog | Digital Marketing, Web Development & AI Insights</title>
+                <meta name="description" content="Read our latest blogs on digital marketing, web development, AI solutions, e-commerce, and design trends. Stay updated with expert insights and industry news." />
+            </Helmet>
 
             <main className="pt-10">
                 {/* ================= HERO ================= */}

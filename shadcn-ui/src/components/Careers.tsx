@@ -2,6 +2,7 @@ import LocationSection from "@/components/Footer";
 import Header from "@/components/Header";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
+import {Helmet} from "react-helmet";
 
 export default function Careers() {
   const [showTop, setShowTop] = useState(false);
@@ -33,6 +34,10 @@ export default function Careers() {
   return (
     <div className="bg-black text-white font-sans">
       <Header />
+        <Helmet>
+         <title>Careers | Join Our Digital Marketing & Development Team</title>
+           <meta name="description" content="Explore exciting career opportunities in digital marketing, web development, AI, design, and more. Join our expert team and grow your career with us." />
+      </Helmet>
 
       <main className="pt-10">
         {/* ================= HERO ================= */}

@@ -2,6 +2,7 @@ import LocationSection from "@/components/Footer";
 import Header from "@/components/Header";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
+import { Helmet } from "react-helmet";
 
 export default function AiDevelopment() {
   const [showTop, setShowTop] = useState(false);
@@ -15,6 +16,14 @@ export default function AiDevelopment() {
   return (
     <div className="bg-black text-white font-sans">
       <Header />
+      <Helmet>
+        <title>AI Development Services | Custom AI Solutions & Intelligent Automation</title>
+        <meta
+          name="description"
+          content="Expert AI development services to build intelligent, scalable, and secure AI-powered solutions including machine learning, natural language processing, and automation for your business."
+        />
+      </Helmet>
+
 
       <main className="pt-10">
         {/* ================= HERO ================= */}

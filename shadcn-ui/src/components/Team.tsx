@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import {Helmet} from "react-helmet";
 
 const teamMembers = [
   { name: "Ajay Manthri", role: "Founder & CEO", img: "/images/ajay.jpg" },
@@ -25,50 +26,55 @@ const teamMembers = [
 
 export default function TeamSection() {
   return (
-    <section className="py-20 bg-white">
-      <div className="container mx-auto px-6">
-        {/* Left Title */}
-        <div className="flex flex-col md:flex-row gap-12 items-start">
-          {/* Vertical Team Heading */}
-          <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
-            className="md:w-1/4 text-center md:text-left"
-          >
-            <h2 className="text-[80px] font-extrabold leading-none text-black">
-              Te<br />am
-            </h2>
-            <p className="mt-4 text-gray-600 font-medium uppercase tracking-widest">
-              Meet Our Expert
-            </p>
-          </motion.div>
+    <>
+      <Helmet>
+         <title>Our Team | Experts in Digital Marketing, Development & Design</title>
+           <meta name="description" content="Meet our dedicated team of professionals specializing in digital marketing, web development, AI solutions, and creative design. Together, we drive business success." />
+      </Helmet>
 
-          {/* Team Members Grid */}
-          <div className="md:w-3/4 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-8">
-            {teamMembers.map((member, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: index * 0.05 }}
-                className="flex flex-col items-center text-center"
-              >
-                <div className="w-40 h-40 rounded-xl overflow-hidden shadow-md hover:scale-105 transition-all">
-                  <img
-                    src={member.img}
-                    alt={member.name}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <h3 className="mt-4 font-semibold text-lg">{member.name}</h3>
-                <p className="text-gray-500 text-sm">{member.role}</p>
-              </motion.div>
-            ))}
-          </div>
+    
+    <section className="bg-black text-white py-20 relative overflow-hidden">
+      {/* Background Effects */}
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(34,197,94,0.1),transparent_50%),radial-gradient(circle_at_bottom_right,rgba(168,85,247,0.1),transparent_50%)]" />
+
+      <div className="relative z-10 max-w-7xl mx-auto px-5">
+        {/* Title */}
+        <motion.h2 style={{padding:'40px'}}
+          className="text-4xl md:text-5xl font-extrabold text-center mb-12 bg-clip-text text-transparent bg-gradient-to-r from-green-400 to-purple-400"
+          initial={{ opacity: 0, y: -20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+        >
+          Meet Our Team
+        </motion.h2>
+
+        {/* Team Members Grid */}
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-10">
+          {teamMembers.map((member, index) => (
+            <motion.div
+              key={index}
+              className="p-6 rounded-2xl bg-gradient-to-br from-green-500/10 to-purple-500/10 shadow-xl hover:scale-105 transition-transform border border-gray-800 text-center"
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.05 }}
+              viewport={{ once: true }}
+            >
+              <div className="w-32 h-32 mx-auto rounded-xl overflow-hidden shadow-md">
+                <img
+                  src={member.img}
+                  alt={member.name}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <h3 className="mt-4 font-semibold text-lg text-green-400">{member.name}</h3>
+              <p className="text-gray-400 text-sm">{member.role}</p>
+            </motion.div>
+          ))}
         </div>
       </div>
     </section>
+    </>
   );
 }
+
 

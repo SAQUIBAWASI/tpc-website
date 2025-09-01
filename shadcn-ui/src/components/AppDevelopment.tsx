@@ -2,6 +2,7 @@ import LocationSection from "@/components/Footer";
 import Header from "@/components/Header";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
+import { Helmet } from "react-helmet";
 
 export default function AppDevelopment() {
   // scroll-to-top visibility
@@ -15,6 +16,10 @@ export default function AppDevelopment() {
   return (
     <div className="bg-black text-white">
       <Header />
+      <Helmet>
+        <title>App Development Services | Custom Mobile & Web Applications</title>
+        <meta name="description" content="Professional app development services to build fast, secure, and user-friendly mobile and web applications tailored to your business needs." />
+      </Helmet>
 
       <main className="pt-10">
         {/* ================= HERO (orange side bars + black center) ================= */}

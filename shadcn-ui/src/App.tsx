@@ -2,6 +2,7 @@ import { Toaster } from '@/components/ui/sonner';
 import { TooltipProvider } from '@/components/ui/tooltip';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import {Helmet} from "react-helmet";
 
 // ✅ Common Components
 import Header from '@/components/Header';
@@ -39,6 +40,11 @@ const App = () => (
       <BrowserRouter>
         {/* ✅ Header har page pe visible hoga */}
         <Header />
+        <Helmet>
+          <title> Best | Digital | Marketing</title>
+           <meta name="description" content="best digital marketing company in hyderabad" />
+        </Helmet>
+        
         <Routes>
           {/* Main Pages */}
           <Route path="/" element={<Index />} />

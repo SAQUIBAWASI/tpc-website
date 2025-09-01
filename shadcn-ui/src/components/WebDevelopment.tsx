@@ -1,20 +1,28 @@
 import LocationSection from "@/components/Footer";
 import Header from "@/components/Header";
 import { motion } from "framer-motion";
+import {Helmet} from "react-helmet";
+
+
+
 
 export default function WebDevelopment() {
   return (
     <div className="bg-gray-500 text-white">
       <Header />
-
+      <Helmet>
+         <title>Web Development Services | Responsive & SEO-Friendly Websites</title>
+           <meta name="description" content="Expert web development services to create fast, secure, and SEO-friendly websites. We deliver responsive solutions tailored for businesses of all sizes." />
+      </Helmet>
+    
       <main className="pt-24">
         {/* ===== HERO (gallery-like grid + big title) ===== */}
         <section className="relative max-w-7xl mx-auto px-6 py-16">
           {/* gallery grid */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 opacity-90">
             {[
-              
-              
+
+
             ].map((src, i) => (
               <motion.img
                 key={i}

@@ -1,11 +1,19 @@
 import LocationSection from "@/components/Footer";
 import Header from "@/components/Header";
 import { motion } from "framer-motion";
+import { Helmet } from "react-helmet";
 
 export default function EcommerceHyderabad() {
   return (
     <div className="bg-white text-black">
       <Header />
+        <Helmet>
+        <title>Google Ads Services | PPC Campaign Management & Optimization</title>
+        <meta
+          name="description"
+          content="Expert Google Ads management services to create, optimize, and scale high-performing PPC campaigns that drive traffic, leads, and sales for your business."
+        />
+      </Helmet>
 
       <main className="pt-24">
         {/* ===== HERO ===== */}

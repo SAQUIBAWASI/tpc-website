@@ -2,6 +2,7 @@ import LocationSection from "@/components/Footer";
 import Header from "@/components/Header";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
+import { Helmet } from "react-helmet";
 
 export default function About() {
   const [showTop, setShowTop] = useState(false);
@@ -15,6 +16,13 @@ export default function About() {
   return (
     <div className="bg-black text-white font-sans">
       <Header />
+      <Helmet>
+        <title>About Us | Leading Digital Marketing & Development Company</title>
+        <meta
+          name="description"
+          content="Learn more about our team of experts delivering top-notch digital marketing, web development, AI solutions, and creative design services to help businesses grow."
+        />
+      </Helmet>
 
       <main className="pt-10">
         {/* ================= HERO ================= */}
@@ -46,7 +54,7 @@ export default function About() {
               adapt, and thrive in the modern world.
             </motion.p>
 
-            <motion.img style={{height:'300px', width:'300px'}}
+            <motion.img style={{ height: '300px', width: '300px' }}
               src="/images/robo-img.png"
               alt="About Us"
               className="mt-5 w-full md:w-2/4 lg:w-2/3 mx-auto rounded-2xl shadow-2xl border border-gray-700"
@@ -172,9 +180,8 @@ export default function About() {
           ].map((s, i) => (
             <div
               key={i}
-              className={`max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center ${
-                s.reverse ? "md:flex-row-reverse" : ""
-              }`}
+              className={`max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center ${s.reverse ? "md:flex-row-reverse" : ""
+                }`}
             >
               <motion.img
                 src={s.img}
