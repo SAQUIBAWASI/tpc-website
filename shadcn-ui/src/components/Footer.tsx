@@ -66,12 +66,24 @@ export default function LocationSection() {
           <div>
             <h4 className="text-green-400 font-bold mb-4">Our Services</h4>
             <ul className="space-y-2">
-              <li>Web Development</li>
-              <li>App Development</li>
-              <li>Social Media Marketing</li>
-              <li>Search Engine Optimization</li>
-              <li>E-Commerce</li>
-              <li>Google Ads</li>
+              <li>
+            <Link to="/web-development">Web Development</Link>
+              </li>
+              <li>
+               <Link to="/app-development">App Development</Link>
+              </li>
+              <li>
+              <Link to="/digital-marketing">Social Media Marketing</Link>
+              </li>
+              <li>
+                  <Link to="/digital-marketing">Search Engine Optimization</Link>
+              </li>
+              <li>
+               <Link to="/e-commerce">E-Commerce</Link>
+              </li>
+              <li>
+                 <Link to="/google-ads">Google Ads</Link>
+              </li>
             </ul>
           </div>
 

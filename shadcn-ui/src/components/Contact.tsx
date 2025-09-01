@@ -121,7 +121,7 @@ export default function Contact() {
               </p>
               <div className="space-y-3 text-gray-300">
                 <p>
-                  📍 Address: <span className="text-white">Hyderabad, India</span>
+                  📍 Address: <span className="text-white">T- HuB 2.o, Inorbit Mall Rd, Vittal Rao Nagar, Knowledge City, Madhapur, Hyderabad, Telangana 500081</span>
                 </p>
                 <p>
                   📧 Email:{" "}
@@ -129,7 +129,7 @@ export default function Contact() {
                     href="mailto:contact@patterns.ai"
                     className="text-green-400 hover:underline"
                   >
-                    contact@patterns.ai
+                  info@thepatternscompany.com
                   </a>
                 </p>
                 <p>
@@ -138,7 +138,7 @@ export default function Contact() {
                     href="tel:+91837416160"
                     className="text-green-400 hover:underline"
                   >
-                    +91 83741 6160
+                    +91-9392557785
                   </a>
                 </p>
               </div>
