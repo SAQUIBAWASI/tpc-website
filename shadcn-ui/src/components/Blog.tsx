@@ -141,25 +141,24 @@ export default function Blogs() {
                 </svg>
             </a>
 
-            {/* Scroll to Top */}
-            {showTop && (
-                <button
-                    onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-                    className="fixed bottom-6 right-24 z-50 inline-flex items-center justify-center w-12 h-12 rounded-full bg-green-400 hover:bg-green-500 shadow-xl"
-                    aria-label="Scroll to top"
-                >
-                    <svg viewBox="0 0 24 24" fill="none" className="w-6 h-6">
-                        <path
-                            d="M6 15l6-6 6 6"
-                            stroke="white"
-                            strokeWidth="2"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                        />
-                    </svg>
-                </button>
-            )}
-
+           {/* Scroll to Top */}
+{showTop && (
+  <button
+    onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+    className="fixed bottom-24 right-6 z-50 inline-flex items-center justify-center w-12 h-12 rounded-full bg-green-400 hover:bg-green-500 shadow-xl"
+    aria-label="Scroll to top"
+  >
+    <svg viewBox="0 0 24 24" fill="none" className="w-6 h-6">
+      <path
+        d="M6 15l6-6 6 6"
+        stroke="white"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  </button>
+)}
             <LocationSection />
         </div>
     );

@@ -22,7 +22,7 @@ export default function LocationSection() {
             width="100%"
             height="100%"
             style={{ border: 0 }}
-            allowFullScreen=""
+            // allowFullScreen=""
             loading="lazy"
           ></iframe>
         </div>
@@ -33,7 +33,7 @@ export default function LocationSection() {
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 px-4">
           {/* Logo */}
           <div className="flex flex-col items-center md:items-start">
-            <img src="/images/logo.PNG" alt="The Patterns Company" className="w-20 mb-4" />
+            <img src="/images/neww.png" alt="The Patterns Company" className="w-50 mb-4" />
             <p className="text-lg font-bold">THE PATTERNS COMPANY</p>
           </div>
 

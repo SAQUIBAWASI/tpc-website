@@ -2,11 +2,21 @@ import LocationSection from "@/components/Footer";
 import Header from "@/components/Header";
 import { motion } from "framer-motion";
 import {Helmet} from "react-helmet";
+import { useEffect, useState } from "react";
+
+
 
 
 
 
 export default function WebDevelopment() {
+  const [showTop, setShowTop] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setShowTop(window.scrollY > 400);
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
   return (
     <div className="bg-gray-500 text-white">
       <Header />
@@ -235,7 +245,24 @@ export default function WebDevelopment() {
           <path d="M26.7 5.3C23.9 2.5 20.2 1 16.3 1 8.6 1 2.3 7.3 2.3 15c0 2.4.6 4.8 1.8 6.9L2 31l9.3-2.1c2 .9 4.3 1.4 6.6 1.4 7.7 0 14-6.3 14-14 0-3.9-1.5-7.6-4.2-10.3zM16 28.6c-2.1 0-4.2-.5-6.1-1.4l-.4-.2-5.5 1.2 1.2-5.4-.3-.4C3.9 20.6 3.3 17.9 3.3 15 3.3 8.9 8.9 3.3 16 3.3c3.1 0 6 1.2 8.2 3.4 2.2 2.2 3.4 5.1 3.4 8.3 0 6.4-5.2 11.6-11.6 11.6z" />
         </svg>
       </a>
-
+{/* Scroll to Top */}
+{showTop && (
+  <button
+    onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+    className="fixed bottom-24 right-6 z-50 inline-flex items-center justify-center w-12 h-12 rounded-full bg-green-400 hover:bg-green-500 shadow-xl"
+    aria-label="Scroll to top"
+  >
+    <svg viewBox="0 0 24 24" fill="none" className="w-6 h-6">
+      <path
+        d="M6 15l6-6 6 6"
+        stroke="white"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  </button>
+)}
       <LocationSection />
     </div>
   );
