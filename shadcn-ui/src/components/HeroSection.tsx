@@ -67,27 +67,6 @@ export default function HeroSection() {
           {/* ✅ Stats Section */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 mt-10 sm:mt-16">
             <div className="text-center">
-              <div className="inline-flex items-center justify-center w-14 h-14 sm:w-16 sm:h-16 bg-green-400/20 rounded-full mb-3">
-                <Users className="w-7 h-7 sm:w-8 sm:h-8 text-green-400" />
-              </div>
-              <div className="text-2xl sm:text-3xl font-bold mb-1">500+</div>
-              <div className="text-gray-200 text-sm sm:text-base">Happy Clients</div>
-            </div>
-
-            <div className="text-center">
-              <div className="inline-flex items-center justify-center w-14 h-14 sm:w-16 sm:h-16 bg-green-400/20 rounded-full mb-3">
-                <Truck className="w-7 h-7 sm:w-8 sm:h-8 text-green-400" />
-              </div>
-              <div className="text-2xl sm:text-3xl font-bold mb-1">1000+</div>
-              <div className="text-gray-200 text-sm sm:text-base">Projects Completed</div>
-            </div>
-
-            <div className="text-center">
-              <div className="inline-flex items-center justify-center w-14 h-14 sm:w-16 sm:h-16 bg-green-400/20 rounded-full mb-3">
-                <Award className="w-7 h-7 sm:w-8 sm:h-8 text-green-400" />
-              </div>
-              <div className="text-2xl sm:text-3xl font-bold mb-1">25+</div>
-              <div className="text-gray-200 text-sm sm:text-base">Years Experience</div>
             </div>
           </div>
         </div>

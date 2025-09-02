@@ -1,4 +1,5 @@
 
+import { Link } from "react-router-dom";
 export default function BlogsSection() {
   return (
     <section id="blogs" className="bg-black text-green-400 py-16 px-6 md:px-12">
@@ -52,45 +53,50 @@ export default function BlogsSection() {
           <div className="md:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-6">
             <div className="relative group overflow-hidden rounded-xl">
               <img
-                src="/images/E-Commerce.jpg"
+                src="/images/digital.jpg"
                 alt="E Commerce Website"
                 className="w-full h-64 object-cover group-hover:scale-105 transition"
               />
+
+
               <h4 className="absolute bottom-4 left-4 text-xl font-bold text-white">
-                E Commerce Website
+                <Link to="/blog" className="hover:underline">
+                  Top 5 Digital Marketing Trends
+                </Link>
               </h4>
+
             </div>
 
             <div className="relative group overflow-hidden rounded-xl">
               <img
-                src="/images/Web-Dev.jpeg"
+                src="/images/blog-2.jpg"
                 alt="Web Development"
                 className="w-full h-64 object-cover group-hover:scale-105 transition"
               />
               <h4 className="absolute bottom-4 left-4 text-xl font-bold text-white">
-                Web Development
+                Why Every Business Needs SEO
               </h4>
             </div>
 
             <div className="relative group overflow-hidden rounded-xl">
               <img
-                src="/images/App-Dev.jpg"
+                src="/images/blog-3.jpg"
                 alt="App Development"
                 className="w-full h-64 object-cover group-hover:scale-105 transition"
               />
               <h4 className="absolute bottom-4 left-4 text-xl font-bold text-white">
-                App Development
+                The Rise of AI in Digital Marketing
               </h4>
             </div>
 
             <div className="relative group overflow-hidden rounded-xl">
               <img
-                src="/images/AI.jpg"
+                src="/images/blog-4.jpg"
                 alt="AI Development"
                 className="w-full h-64 object-cover group-hover:scale-105 transition"
               />
               <h4 className="absolute bottom-4 left-4 text-xl font-bold text-white">
-                AI Development
+                Social Media Strategies
               </h4>
             </div>
           </div>

@@ -5,21 +5,22 @@ export default function TestimonialSection() {
   const testimonials = [
     {
       name: "Pavan",
-      avatar: "/images/salon5.jpg",
+      avatar: "/images/t1.png",
       leftImage: "/images/salon4.jpg",
+      
       rightImage: "/images/salon6.jpg",
       text: "The Social Media Marketing Services in Hyderabad provided by this company have been a game-changer for my business. Their team is knowledgeable, creative, and always on top of the latest trends in social media.",
     },
     {
       name: "Amit Verma",
-      avatar: "/images/salon4.jpg",
+      avatar: "/images/t2.png",
       leftImage: "/images/salon4.jpg",
       rightImage: "/images/salon6.jpg",
       text: "The professionalism and dedication of this company is unmatched. They helped boost our online presence and sales significantly. A pleasure to work with.",
     },
     {
       name: "Raja Rao",
-      avatar: "/images/salon4.jpg",
+      avatar: "/images/t3.png",
       leftImage: "/images/salon4.jpg",
       rightImage: "/images/salon6.jpg",
       text: "I recently engaged this media and portfolio company to develop a video for my business. The video was interesting, informative, and the team was professional, creative, and a joy to deal with. They provide the best SEO services in Hyderabad.",
