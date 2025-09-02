@@ -30,7 +30,7 @@ export default function CareersSection() {
         <h3 className="text-2xl font-semibold mb-6">
           Find Opportunities For You
         </h3>
-        <Link to="/careers">
+        <Link to="/career">
           <Button className="bg-green-400 hover:bg-green-400 text-white text-lg px-6 py-3 rounded-lg">
             Explore Careers
           </Button>

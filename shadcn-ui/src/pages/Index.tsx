@@ -1,6 +1,7 @@
 import AboutSection from '@/components/AboutSection';
 import Blogs from '@/components/Blogs';
 import CareersSection from '@/components/CareerSection';
+import Careers from '@/components/Careers';
 import ContactSection from '@/components/ContactSection';
 import Footer from '@/components/Footer';
 import Gallery from '@/components/Gallery';
