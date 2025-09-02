@@ -13,7 +13,7 @@ export default function HeroSection() {
     >
       {/* ✅ Video Background */}
       <div className="absolute inset-0 z-0">
-        <video style={{backgroundPosition:'top'}}
+        <video style={{ backgroundPosition: 'top' }}
           autoPlay
           muted
           loop
@@ -31,30 +31,37 @@ export default function HeroSection() {
       <div className="relative z-10 container mx-auto px-4 text-center text-white">
         <div className="max-w-3xl mx-auto">
           {/* Tagline Icon */}
-          <div className="mb-6 flex justify-center">
+          {/* <div className="mb-6 flex justify-center">
             <div className="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 text-xs sm:text-sm">
               <Award className="w-4 h-4" />
               <span>Trusted by Businesses</span>
             </div>
-          </div>
+          </div> */}
 
           {/* ✅ Main Heading */}
-         <h1
-  style={{ padding: "53px" }}
-  className="font-bold text-2xl sm:text-3xl md:text-5xl leading-snug px-2 sm:px-4 mb-6"
->
-  <span
-    style={{ padding: "10px" }}
-    className="inline-block text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-green-600"
-  >
-    <span className="text-7xl sm:text-8xl md:text-9xl align-top leading-none">W</span>
-    e Create Feature Website
-  </span>
-</h1>
+          {/* <h1
+            style={{ padding: "10px" }}
+            className="font-bold text-2xl sm:text-3xl md:text-5xl leading-snug px-2 sm:px-4 mb-6"
+          >
+            <span
+              style={{ padding: "0px" }}
+              className="inline-block text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-green-600"
+            >
+              <span className="text-7xl sm:text-8xl md:text-9xl align-top leading-none">W</span>
+              e Create Feature Website
+            </span>
+          </h1> */}
+          <h1 className="font-bold text-center text-3xl sm:text-5xl md:text-6xl leading-relaxed mt-5">
+            <div>WE</div>
+            <div>CREATE</div>
+            <div>FUTURE</div>
+            <div>WEBSITES</div>
+          </h1>
+
 
 
           {/* ✅ CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-15">
             <Link to="/services">
               <Button size="lg" className="bg-green-400 hover:bg-green-500 text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4">
                 Explore Our Services

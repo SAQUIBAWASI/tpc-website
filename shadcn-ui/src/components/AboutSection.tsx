@@ -126,6 +126,155 @@
 
 
 
+// import { Badge } from "@/components/ui/badge";
+// import { Button } from "@/components/ui/button";
+// import { ArrowRight, Award, CheckCircle, Truck, Users } from "lucide-react";
+// import { motion } from "framer-motion";
+// import { Link } from "react-router-dom";
+
+// export default function AboutSection() {
+//   const achievements = [
+//     { icon: Users, value: "100+", label: "Happy Clients" },
+//     { icon: Truck, value: "120+", label: "Projects Completed" },
+//     { icon: Award, value: "5+", label: "Years Experience" },
+//     { icon: CheckCircle, value: "99%", label: "On-Time Delivery" },
+//   ];
+
+//   const features = [
+//     "Premium quality materials from certified suppliers",
+//     "Expert consultation and project planning",
+//     "Transparent pricing & cost breakdowns",
+//     "Reliable delivery network across regions",
+//     "Strict quality assurance testing",
+//     "24/7 customer support",
+//   ];
+
+//   return (
+//     <section
+//       id="about"
+//       className="relative py-24 bg-gradient-to-br from-white via-green-50 to-green-100 overflow-hidden"
+//     >
+//       {/* Background Decorative Shapes */}
+//       <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-green-200 rounded-full blur-3xl opacity-30" />
+//       <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-green-300 rounded-full blur-3xl opacity-20" />
+
+//       <div className="container mx-auto px-6 relative z-10">
+//         {/* Header */}
+//         <div className="text-center max-w-3xl mx-auto mb-16">
+//           <Badge className="bg-green-100 text-green-600 mb-4">
+//             Who We Are
+//           </Badge>
+//           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 leading-snug">
+//             Best{" "}
+//             <span className="text-green-500">
+//               Digital Marketing in Hyderabad
+//             </span>
+//           </h2>
+//           <p className="mt-6 text-gray-600 text-lg leading-relaxed">
+//             Discover the best digital marketing agency in Hyderabad — a creative
+//             and B2B-driven company offering end-to-end services: branding, web
+//             design, eCommerce solutions, SEO, content marketing, digital
+//             advertising, social media management, PR, and more. Recognized as
+//             the leading website design company in Madhapur, Hyderabad.
+//           </p>
+//         </div>
+
+//         {/* Grid */}
+//         <div className="grid lg:grid-cols-2 gap-16 items-center">
+//           {/* Left: Image with overlay */}
+//           <motion.div
+//             initial={{ opacity: 0, x: -40 }}
+//             whileInView={{ opacity: 1, x: 0 }}
+//             viewport={{ once: true }}
+//             transition={{ duration: 0.6 }}
+//             className="flex justify-center"
+//           >
+//             <div className="relative w-80 h-80 md:w-96 md:h-96 rounded-full overflow-hidden shadow-2xl border-8 border-white">
+//               <img
+//                 src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=900&q=80"
+//                 alt="About TPC"
+//                 className="object-cover w-full h-full"
+//               />
+//               <span className="absolute bottom-4 left-4 bg-green-500 text-white px-4 py-1 rounded-full text-sm font-semibold shadow-md">
+//                 Since 2018
+//               </span>
+//             </div>
+//           </motion.div>
+
+//           {/* Right: Content */}
+//           <motion.div
+//             initial={{ opacity: 0, x: 40 }}
+//             whileInView={{ opacity: 1, x: 0 }}
+//             viewport={{ once: true }}
+//             transition={{ duration: 0.6 }}
+//           >
+//             <h3 className="text-2xl font-semibold text-gray-900 mb-6">
+//               Why Choose Us?
+//             </h3>
+
+//             {/* Features */}
+//             <ul className="space-y-4 mb-10">
+//               {features.map((feature, i) => (
+//                 <motion.li
+//                   key={i}
+//                   initial={{ opacity: 0, y: 20 }}
+//                   whileInView={{ opacity: 1, y: 0 }}
+//                   viewport={{ once: true }}
+//                   transition={{ delay: i * 0.1 }}
+//                   className="flex items-start space-x-3"
+//                 >
+//                   <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0 mt-1" />
+//                   <span className="text-gray-700 text-base leading-relaxed">
+//                     {feature}
+//                   </span>
+//                 </motion.li>
+//               ))}
+//             </ul>
+
+//             {/* CTA Buttons */}
+//             <div className="flex flex-col sm:flex-row gap-4">
+//               <Link to="/about">
+//                 <Button
+//                   size="lg"
+//                   className="bg-green-500 hover:bg-green-600 shadow-lg"
+//                 >
+//                   Learn More
+//                   <ArrowRight className="ml-2 w-5 h-5" />
+//                 </Button>
+//               </Link>
+//             </div>
+//           </motion.div>
+//         </div>
+
+//         {/* Floating Stats */}
+//         <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-6">
+//           {achievements.map((item, i) => {
+//             const Icon = item.icon;
+//             return (
+//               <motion.div
+//                 key={i}
+//                 initial={{ opacity: 0, y: 30 }}
+//                 whileInView={{ opacity: 1, y: 0 }}
+//                 viewport={{ once: true }}
+//                 transition={{ delay: i * 0.15 }}
+//                 className="bg-white rounded-xl shadow-md p-6 text-center hover:shadow-xl transition"
+//               >
+//                 <div className="flex justify-center mb-3">
+//                   <Icon className="w-8 h-8 text-green-500" />
+//                 </div>
+//                 <div className="text-2xl font-bold text-gray-900">
+//                   {item.value}
+//                 </div>
+//                 <div className="text-gray-600 text-sm">{item.label}</div>
+//               </motion.div>
+//             );
+//           })}
+//         </div>
+//       </div>
+//     </section>
+//   );
+// }
+
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Award, CheckCircle, Truck, Users } from "lucide-react";
@@ -150,58 +299,60 @@ export default function AboutSection() {
   ];
 
   return (
-    <section
-      id="about"
-      className="relative py-24 bg-gradient-to-br from-white via-green-50 to-green-100 overflow-hidden"
-    >
-      {/* Background Decorative Shapes */}
-      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-green-200 rounded-full blur-3xl opacity-30" />
-      <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-green-300 rounded-full blur-3xl opacity-20" />
+    <section className="relative py-24 bg-gradient-to-br from-green-50 via-white to-green-100 overflow-hidden">
+      {/* Decorative blobs */}
+      <div className="absolute top-0 right-0 w-[450px] h-[450px] bg-green-200 rounded-full blur-3xl opacity-20" />
+      <div className="absolute bottom-0 left-0 w-[350px] h-[350px] bg-purple-300 rounded-full blur-3xl opacity-20" />
 
       <div className="container mx-auto px-6 relative z-10">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <Badge className="bg-green-100 text-green-600 mb-4">
-            Who We Are
-          </Badge>
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 leading-snug">
+          <Badge className="bg-green-100 text-green-600 mb-4">Who We Are</Badge>
+          <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 leading-snug relative inline-block">
             Best{" "}
-            <span className="text-green-500">
-              Digital Marketing in Hyderabad
-            </span>
+            <span className="relative text-transparent bg-clip-text bg-gradient-to-r from-green-500 to-purple-500">
+              Digital Marketing
+              <span className="absolute left-0 bottom-0 w-full h-1 bg-gradient-to-r from-green-400 to-purple-400 rounded-full scale-x-0 group-hover:scale-x-100 transition-transform duration-500" />
+            </span>{" "}
+            in Hyderabad
           </h2>
           <p className="mt-6 text-gray-600 text-lg leading-relaxed">
-            Discover the best digital marketing agency in Hyderabad — a creative
-            and B2B-driven company offering end-to-end services: branding, web
-            design, eCommerce solutions, SEO, content marketing, digital
-            advertising, social media management, PR, and more. Recognized as
-            the leading website design company in Madhapur, Hyderabad.
+            Discover the best digital marketing agency in Hyderabad — a
+            creative and B2B-driven company offering end-to-end services:
+            branding, web design, SEO, content marketing, advertising,
+            social media management, PR, and more.
           </p>
         </div>
 
         {/* Grid */}
         <div className="grid lg:grid-cols-2 gap-16 items-center">
-          {/* Left: Image with overlay */}
+          {/* Left: Floating Image Stack */}
           <motion.div
             initial={{ opacity: 0, x: -40 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="flex justify-center"
+            className="relative flex justify-center"
           >
-            <div className="relative w-80 h-80 md:w-96 md:h-96 rounded-full overflow-hidden shadow-2xl border-8 border-white">
+            <div className="relative w-80 h-80 md:w-96 md:h-96">
+              <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-green-400 to-purple-400 blur-lg opacity-40 animate-pulse" />
               <img
                 src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=900&q=80"
                 alt="About TPC"
-                className="object-cover w-full h-full"
+                className="relative z-10 object-cover w-full h-full rounded-2xl shadow-2xl border-4 border-white"
               />
-              <span className="absolute bottom-4 left-4 bg-green-500 text-white px-4 py-1 rounded-full text-sm font-semibold shadow-md">
+              <motion.span
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.5 }}
+                className="absolute bottom-4 left-4 bg-green-500 text-white px-4 py-1 rounded-full text-sm font-semibold shadow-md"
+              >
                 Since 2018
-              </span>
+              </motion.span>
             </div>
           </motion.div>
 
-          {/* Right: Content */}
+          {/* Right: Features */}
           <motion.div
             initial={{ opacity: 0, x: 40 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -212,7 +363,6 @@ export default function AboutSection() {
               Why Choose Us?
             </h3>
 
-            {/* Features */}
             <ul className="space-y-4 mb-10">
               {features.map((feature, i) => (
                 <motion.li
@@ -221,32 +371,26 @@ export default function AboutSection() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.1 }}
-                  className="flex items-start space-x-3"
+                  className="flex items-start space-x-3 group"
                 >
-                  <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0 mt-1" />
-                  <span className="text-gray-700 text-base leading-relaxed">
+                  <CheckCircle className="w-6 h-6 text-green-500 flex-shrink-0 mt-1 transition-transform group-hover:scale-110 group-hover:text-green-600" />
+                  <span className="text-gray-700 text-base leading-relaxed group-hover:text-gray-900 transition">
                     {feature}
                   </span>
                 </motion.li>
               ))}
             </ul>
 
-            {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Link to="/about">
-                <Button
-                  size="lg"
-                  className="bg-green-500 hover:bg-green-600 shadow-lg"
-                >
-                  Learn More
-                  <ArrowRight className="ml-2 w-5 h-5" />
-                </Button>
-              </Link>
-            </div>
+            <Link to="/about">
+              <Button className="bg-green-500 hover:bg-green-600 shadow-lg">
+                Learn More
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </Button>
+            </Link>
           </motion.div>
         </div>
 
-        {/* Floating Stats */}
+        {/* Floating Achievements */}
         <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-6">
           {achievements.map((item, i) => {
             const Icon = item.icon;
@@ -257,7 +401,7 @@ export default function AboutSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.15 }}
-                className="bg-white rounded-xl shadow-md p-6 text-center hover:shadow-xl transition"
+                className="bg-white/60 backdrop-blur-md rounded-2xl shadow-md p-6 text-center border border-gray-200 hover:shadow-xl hover:-translate-y-2 transition"
               >
                 <div className="flex justify-center mb-3">
                   <Icon className="w-8 h-8 text-green-500" />
