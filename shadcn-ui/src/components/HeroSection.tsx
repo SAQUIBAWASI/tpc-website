@@ -39,11 +39,19 @@ export default function HeroSection() {
           </div>
 
           {/* ✅ Main Heading */}
-          <h1 style={{padding:'53px'}} className="font-bold text-2xl sm:text-3xl md:text-5xl leading-snug px-2 sm:px-4 mb-6">
-            <span style={{padding:'10px'}} className="inline-block text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-green-600">
-              Best Digital Marketing & Web Development in Hyderabad
-            </span>
-          </h1>
+         <h1
+  style={{ padding: "53px" }}
+  className="font-bold text-2xl sm:text-3xl md:text-5xl leading-snug px-2 sm:px-4 mb-6"
+>
+  <span
+    style={{ padding: "10px" }}
+    className="inline-block text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-green-600"
+  >
+    <span className="text-7xl sm:text-8xl md:text-9xl align-top leading-none">W</span>
+    e Create Feature Website
+  </span>
+</h1>
+
 
           {/* ✅ CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
