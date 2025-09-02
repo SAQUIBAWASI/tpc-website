@@ -203,7 +203,7 @@ export default function Products() {
           inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
         }`}
       >
-        <h1 className="text-4xl md:text-5xl font-bold">Our Services</h1>
+        <h1 className="text-4xl md:text-5xl font-bold mt-12">Our Services</h1>
         <p className="mt-3 md:mt-4 text-muted-foreground">
           Explore our lineup of technology and marketing services to grow your business.
         </p>
@@ -260,7 +260,7 @@ export default function Products() {
           ]}
           img={SEO_IMG}
           bgColor="bg-[#9b59b6]"
-          link="/seo"
+          link="/digital-marketing"
         />
 
         <DroneCard
@@ -287,7 +287,7 @@ export default function Products() {
           ]}
           img={Brand}
           bgColor="bg-[#f39c12]"
-          link="/branding"
+          link="/graphic-designing"
         />
       </div>
 
