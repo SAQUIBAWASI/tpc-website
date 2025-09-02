@@ -51,19 +51,20 @@ export default function HeroSection() {
               e Create Feature Website
             </span>
           </h1> */}
-          <h1 className="font-bold text-center text-3xl sm:text-5xl md:text-6xl leading-relaxed mt-5">
+          <h1 className="font-bold text-center text-3xl sm:text-5xl md:text-6xl leading-tight mt-2">
             <div>WE</div>
             <div>CREATE</div>
             <div>FUTURE</div>
             <div>WEBSITES</div>
           </h1>
 
-
-
           {/* ✅ CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-15">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-6 mb-5 hero-btn">
             <Link to="/services">
-              <Button size="lg" className="bg-green-400 hover:bg-green-500 text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4">
+              <Button
+                size="lg"
+                className="bg-green-400 hover:bg-green-500 text-base sm:text-lg px-10 sm:px-8 py-3 sm:py-4"
+              >
                 Explore Our Services
                 <ArrowRight className="ml-2 w-4 h-4 sm:w-5 sm:h-5" />
               </Button>
@@ -79,6 +80,10 @@ export default function HeroSection() {
               </Button>
             </Link>
           </div>
+
+
+
+
 
           {/* ✅ Stats Section */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 mt-10 sm:mt-16">

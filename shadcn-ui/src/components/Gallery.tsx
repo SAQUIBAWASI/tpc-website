@@ -157,9 +157,9 @@ const partners = [
   { name: "React", logo: "https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" },
   { name: "Node.js", logo: "https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg" },
   { name: "WordPress", logo: "https://s.w.org/style/images/about/WordPress-logotype-wmark.png" },
-  { name: "GoDaddy", logo: "https://upload.wikimedia.org/wikipedia/commons/3/3a/GoDaddy_logo.svg" },
-  { name: "Cloudflare", logo: "https://upload.wikimedia.org/wikipedia/commons/6/6b/Cloudflare_Logo.png" },
-  { name: "Vercel", logo: "https://upload.wikimedia.org/wikipedia/commons/a/a1/Vercel_logo_black.svg" },
+  // { name: "GoDaddy", logo: "https://upload.wikimedia.org/wikipedia/commons/3/3a/GoDaddy_logo.svg" },
+  // { name: "Cloudflare", logo: "https://upload.wikimedia.org/wikipedia/commons/6/6b/Cloudflare_Logo.png" },
+  // { name: "Vercel", logo: "https://upload.wikimedia.org/wikipedia/commons/a/a1/Vercel_logo_black.svg" },
 ];
 
 export default function TeamSection() {
