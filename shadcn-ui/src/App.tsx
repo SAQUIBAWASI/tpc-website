@@ -53,7 +53,6 @@ const App = () => (
           {/* ✅ Services Routes */}
 
           <Route path="/services" element={<ServicesSection />} />
-          {/* <Route path="/gallery" element={<Gallery />} /> */}
           <Route path="/about-us" element={<AboutUs />} />
           <Route path="/app-development" element={<AppDevelopment />} />
           <Route path="/web-development" element={<WebDevelopment />} />

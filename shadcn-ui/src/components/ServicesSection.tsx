@@ -2,8 +2,7 @@ import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import {
   ArrowRight,
-  Brush // ✅ Branding icon
-  ,
+  Brush,
   Code2,
   Globe,
   Minus,
@@ -13,9 +12,8 @@ import {
   Smartphone,
   Store
 } from "lucide-react";
-import { useEffect, useState } from "react";
 import { useInView } from "react-intersection-observer";
-import { Link } from "react-router-dom"; // ✅ import Link
+import { Link } from "react-router-dom";
 
 // Service images
 const APP_DEV_IMG = "/images/App-Dev.jpg";
@@ -23,8 +21,7 @@ const WEB_DEV_IMG = "/images/Web-Dev.jpeg";
 const DIGITAL_MARKETING_IMG = "/images/Digital-marketing.jpg";
 const SMM_IMG = "/images/AI.jpg";
 const SEO_IMG = "/images/Seo.jpg";
-const BRANDING_IMG = "/images/Branding.jpg";  // ✅ new
-const Brand = "/images/branding.jpg"
+const Brand = "/images/branding.jpg";
 
 function Spec({ label, value, unit }: { label: string; value: string; unit?: string }) {
   return (
@@ -148,49 +145,6 @@ function DroneCard({
   );
 }
 
-// 🔹 Services Strip Component with Auto Sliding Carousel
-function ServicesStrip() {
-  const services = [
-    { name: "APP DEVELOPMENT", icon: <Smartphone className="w-8 h-8" /> },
-    { name: "WEB DEVELOPMENT", icon: <Globe className="w-8 h-8" /> },
-    { name: "ECOMMERCE DEVELOPMENT", icon: <Store className="w-8 h-8" /> },
-    { name: "SOFTWARE DEVELOPMENT", icon: <Code2 className="w-8 h-8" /> },
-    { name: "SHOPIFY DEVELOPMENT", icon: <ShoppingBag className="w-8 h-8" /> },
-    { name: "BRANDING", icon: <Brush className="w-8 h-8" /> },  // ✅ new branding
-  ];
-
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  // Auto slide every 3s
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % services.length);
-    }, 3000);
-    return () => clearInterval(interval);
-  }, [services.length]);
-
-  // Show 4 at a time
-  const visibleServices = [
-    services[currentIndex],
-    services[(currentIndex + 1) % services.length],
-    services[(currentIndex + 2) % services.length],
-    services[(currentIndex + 3) % services.length],
-  ];
-
-  return (
-    <section className="bg-[#7ED957] py-6 mt-16 rounded-2xl overflow-hidden">
-      <div className="container mx-auto flex justify-center items-center gap-12 text-white transition-all duration-700">
-        {visibleServices.map((service, index) => (
-          <div key={index} className="flex items-center space-x-3">
-            {service.icon}
-            <span className="text-lg font-medium">{service.name}</span>
-          </div>
-        ))}
-      </div>
-    </section>
-  );
-}
-
 export default function Products() {
   const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.1 });
 
@@ -211,23 +165,24 @@ export default function Products() {
 
       {/* Cards */}
       <div className="mt-12 md:mt-20 space-y-12 md:space-y-18 max-w-7xl mx-auto px-4">
+
         <DroneCard
-          title="App Development"
-          subtitle="Mobile App"
-          description="Transforming ideas into seamless digital solutions through expert app development Services in Hyderabad at Patterns Company. "
+          title="Branding"
+          subtitle="Creative Branding"
+          description="Build a strong and memorable identity for your business with our expert branding solutions, from logo design to complete brand strategy."
           specs={[
-            { label: "Delivery time", value: "3", unit: "months" },
-            { label: "Team size", value: "5", unit: "devs" }
+            { label: "Brand projects", value: "50", unit: "+" },
+            { label: "Satisfaction rate", value: "98", unit: "%" }
           ]}
-          img={APP_DEV_IMG}
-          bgColor="bg-[#ff6b01]"
-          link="/app-development"
+          img={Brand}
+          bgColor="bg-[#f39c12]"
+          link="/graphic-designing"
         />
 
         <DroneCard
           title="Web Development"
           subtitle="Website Development"
-          description="Patterns Company specializes in delivering bespoke Web Development Services In Hyderabad tailored to your unique needs and aspirations. "
+          description="Patterns Company specializes in delivering bespoke Web Development Services In Hyderabad tailored to your unique needs and aspirations."
           specs={[
             { label: "Delivery time", value: "2", unit: "months" },
             { label: "Pages included", value: "10", unit: "+" }
@@ -235,6 +190,19 @@ export default function Products() {
           img={WEB_DEV_IMG}
           bgColor="bg-[#A8EB66]"
           link="/web-development"
+        />
+
+        <DroneCard
+          title="App Development"
+          subtitle="Mobile App"
+          description="Transforming ideas into seamless digital solutions through expert app development Services in Hyderabad at Patterns Company."
+          specs={[
+            { label: "Delivery time", value: "3", unit: "months" },
+            { label: "Team size", value: "5", unit: "devs" }
+          ]}
+          img={APP_DEV_IMG}
+          bgColor="bg-[#ff6b01]"
+          link="/app-development"
         />
 
         <DroneCard
@@ -276,23 +244,8 @@ export default function Products() {
           link="/ai-development"
         />
 
-        {/* ✅ New Branding Card */}
-        <DroneCard
-          title="Branding"
-          subtitle="Creative Branding"
-          description="Build a strong and memorable identity for your business with our expert branding solutions, from logo design to complete brand strategy."
-          specs={[
-            { label: "Brand projects", value: "50", unit: "+" },
-            { label: "Satisfaction rate", value: "98", unit: "%" }
-          ]}
-          img={Brand}
-          bgColor="bg-[#f39c12]"
-          link="/graphic-designing"
-        />
       </div>
-
-      {/* 🔹 Services Strip Carousel */}
-      <ServicesStrip />
     </section>
   );
 }
+

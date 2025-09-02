@@ -5,7 +5,7 @@ export default function CareersSection() {
     <section id="career"className="bg-white text-green-400 py-16">
       {/* Top Heading */}
       <div className="text-center px-4">
-        <h2 className="text-4xl font-bold mb-4">Careers</h2>
+        <h2 className="text-4xl font-bold mb-4"> Life At Patterns | Careers</h2>
         <p className="text-lg max-w-2xl mx-auto">
           Every Patternson is the navigator of our clients’ digital transformation
         </p>

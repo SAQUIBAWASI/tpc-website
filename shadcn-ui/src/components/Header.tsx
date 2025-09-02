@@ -201,8 +201,8 @@ export default function Header() {
 
   const navItems = [
     { name: "Home", href: "/", isPage: true },
+     { name: "AboutUs", href: "/about", isPage: true },
     { name: "Services", href: "" },
-    { name: "AboutUs", href: "/about", isPage: true },
     { name: "Career", href: "/career", isPage: true },
     { name: "Team", href: "/Team", isPage: true },
     { name: "Blog", href: "/blog", isPage: true },
@@ -325,7 +325,7 @@ export default function Header() {
 
       {/* Mobile Drawer */}
       {isMenuOpen && (
-        <div className="md:hidden bg-black text-white px-6 py-4 space-y-4">
+        <div style={{background:'black'}} className="md:hidden bg-black text-white px-6 py-4 space-y-4">
           {navItems.map((item) => {
             if (item.name === "Services") {
               return (
