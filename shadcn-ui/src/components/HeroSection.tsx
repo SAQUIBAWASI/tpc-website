@@ -70,7 +70,7 @@ export default function HeroSection() {
         {/* ✅ Hero Heading moved lower */}
         <div className="flex-1 flex items-start justify-center pt-32 sm:pt-20 md:pt-40">
           <h1 className=" font-geometric font-bold text-3xl sm:text-5xl md:text-6xl leading-relaxed">
-            <div>WE</div>
+            <div><span className='text-[80px] '>W</span><span className='text-[30px]'>E</span></div>
             <div>CREATE</div>
             <div>FUTURE</div>
             <div>WEBSITES</div>
