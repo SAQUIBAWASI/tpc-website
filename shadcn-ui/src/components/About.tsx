@@ -69,9 +69,9 @@ export default function About() {
         <section className="bg-black py-14 border-t border-gray-800">
           <div className="max-w-6xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-10 text-center">
             {[
-              { value: "10+", label: "Years in Business" },
-              { value: "500+", label: "Happy Clients" },
-              { value: "1000+", label: "Projects Delivered" },
+              { value: "5+", label: "Years in Business" },
+              { value: "100+", label: "Happy Clients" },
+              { value: "120+", label: "Projects Delivered" },
               { value: "50+", label: "Experts on Team" },
             ].map((s, i) => (
               <motion.div

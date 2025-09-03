@@ -53,7 +53,7 @@ export default function DigitalMarketing() {
             {[
               { value: "800+", label: "Successful Campaigns" },
               { value: "1000+", label: "Leads Generated" },
-              { value: "10+", label: "Years of Experience" },
+              { value: "5+", label: "Years of Experience" },
               { value: "50+", label: "Digital Experts" },
             ].map((s, i) => (
               <motion.div
