@@ -63,9 +63,9 @@ export default function WebDevelopment() {
         <section className="bg-black py-16 border-t border-gray-800">
           <div className="max-w-6xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-10 text-center">
             {[
-              { value: "500+", label: "Happy Customers" },
+              { value: "100+", label: "Happy Customers" },
               { value: "1000+", label: "Digital Transformations" },
-              { value: "27+", label: "Glorious Experience" },
+              { value: "5+", label: "Glorious Experience" },
               { value: "50+", label: "Our Team" },
             ].map((s, i) => (
               <motion.div
@@ -211,7 +211,7 @@ export default function WebDevelopment() {
             </h3>
             <ul className="grid md:grid-cols-2 gap-4 text-gray-300 max-w-4xl mx-auto">
               {[
-                "Experienced team with 27+ years combined expertise",
+                "Experienced team with 5+ years combined expertise",
                 "Modern stacks: Next.js, React, Node, Headless CMS, Tailwind",
                 "SEO-ready, fast, secure, and fully responsive builds",
                 "Post-launch maintenance & growth support",

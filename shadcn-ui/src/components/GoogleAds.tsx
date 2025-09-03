@@ -46,9 +46,9 @@ export default function EcommerceHyderabad() {
         <section className="bg-black py-16">
           <div className="max-w-6xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-10 text-center">
             {[
-              { value: "500+", label: "Happy Customers" },
+              { value: "100+", label: "Happy Customers" },
               { value: "1000+", label: "Digital Transformations" },
-              { value: "27+", label: "Glorious Experience" },
+              { value: "5+", label: "Glorious Experience" },
               { value: "50+", label: "Our Team" },
             ].map((s, i) => (
               <motion.div
