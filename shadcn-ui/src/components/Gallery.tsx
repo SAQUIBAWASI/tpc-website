@@ -148,9 +148,9 @@ const teamMembers = [
   { name: "Sasi", role: "Debugging: half my life.", img: "/images/16.jpg" },
   { name: "Rakesh", role: "slicing through code challenges with precision", img: "/images/26.jpg" },
   { name: "Kumar", role: "Silencing the bugs, one fix at a time.", img: "/images/34.jpg" },
-  { name: "Maddiboina Lokesh", role: "Research", img: "/team/roshini (6) - Copy.png" },
-  { name: "Rajesh", role: "Research", img: "/team/roshini (6) - Copy.png" },
-  { name: "Sireesha", role: "Research", img: "/team/roshini (6) - Copy.png" },
+  { name: "Maddiboina Lokesh", role: "Software Engineer | R&D", img: "/team/roshini (6) - Copy.png" },
+  { name: "Rajesh", role: "Graphic design", img: "/team/roshini (6) - Copy.png" },
+  { name: "Sireesha", role: "BDE", img: "/team/roshini (6) - Copy.png" },
   { name: "Tarun", role: "Research", img: "/team/roshini (6) - Copy.png" },
 ];
 
