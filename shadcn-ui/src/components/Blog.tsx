@@ -19,22 +19,21 @@ export default function Blogs() {
     const blogs = [
         {
             title: "Top 5 Digital Marketing Trends in 2025",
-            desc: "Stay ahead of the curve with the latest digital marketing trends — from AI automation to voice search optimization.",
+            desc: "Highlights the most impactful strategies shaping the future of online marketing. From the rise of AI-powered automation tools and personalized customer experiences to voice search optimization, video marketing dominance, and data-driven SEO practices, these trends are redefining how businesses connect with their audience. By adopting these innovations early, brands can improve their online visibility, boost engagement rates, and stay ahead of competitors. Whether you’re a startup or an established enterprise, understanding the latest digital marketing strategies in 2025 will help you generate more leads, increase conversions, and build long-term customer loyalty.",
             img: "/images/digital.jpg",
-        },
-        {
+        },       {
             title: "Why Every Business Needs SEO in 2025",
-            desc: "Discover how SEO continues to be the backbone of digital growth and why local SEO is more important than ever.",
+            desc: "Explains why search engine optimization remains the backbone of digital growth. As competition increases online, SEO ensures that businesses stay visible on Google search results, attract qualified leads, and build long-term brand authority. In 2025, the rise of AI-driven algorithms, voice search queries, and mobile-first indexing makes SEO more important than ever. Local SEO is especially critical, helping businesses appear in near me searches, boost foot traffic, and dominate regional markets. Whether you run a small startup or a global enterprise, investing in SEO strategies in 2025 will drive sustainable growth, improve customer trust, and keep you ahead of competitors in the digital landscape.",
             img: "/images/blog-2.jpg",
         },
         {
             title: "The Rise of AI in Digital Marketing",
-            desc: "AI is transforming customer targeting, ad campaigns, and personalization. Here’s how your business can benefit.",
+            desc: "Explores how artificial intelligence is reshaping the way brands connect with customers. In 2025, AI-driven tools are enhancing customer targeting, optimizing ad campaigns, and delivering hyper-personalized experiences at scale. From predictive analytics and chatbots to automated content creation and voice search optimization, AI is helping businesses achieve higher ROI while reducing costs. Companies that embrace AI in digital marketing can gain a competitive edge by improving engagement, refining customer journeys, and making smarter, data-driven decisions. Whether you’re a small business or a global brand, integrating AI into your digital strategy is no longer optional — it’s the key to growth and long-term success.",
             img: "/images/blog-3.jpg",
         },
         {
             title: "Social Media Strategies That Drive ROI",
-            desc: "From TikTok to LinkedIn — learn how to create platform-specific strategies that maximize engagement and conversions.",
+            desc: "Focuses on how businesses can use social platforms effectively to boost visibility, engagement, and revenue. In 2025, brands need more than just a presence on TikTok, Instagram, Facebook, and LinkedIn — they need platform-specific strategies that deliver measurable results. By leveraging data-driven insights, AI-powered analytics, and creative content formats, companies can maximize audience engagement, increase conversions, and achieve a higher return on investment (ROI). From short-form videos to professional networking campaigns, the right social media marketing strategies can strengthen brand awareness, build customer trust, and drive sustainable business growth.",
             img: "/images/blog-4.jpg",
         },
     ];
