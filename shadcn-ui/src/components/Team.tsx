@@ -8,7 +8,7 @@ const teamMembers = [
   { name: "Shruthi", role: "Human Resource", img: "/images/36.jpg" },
   { name: "Srini", role: "Hyderabad Public School ka Property", img: "/images/Sinu6.png" },
   { name: "Pandu Reddy", role: "Developer", img: "/images/pandu-reddy.png" },
-  { name: "Suvarna", role: "UI/UX", img: "/images/7.jpg" },
+  { name: "Suvarna", role: "Quickly put the developer on speed dial.", img: "/images/suvarna - Copy.jpg" },
   { name: "Anil", role: "Marketing", img: "/images/anil 1.jpg" },
   { name: "Pragnya", role: "Embrace the unknown.", img: "/images/47.jpg" },
   { name: "Hema", role: "Digital Marketing", img: "/images/2.jpg" },
