@@ -157,7 +157,10 @@ export default function Products() {
           inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
         }`}
       >
-        <h1 className="text-4xl md:text-5xl font-bold mt-12">Our Services</h1>
+        <h1 className="text-4xl md:text-5xl font-bold mt-12">Our <span className="bg-gradient-to-r from-green-500 to-purple-500 bg-clip-text text-transparent">
+  Services
+</span>
+</h1>
         <p className="mt-3 md:mt-4 text-muted-foreground">
           Explore our lineup of technology and marketing services to grow your business.
         </p>
