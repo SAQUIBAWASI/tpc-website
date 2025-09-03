@@ -237,7 +237,7 @@ export default function Header() {
         <div className="flex items-center justify-between h-28">
           {/* Logo */}
           <RouterLink to="/" className="flex items-center space-x-2">
-            <img src="/images/logo.PNG" alt="TPC Logo" className="h-12" />
+            <img src="/images/tpc1.png" alt="TPC Logo" className="h-12" />
           </RouterLink>
 
           {/* Desktop Nav */}
