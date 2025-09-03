@@ -74,7 +74,9 @@ export default function BlogsSection() {
                 className="w-full h-64 object-cover group-hover:scale-105 transition"
               />
               <h4 className="absolute bottom-4 left-4 text-xl font-bold text-white">
+                  <Link to="/blog" className="hover:underline">
                 Why Every Business Needs SEO
+                </Link>
               </h4>
             </div>
 
@@ -85,7 +87,9 @@ export default function BlogsSection() {
                 className="w-full h-64 object-cover group-hover:scale-105 transition"
               />
               <h4 className="absolute bottom-4 left-4 text-xl font-bold text-white">
+                 <Link to="/blog" className="hover:underline">
                 The Rise of AI in Digital Marketing
+                </Link>
               </h4>
             </div>
 
@@ -96,7 +100,9 @@ export default function BlogsSection() {
                 className="w-full h-64 object-cover group-hover:scale-105 transition"
               />
               <h4 className="absolute bottom-4 left-4 text-xl font-bold text-white">
+                 <Link to="/blog" className="hover:underline">
                 Social Media Strategies
+                </Link>
               </h4>
             </div>
           </div>
