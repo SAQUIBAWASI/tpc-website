@@ -67,44 +67,44 @@ export default function HeroSection() {
       </div> */}
 
       <div className="relative z-10 container mx-auto px-4 text-center text-white min-h-screen flex flex-col justify-between">
-  {/* ✅ Hero Heading moved lower */}
-<div className="flex-1 flex items-start justify-center pt-32 sm:pt-20 md:pt-40">
-    <h1 className="font-bold text-3xl sm:text-5xl md:text-6xl leading-relaxed">
-      <div>WE</div>
-      <div>CREATE</div>
-      <div>FUTURE</div>
-      <div>WEBSITES</div>
-    </h1>
-  </div>
+        {/* ✅ Hero Heading moved lower */}
+        <div className="flex-1 flex items-start justify-center pt-32 sm:pt-20 md:pt-40">
+          <h1 className=" font-geometric font-bold text-3xl sm:text-5xl md:text-6xl leading-relaxed">
+            <div>WE</div>
+            <div>CREATE</div>
+            <div>FUTURE</div>
+            <div>WEBSITES</div>
+          </h1>
+        </div>
 
-  {/* ✅ Buttons at the bottom */}
-  <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12 sm:mb-16">
-    <Link to="/services">
-      <Button
-        size="lg"
-        className="bg-green-400 hover:bg-green-500 text-base sm:text-lg px-10 sm:px-8 py-3 sm:py-4"
-      >
-        Explore Our Services
-        <ArrowRight className="ml-2 w-4 h-4 sm:w-5 sm:h-5" />
-      </Button>
-    </Link>
+        {/* ✅ Buttons at the bottom */}
+        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12 sm:mb-16">
+          <Link to="/services">
+            <Button
+              size="lg"
+              className="bg-green-400 hover:bg-green-500 text-base sm:text-lg px-10 sm:px-8 py-3 sm:py-4"
+            >
+              Explore Our Services
+              <ArrowRight className="ml-2 w-4 h-4 sm:w-5 sm:h-5" />
+            </Button>
+          </Link>
 
-    <Link to="/contact">
-      <Button
-        variant="outline"
-        size="lg"
-        className="text-white border border-green-400 bg-green-400 hover:text-gray-900 text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4"
-      >
-        Get In Touch
-      </Button>
-    </Link>
-  </div>
-</div>
+          <Link to="/contact">
+            <Button
+              variant="outline"
+              size="lg"
+              className="text-white border border-green-400 bg-green-400 hover:text-gray-900 text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4"
+            >
+              Get In Touch
+            </Button>
+          </Link>
+        </div>
+      </div>
 
-      
+
 
       {/* ✅ Scroll Indicator */}
-      <div className="absolute bottom-6 sm:bottom-8 left-1/2 transform -translate-x-1/2 z-10">
+      <div className=" move absolute bottom-6 sm:bottom-8 left-1/2 transform -translate-x-1/2 z-10">
         <div className="w-5 h-8 sm:w-6 sm:h-10 border-2 border-white/50 rounded-full flex justify-center">
           <div className="w-1 h-3 bg-white rounded-full mt-1 animate-bounce"></div>
         </div>

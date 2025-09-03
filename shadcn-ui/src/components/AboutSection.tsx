@@ -307,8 +307,8 @@ export default function AboutSection() {
       <div className="container mx-auto px-6 relative z-10">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <Badge className="bg-green-100 text-green-600 mb-4">Who We Are</Badge>
-          <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 leading-snug relative inline-block">
+          <Badge className=" font-geometric bg-green-100 text-green-600 mb-4">Who We Are</Badge>
+          <h2 className="font-geometric text-4xl md:text-5xl font-extrabold text-gray-900 leading-snug relative inline-block">
             Best{" "}
             <span className="relative text-transparent bg-clip-text bg-gradient-to-r from-green-500 to-purple-500">
               Digital Marketing
@@ -359,7 +359,7 @@ export default function AboutSection() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h3 className="text-2xl font-semibold text-gray-900 mb-6">
+            <h3 className=" font-geometric text-2xl font-semibold text-gray-900 mb-6">
               Why Choose Us?
             </h3>
 

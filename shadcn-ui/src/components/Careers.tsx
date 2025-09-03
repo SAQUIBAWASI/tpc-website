@@ -44,7 +44,7 @@ export default function Careers() {
         <section className="relative overflow-hidden bg-gradient-to-r from-green-500/10 to-purple-700/10">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(34,197,94,0.15),transparent_50%),radial-gradient(circle_at_bottom_right,rgba(168,85,247,0.15),transparent_50%)]" />
           <div className="relative z-10 max-w-7xl mx-auto px-6 py-20 text-center">
-            <motion.h1
+            <motion.h1   style={{ fontFamily: "Poppins, sans-serif" }}
               className="text-4xl md:text-6xl font-extrabold leading-tight bg-clip-text text-transparent bg-gradient-to-r from-green-400 to-purple-400 drop-shadow-lg"
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}

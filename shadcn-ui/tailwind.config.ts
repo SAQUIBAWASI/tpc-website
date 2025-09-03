@@ -1,16 +1,15 @@
-import tailwindcssAspectRatio from "@tailwindcss/aspect-ratio";
 import type { Config } from "tailwindcss";
-import tailwindcssAnimate from "tailwindcss-animate";
+import aspectRatio from "@tailwindcss/aspect-ratio";
+import animate from "tailwindcss-animate";
 
-export default {
-  darkMode: ["class"],
+const config: Config = {
+  darkMode: ["class"], // enable dark mode via class
   content: [
-    "./pages/**/*.{ts,tsx}",
-    "./components/**/*.{ts,tsx}",
-    "./app/**/*.{ts,tsx}",
-    "./src/**/*.{ts,tsx}",
+    "./pages/**/*.{js,ts,jsx,tsx}",
+    "./components/**/*.{js,ts,jsx,tsx}",
+    "./app/**/*.{js,ts,jsx,tsx}",
+    "./src/**/*.{js,ts,jsx,tsx}",
   ],
-  prefix: "",
   theme: {
     container: {
       center: true,
@@ -20,6 +19,12 @@ export default {
       },
     },
     extend: {
+      // ✅ Add custom Poppins font
+      fontFamily: {
+        geometric: ["Poppins", "sans-serif"],
+      },
+
+      // ✅ Your colors
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -64,29 +69,29 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
-
-        // ✅ Full custom green palette
         green: {
           100: "#E6F9E6",
           200: "#C2F0C2",
           300: "#99E699",
-          400: "#7ED957", // custom
+          400: "#7ED957",
           500: "#4DB84D",
           600: "#339933",
           700: "#267326",
           800: "#195C19",
           900: "#0D330D",
         },
-
-        // ✅ Custom black (your requested color)
         black: "#1C1C1C",
-        dark: "#1C1C1C", // optional alias
+        dark: "#1C1C1C",
       },
+
+      // ✅ Radius
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
       },
+
+      // ✅ Animations
       keyframes: {
         "accordion-down": {
           from: { height: "0" },
@@ -103,5 +108,10 @@ export default {
       },
     },
   },
-  plugins: [tailwindcssAnimate, tailwindcssAspectRatio],
-} satisfies Config;
+  plugins: [animate, aspectRatio],
+};
+
+export default config;
+
+
+
