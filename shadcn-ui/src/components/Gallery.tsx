@@ -150,8 +150,8 @@ const teamMembers = [
   { name: "Kumar", role: "Silencing the bugs, one fix at a time.", img: "/images/34.jpg" },
   { name: "Maddiboina Lokesh", role: "Software Engineer | R&D", img: "/team/roshini (6) - Copy.png" },
   { name: "Rajesh", role: "Graphic design", img: "/team/roshini (6) - Copy.png" },
-  { name: "Sireesha", role: "BDE", img: "/team/roshini (6) - Copy.png" },
-  { name: "Tarun", role: "Research", img: "/team/roshini (6) - Copy.png" },
+  { name: "Roshini", role: "BDE", img: "/team/roshini (1) - Copy.png" },
+  { name: "Gayathri", role: "Research", img: "/team/Gayathri - Copy.webp" },
 ];
 
 const partners = [
