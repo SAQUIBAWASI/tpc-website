@@ -276,6 +276,12 @@ import { Link } from "react-router-dom";
 
 // ✅ Use one video for all cards
 import hero from "../tpc vide 1.mp4";
+import ss1 from "../ss1.mp4";
+import ss2 from "../ss2.mp4";
+import ss3 from "../ss3.mp4";
+import ss4 from "../ss4.mp4";
+import ss5 from "../ss5.mp4";
+import ss6 from "../ss6.mp4"
 
 // Service images (fallback if video not working)
 const APP_DEV_IMG = "/images/App-Dev.jpg";
@@ -474,7 +480,7 @@ export default function Products() {
             { label: "Brand projects", value: "50", unit: "+" },
             { label: "Satisfaction rate", value: "98", unit: "%" },
           ]}
-          video={hero}
+          video={ss1}
           img={Brand}
           bgColor="bg-[#f39c12]"
           link="/graphic-designing"
@@ -488,7 +494,7 @@ export default function Products() {
             { label: "Delivery time", value: "2", unit: "months" },
             { label: "Pages included", value: "10", unit: "+" },
           ]}
-          video={hero}
+          video={ss2}
           img={WEB_DEV_IMG}
           bgColor="bg-[#A8EB66]"
           link="/web-development"
@@ -502,7 +508,7 @@ export default function Products() {
             { label: "Delivery time", value: "3", unit: "months" },
             { label: "Team size", value: "5", unit: "devs" },
           ]}
-          video={hero}
+          video={ss3}
           img={APP_DEV_IMG}
           bgColor="bg-[#ff6b01]"
           link="/app-development"
@@ -516,7 +522,7 @@ export default function Products() {
             { label: "Campaign reach", value: "1M", unit: "+" },
             { label: "ROI", value: "3x", unit: "" },
           ]}
-          video={hero}
+          video={ss4}
           img={DIGITAL_MARKETING_IMG}
           bgColor="bg-[#e7c132]"
           link="/digital-marketing"
@@ -530,7 +536,7 @@ export default function Products() {
             { label: "Keywords ranked", value: "100", unit: "+" },
             { label: "Traffic increase", value: "200", unit: "%" },
           ]}
-          video={hero}
+          video={ss5}
           img={SEO_IMG}
           bgColor="bg-[#9b59b6]"
           link="/digital-marketing"
@@ -544,7 +550,7 @@ export default function Products() {
             { label: "Platforms", value: "6", unit: "+" },
             { label: "Engagement rate", value: "25", unit: "%" },
           ]}
-          video={hero}
+          video={ss6}
           img={SMM_IMG}
           bgColor="bg-[#4dc7ff]"
           link="/ai-development"
