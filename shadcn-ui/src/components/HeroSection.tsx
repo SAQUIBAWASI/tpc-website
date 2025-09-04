@@ -1,14 +1,12 @@
 import { Button } from '@/components/ui/button';
-import { ArrowRight, Award, Truck, Users } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { Link } from "react-router-dom";
-import video from '../large_view.mp4';
-
 import hero from '../tpc vide 1.mp4'
-
 
 export default function HeroSection() {
   return (
-    <section id="herosection" className="relative min-h-screen overflow-hidden">
+    // ✅ Added pt-24 (top padding) to push hero below navbar
+    <section id="herosection" className="relative min-h-screen overflow-hidden pt-20">
       
       {/* ✅ Desktop View (text left + half-circle video right) */}
       <div className="hidden md:flex items-center min-h-screen bg-white text-black">
@@ -64,7 +62,7 @@ export default function HeroSection() {
         <div className="absolute inset-0 bg-black/50 z-0"></div>
 
         {/* Foreground text */}
-        <div className="relative z-10 px-6">
+        <div className="relative z-10 px-6 pt-20">
           <p className="text-green-400 text-sm font-semibold">5+ YEARS OF EXPERIENCE</p>
           <h1 className="font-bold text-3xl leading-tight mt-2">
             <div>WE</div>

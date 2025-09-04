@@ -1,3 +1,262 @@
+// import { Button } from "@/components/ui/button";
+// import { motion } from "framer-motion";
+// import {
+//   ArrowRight,
+//   Brush,
+//   Code2,
+//   Globe,
+//   Minus,
+//   Move,
+//   Plus,
+//   ShoppingBag,
+//   Smartphone,
+//   Store
+// } from "lucide-react";
+// import { useInView } from "react-intersection-observer";
+// import { Link } from "react-router-dom";
+// import hero from '../tpc vide 1.mp4'
+
+// // Service images
+// const APP_DEV_IMG = "/images/App-Dev.jpg";
+// const WEB_DEV_IMG = "/images/Web-Dev.jpeg";
+// const DIGITAL_MARKETING_IMG = "/images/Digital-marketing.jpg";
+// const SMM_IMG = "/images/AI.jpg";
+// const SEO_IMG = "/images/Seo.jpg";
+// const Brand = "/images/branding.jpg";
+
+// function Spec({ label, value, unit }: { label: string; value: string; unit?: string }) {
+//   return (
+//     <div className="grid grid-cols-[1fr,auto] items-end gap-4 border-t border-black/20 pt-3">
+//       <dt className="text-xs uppercase tracking-wide text-black/70">{label}</dt>
+//       <dd className="text-right text-2xl md:text-3xl font-extrabold text-black">
+//         {value}
+//         {unit && <span className="ml-1 text-base font-semibold text-black/80">{unit}</span>}
+//       </dd>
+//     </div>
+//   );
+// }
+
+// // Reusable card
+// function DroneCard({
+//   title,
+//   subtitle,
+//   description,
+//   specs,
+//   img,
+//   bgColor,
+//   link
+// }: {
+//   title: string;
+//   subtitle: string;
+//   description: string;
+//   specs: Array<{ label: string; value: string; unit: string }>;
+//   img: string;
+//   bgColor: string;
+//   link: string;
+// }) {
+//   return (
+//     <motion.div
+//       initial={{ opacity: 0, y: 24 }}
+//       whileInView={{ opacity: 1, y: 0 }}
+//       viewport={{ once: true }}
+//       transition={{ duration: 0.6 }}
+//       className={`relative grid overflow-hidden rounded-[30px] ${bgColor} p-4 sm:p-6 md:p-8 shadow-xl`}
+//     >
+//       {/* Decorative glyphs (desktop only) */}
+//       <div className="pointer-events-none absolute right-6 top-6 hidden md:block select-none text-black/70">
+//         <div className="flex items-center gap-8 text-sm font-semibold">
+//           <span className="inline-flex items-center gap-1"><Move size={18} />⌃</span>
+//           <span className="underline">l‰</span>
+//         </div>
+//       </div>
+
+//       <div className="grid grid-cols-1 gap-8 md:grid-cols-2 items-start">
+//         {/* LEFT SECTION */}
+//         <div className="relative">
+//           <div className="grid gap-5 rounded-[24px] bg-white p-3 md:grid-cols-[260px,1fr] md:p-5">
+//             {/* Specs */}
+//             <div className="relative rounded-[20px] border-2 border-black/15 p-4 max-h-none md:max-h-[300px] overflow-y-auto">
+//               <div className="flex items-center justify-between">
+//                 <div>
+//                   <p className="text-2xl md:text-4xl font-extrabold tracking-tight">{subtitle}</p>
+//                   <div className="mt-1 w-28 md:w-36 border-y-4 border-black/80 text-center text-xs uppercase tracking-widest">
+//                     service
+//                   </div>
+//                 </div>
+//               </div>
+
+//               <p className="mt-3 text-sm md:text-base leading-snug text-black/80">{description}</p>
+
+//               <div className="mt-3 flex items-center gap-3">
+//                 <button className="grid h-8 w-8 md:h-10 md:w-10 place-items-center rounded-full border-2 border-black/70 bg-white text-black">
+//                   <Minus size={16} />
+//                 </button>
+//                 <button className="grid h-8 w-8 md:h-10 md:w-10 place-items-center rounded-full border-2 border-black/70 bg-white text-black">
+//                   <Plus size={16} />
+//                 </button>
+//               </div>
+
+//               <dl className="mt-4 space-y-4">
+//                 {specs.map((spec, idx) => (
+//                   <Spec key={idx} label={spec.label} value={spec.value} unit={spec.unit} />
+//                 ))}
+//               </dl>
+//             </div>
+
+//             {/* Image */}
+//             <div className="relative rounded-[20px] border-2 border-black/15 overflow-hidden">
+//               <img
+//                 src={img}
+//                 alt={title}
+//                 className="w-full h-48 md:h-[300px] object-cover transition-transform duration-500 hover:scale-105"
+//               />
+//             </div>
+//           </div>
+//         </div>
+
+//         {/* RIGHT SECTION */}
+//         <div className="relative">
+//           <h2 className="text-3xl sm:text-4xl md:text-6xl font-black tracking-tight text-black">
+//             {title}
+//           </h2>
+//           <p className="mt-4 md:mt-6 max-w-xl text-base md:text-lg leading-relaxed text-black/80">
+//             {description}
+//           </p>
+
+//           <div className="mt-6 md:mt-16">
+//             <Button
+//               variant="default"
+//               size="lg"
+//               className="w-full md:w-auto rounded-full bg-black text-white hover:bg-black/90 shadow-md hover:shadow-lg"
+//               asChild
+//             >
+//               {/* ✅ Internal navigation */}
+//               <Link
+//                 to={link}
+//                 className="inline-flex items-center justify-center gap-3"
+//               >
+//                 More details
+//                 <ArrowRight size={22} className="transition-transform duration-300 group-hover:translate-x-1" />
+//               </Link>
+//             </Button>
+//           </div>
+//         </div>
+//       </div>
+//     </motion.div>
+//   );
+// }
+
+// export default function Products() {
+//   const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.1 });
+
+//   return (
+//     <section id="services" className="py-16 md:py-20 bg-accent/50 scroll-mt-24 md:scroll-mt-28">
+//       {/* Header */}
+//       <div
+//         ref={ref}
+//         className={`mx-auto max-w-2xl text-center transition-all duration-700 ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+//           }`}
+//       >
+//         <h1 className="font-geometric text-4xl md:text-5xl font-bold mt-12">
+//           Our{" "}
+//           <span className="bg-gradient-to-r from-green-500 to-purple-500 bg-clip-text text-transparent">
+//             Services
+//           </span>
+//         </h1>
+
+//         <p className="mt-3 md:mt-4 text-muted-foreground">
+//           Explore our lineup of technology and marketing services to grow your business.
+//         </p>
+//       </div>
+
+//       {/* Cards */}
+//       <div className="mt-12 md:mt-20 space-y-12 md:space-y-18 max-w-7xl mx-auto px-4">
+
+//         <DroneCard
+//           title="Branding"
+//           subtitle="Creative Branding"
+//           description="Build a strong and memorable identity for your business with our expert branding solutions, from logo design to complete brand strategy."
+//           specs={[
+//             { label: "Brand projects", value: "50", unit: "+" },
+//             { label: "Satisfaction rate", value: "98", unit: "%" }
+//           ]}
+//           img={Brand}
+//           bgColor="bg-[#f39c12]"
+//           link="/graphic-designing"
+//         />
+
+//         <DroneCard
+//           title="Web Development"
+//           subtitle="Website Development"
+//           description="Patterns Company specializes in delivering bespoke Web Development Services In Hyderabad tailored to your unique needs and aspirations."
+//           specs={[
+//             { label: "Delivery time", value: "2", unit: "months" },
+//             { label: "Pages included", value: "10", unit: "+" }
+//           ]}
+//           img={WEB_DEV_IMG}
+//           bgColor="bg-[#A8EB66]"
+//           link="/web-development"
+//         />
+
+//         <DroneCard
+//           title="App Development"
+//           subtitle="Mobile App"
+//           description="Transforming ideas into seamless digital solutions through expert app development Services in Hyderabad at Patterns Company."
+//           specs={[
+//             { label: "Delivery time", value: "3", unit: "months" },
+//             { label: "Team size", value: "5", unit: "devs" }
+//           ]}
+//           img={APP_DEV_IMG}
+//           bgColor="bg-[#ff6b01]"
+//           link="/app-development"
+//         />
+
+//         <DroneCard
+//           title="Digital Marketing"
+//           subtitle="DMS"
+//           description="Transforming businesses through strategic campaigns across multiple digital channels."
+//           specs={[
+//             { label: "Campaign reach", value: "1M", unit: "+" },
+//             { label: "ROI", value: "3x", unit: "" }
+//           ]}
+//           img={DIGITAL_MARKETING_IMG}
+//           bgColor="bg-[#e7c132]"
+//           link="/digital-marketing"
+//         />
+
+//         <DroneCard
+//           title="Search Engine Optimization"
+//           subtitle="SEO"
+//           description="Improve search visibility and drive organic traffic with our expert SEO services."
+//           specs={[
+//             { label: "Keywords ranked", value: "100", unit: "+" },
+//             { label: "Traffic increase", value: "200", unit: "%" }
+//           ]}
+//           img={SEO_IMG}
+//           bgColor="bg-[#9b59b6]"
+//           link="/digital-marketing"
+//         />
+
+//         <DroneCard
+//           title="AI Development"
+//           subtitle="SMM"
+//           description="Boost your brand presence with engaging social media strategies and content."
+//           specs={[
+//             { label: "Platforms", value: "6", unit: "+" },
+//             { label: "Engagement rate", value: "25", unit: "%" }
+//           ]}
+//           img={SMM_IMG}
+//           bgColor="bg-[#4dc7ff]"
+//           link="/ai-development"
+//         />
+
+//       </div>
+//     </section>
+//   );
+// }
+
+
+
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import {
@@ -10,12 +269,15 @@ import {
   Plus,
   ShoppingBag,
   Smartphone,
-  Store
+  Store,
 } from "lucide-react";
 import { useInView } from "react-intersection-observer";
 import { Link } from "react-router-dom";
 
-// Service images
+// ✅ Use one video for all cards
+import hero from "../tpc vide 1.mp4";
+
+// Service images (fallback if video not working)
 const APP_DEV_IMG = "/images/App-Dev.jpg";
 const WEB_DEV_IMG = "/images/Web-Dev.jpeg";
 const DIGITAL_MARKETING_IMG = "/images/Digital-marketing.jpg";
@@ -29,7 +291,9 @@ function Spec({ label, value, unit }: { label: string; value: string; unit?: str
       <dt className="text-xs uppercase tracking-wide text-black/70">{label}</dt>
       <dd className="text-right text-2xl md:text-3xl font-extrabold text-black">
         {value}
-        {unit && <span className="ml-1 text-base font-semibold text-black/80">{unit}</span>}
+        {unit && (
+          <span className="ml-1 text-base font-semibold text-black/80">{unit}</span>
+        )}
       </dd>
     </div>
   );
@@ -41,30 +305,34 @@ function DroneCard({
   subtitle,
   description,
   specs,
+  video,
   img,
   bgColor,
-  link
+  link,
 }: {
   title: string;
   subtitle: string;
   description: string;
   specs: Array<{ label: string; value: string; unit: string }>;
+  video?: string;
   img: string;
   bgColor: string;
   link: string;
 }) {
   return (
-    <motion.div
+    <motion.div 
       initial={{ opacity: 0, y: 24 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.6 }}
-      className={`relative grid overflow-hidden rounded-[30px] ${bgColor} p-4 sm:p-6 md:p-8 shadow-xl`}
+      className={`relative grid overflow-hidden rounded-[20px] ${bgColor} p-3 sm:p-4 md:p-5 shadow-xg`}
     >
       {/* Decorative glyphs (desktop only) */}
       <div className="pointer-events-none absolute right-6 top-6 hidden md:block select-none text-black/70">
         <div className="flex items-center gap-8 text-sm font-semibold">
-          <span className="inline-flex items-center gap-1"><Move size={18} />⌃</span>
+          <span className="inline-flex items-center gap-1">
+            <Move size={18} />⌃
+          </span>
           <span className="underline">l‰</span>
         </div>
       </div>
@@ -77,14 +345,18 @@ function DroneCard({
             <div className="relative rounded-[20px] border-2 border-black/15 p-4 max-h-none md:max-h-[300px] overflow-y-auto">
               <div className="flex items-center justify-between">
                 <div>
-                  <p className="text-2xl md:text-4xl font-extrabold tracking-tight">{subtitle}</p>
+                  <p className="text-2xl md:text-4xl font-extrabold tracking-tight">
+                    {subtitle}
+                  </p>
                   <div className="mt-1 w-28 md:w-36 border-y-4 border-black/80 text-center text-xs uppercase tracking-widest">
                     service
                   </div>
                 </div>
               </div>
 
-              <p className="mt-3 text-sm md:text-base leading-snug text-black/80">{description}</p>
+              <p className="mt-3 text-sm md:text-base leading-snug text-black/80">
+                {description}
+              </p>
 
               <div className="mt-3 flex items-center gap-3">
                 <button className="grid h-8 w-8 md:h-10 md:w-10 place-items-center rounded-full border-2 border-black/70 bg-white text-black">
@@ -97,18 +369,34 @@ function DroneCard({
 
               <dl className="mt-4 space-y-4">
                 {specs.map((spec, idx) => (
-                  <Spec key={idx} label={spec.label} value={spec.value} unit={spec.unit} />
+                  <Spec
+                    key={idx}
+                    label={spec.label}
+                    value={spec.value}
+                    unit={spec.unit}
+                  />
                 ))}
               </dl>
             </div>
 
-            {/* Image */}
+            {/* ✅ Conditional video or image */}
             <div className="relative rounded-[20px] border-2 border-black/15 overflow-hidden">
-              <img
-                src={img}
-                alt={title}
-                className="w-full h-48 md:h-[300px] object-cover transition-transform duration-500 hover:scale-105"
-              />
+              {video ? (
+                <video
+                  src={video}
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  className="w-full h-48 md:h-[300px] object-cover"
+                />
+              ) : (
+                <img
+                  src={img}
+                  alt={title}
+                  className="w-full h-48 md:h-[300px] object-cover transition-transform duration-500 hover:scale-105"
+                />
+              )}
             </div>
           </div>
         </div>
@@ -129,13 +417,15 @@ function DroneCard({
               className="w-full md:w-auto rounded-full bg-black text-white hover:bg-black/90 shadow-md hover:shadow-lg"
               asChild
             >
-              {/* ✅ Internal navigation */}
               <Link
                 to={link}
                 className="inline-flex items-center justify-center gap-3"
               >
                 More details
-                <ArrowRight size={22} className="transition-transform duration-300 group-hover:translate-x-1" />
+                <ArrowRight
+                  size={22}
+                  className="transition-transform duration-300 group-hover:translate-x-1"
+                />
               </Link>
             </Button>
           </div>
@@ -149,12 +439,16 @@ export default function Products() {
   const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.1 });
 
   return (
-    <section id="services" className="py-16 md:py-20 bg-accent/50 scroll-mt-24 md:scroll-mt-28">
+    <section
+      id="services"
+      className="py-16 md:py-20 bg-accent/50 scroll-mt-24 md:scroll-mt-28"
+    >
       {/* Header */}
       <div
         ref={ref}
-        className={`mx-auto max-w-2xl text-center transition-all duration-700 ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-          }`}
+        className={`mx-auto max-w-2xl text-center transition-all duration-700 ${
+          inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+        }`}
       >
         <h1 className="font-geometric text-4xl md:text-5xl font-bold mt-12">
           Our{" "}
@@ -164,12 +458,13 @@ export default function Products() {
         </h1>
 
         <p className="mt-3 md:mt-4 text-muted-foreground">
-          Explore our lineup of technology and marketing services to grow your business.
+          Explore our lineup of technology and marketing services to grow your
+          business.
         </p>
       </div>
 
       {/* Cards */}
-      <div className="mt-12 md:mt-20 space-y-12 md:space-y-18 max-w-7xl mx-auto px-4">
+      <div className="mt-12 md:mt-20 space-y-12 md:space-y-18 max-w-6xl mx-auto px-4">
 
         <DroneCard
           title="Branding"
@@ -177,8 +472,9 @@ export default function Products() {
           description="Build a strong and memorable identity for your business with our expert branding solutions, from logo design to complete brand strategy."
           specs={[
             { label: "Brand projects", value: "50", unit: "+" },
-            { label: "Satisfaction rate", value: "98", unit: "%" }
+            { label: "Satisfaction rate", value: "98", unit: "%" },
           ]}
+          video={hero}
           img={Brand}
           bgColor="bg-[#f39c12]"
           link="/graphic-designing"
@@ -190,8 +486,9 @@ export default function Products() {
           description="Patterns Company specializes in delivering bespoke Web Development Services In Hyderabad tailored to your unique needs and aspirations."
           specs={[
             { label: "Delivery time", value: "2", unit: "months" },
-            { label: "Pages included", value: "10", unit: "+" }
+            { label: "Pages included", value: "10", unit: "+" },
           ]}
+          video={hero}
           img={WEB_DEV_IMG}
           bgColor="bg-[#A8EB66]"
           link="/web-development"
@@ -203,8 +500,9 @@ export default function Products() {
           description="Transforming ideas into seamless digital solutions through expert app development Services in Hyderabad at Patterns Company."
           specs={[
             { label: "Delivery time", value: "3", unit: "months" },
-            { label: "Team size", value: "5", unit: "devs" }
+            { label: "Team size", value: "5", unit: "devs" },
           ]}
+          video={hero}
           img={APP_DEV_IMG}
           bgColor="bg-[#ff6b01]"
           link="/app-development"
@@ -216,8 +514,9 @@ export default function Products() {
           description="Transforming businesses through strategic campaigns across multiple digital channels."
           specs={[
             { label: "Campaign reach", value: "1M", unit: "+" },
-            { label: "ROI", value: "3x", unit: "" }
+            { label: "ROI", value: "3x", unit: "" },
           ]}
+          video={hero}
           img={DIGITAL_MARKETING_IMG}
           bgColor="bg-[#e7c132]"
           link="/digital-marketing"
@@ -229,8 +528,9 @@ export default function Products() {
           description="Improve search visibility and drive organic traffic with our expert SEO services."
           specs={[
             { label: "Keywords ranked", value: "100", unit: "+" },
-            { label: "Traffic increase", value: "200", unit: "%" }
+            { label: "Traffic increase", value: "200", unit: "%" },
           ]}
+          video={hero}
           img={SEO_IMG}
           bgColor="bg-[#9b59b6]"
           link="/digital-marketing"
@@ -242,15 +542,14 @@ export default function Products() {
           description="Boost your brand presence with engaging social media strategies and content."
           specs={[
             { label: "Platforms", value: "6", unit: "+" },
-            { label: "Engagement rate", value: "25", unit: "%" }
+            { label: "Engagement rate", value: "25", unit: "%" },
           ]}
+          video={hero}
           img={SMM_IMG}
           bgColor="bg-[#4dc7ff]"
           link="/ai-development"
         />
-
       </div>
     </section>
   );
 }
-
