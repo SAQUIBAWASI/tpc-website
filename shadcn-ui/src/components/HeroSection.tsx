@@ -1,8 +1,9 @@
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Award, Truck, Users } from 'lucide-react';
 import { Link } from "react-router-dom";
-import video from '../large_view.mp4'
+import video from '../large_view.mp4';
 
+import hero from '../tpc vide 1.mp4'
 
 
 export default function HeroSection() {
@@ -20,7 +21,7 @@ export default function HeroSection() {
           playsInline
           className="w-full h-full object-cover"
         >
-          <source src={video} type="video/mp4" />
+          <source src={hero} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
         {/* Overlay */}
