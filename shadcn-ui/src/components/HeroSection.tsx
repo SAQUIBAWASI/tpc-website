@@ -59,7 +59,7 @@ export default function HeroSection() {
           </div>
 
 
-  
+
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 mt-10 sm:mt-16">
             <div className="text-center">
             </div>
@@ -113,4 +113,5 @@ export default function HeroSection() {
     </section>
   );
 }
+
 
