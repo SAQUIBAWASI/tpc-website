@@ -129,7 +129,7 @@ import { Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 const teamMembers = [
-  { name: "Ajay Manthri", role: "Founder & CEO", img: "/team/as2.jpg" },
+  { name: "Aja Manthri", role: "Founder & CEO", img: "/team/as2.jpg" },
   { name: "Manasa Reddy", role: "Senior Human Resource", img: "/team/manasa mam - Copy.png" },
   { name: "Jyothsna", role: "Manager", img: "/images/13.jpg" },
   { name: "Shruthi", role: "Human Resource", img: "/images/36.jpg" },
