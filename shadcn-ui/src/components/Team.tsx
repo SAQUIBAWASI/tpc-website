@@ -9,13 +9,15 @@ const teamMembers = [
   { name: "Manasa Reddy", role: "Senior Human Resource", img: "/team/manasa mam - Copy.png" },
   { name: "Ramya", role: "Pitch, negotiate, close, celebrate victory.", img: "/images/3.jpg" },
   { name: "Anil", role: "Transforming ideas into digital reality.", img: "/images/anil 1.jpg" },
-  { name: "Jyothsna", role: "Manager", img: "/images/13.jpg" },
+  { name: "Pragnya", role: "Embrace the unknown.", img: "/images/47.jpg" },
+  
   { name: "Shruthi", role: "Human Resource", img: "/images/36.jpg" },
   { name: "Roshini", role: "BDE", img: "/team/roshini (1) - Copy.png" },
   { name: "Sathwika", role: "Stay a head, embrace digital trends.", img: "/images/5.jpg" },
   { name: "Srini", role: "Hyderabad Public School ka Property", img: "/images/Sinu6.png" },
   { name: "Pandu Reddy", role: "Aaj mei Khuch Naya Karunga", img: "/images/pandu-reddy.png" },
-  { name: "Pragnya", role: "Embrace the unknown.", img: "/images/47.jpg" },
+  { name: "Jyothsna", role: "Manager", img: "/images/13.jpg" },
+  
   { name: "Hema", role: "Customer-centric campaigns drive results.", img: "/images/2.jpg" },
   
   
@@ -35,8 +37,8 @@ const teamMembers = [
   { name: "Suvarna", role: "Quickly put the developer on speed dial.", img: "/images/suvarna - Copy.jpg" },
   
   { name: "Gayathri", role: "Research", img: "/team/Gayathri - Copy.webp" },
-  { name: "----", role: "Graphic design", img: "/team/roshini (3) - Copy.png" },
-  { name: "Shania", role: "Graphic design", img: "/team/shania mam - Copy.jpg" },
+  { name: "Sangeetha", role: "BDE", img: "/team/roshini (3) - Copy.png" },
+  { name: "Shania", role: "BDE", img: "/team/shania mam - Copy.jpg" },
   { name: "Sushmita", role: "Graphic design", img: "/team/Sushmita - Copy.png" },
   { name: "Shweta", role: "Graphic design", img: "/team/Shweta - Copy.png" },
 ];
