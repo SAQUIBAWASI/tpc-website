@@ -2,6 +2,7 @@ import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
 import { Link } from "react-router-dom";
 import hero from '../tpc vide 1.mp4'
+import mv from '../mv.mp4'
 
 export default function HeroSection() {
   return (

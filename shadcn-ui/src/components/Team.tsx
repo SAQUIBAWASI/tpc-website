@@ -5,27 +5,42 @@ import { useEffect, useState } from "react";
 
 
 const teamMembers = [
-  { name: "Ajay Manthri", role: "Founder & CEO", img: "/images/ajay.jpg" },
+  { name: "Ajay Manthri", role: "Founder & CEO", img: "/team/as2.jpg" },
+  { name: "Manasa Reddy", role: "Senior Human Resource", img: "/team/manasa mam - Copy.png" },
+  { name: "Ramya", role: "Pitch, negotiate, close, celebrate victory.", img: "/images/3.jpg" },
+  { name: "Anil", role: "Transforming ideas into digital reality.", img: "/images/anil 1.jpg" },
   { name: "Jyothsna", role: "Manager", img: "/images/13.jpg" },
   { name: "Shruthi", role: "Human Resource", img: "/images/36.jpg" },
+  { name: "Roshini", role: "BDE", img: "/team/roshini (1) - Copy.png" },
+  { name: "Sathwika", role: "Stay a head, embrace digital trends.", img: "/images/5.jpg" },
   { name: "Srini", role: "Hyderabad Public School ka Property", img: "/images/Sinu6.png" },
-  { name: "Pandu Reddy", role: "Developer", img: "/images/pandu-reddy.png" },
-  { name: "Suvarna", role: "Quickly put the developer on speed dial.", img: "/images/suvarna - Copy.jpg" },
-  { name: "Anil", role: "Marketing", img: "/images/anil 1.jpg" },
+  { name: "Pandu Reddy", role: "Aaj mei Khuch Naya Karunga", img: "/images/pandu-reddy.png" },
   { name: "Pragnya", role: "Embrace the unknown.", img: "/images/47.jpg" },
-  { name: "Hema", role: "Digital Marketing", img: "/images/2.jpg" },
-  { name: "Rama Krishna", role: "SEO", img: "/images/26.jpg" },
-  { name: "Ramya", role: "Content Writer", img: "/images/3.jpg" },
-  { name: "Chandra Kanth", role: "Tester", img: "/images/ck.jpg" },
+  { name: "Hema", role: "Customer-centric campaigns drive results.", img: "/images/2.jpg" },
+  
+  
+  
+  
+  
+  { name: "Chandra Kanth", role: "Design. Develop. Debug. Deploy. Repeat.", img: "/images/ck.jpg" },
   { name: "Phanindra", role: "Code is poetry in motion.", img: "/images/pk.jpg" },
-  { name: "Rani", role: "Visual storytelling", img: "/images/21.jpg" },
+  { name: "Rani", role: "Visual storytelling in vibrant colors. ", img: "/images/21.jpg" },
   { name: "Jagadeesh", role: "Keep calm and code on.", img: "/images/jagadeesh.jpg" },
-  { name: "Sathwika", role: "BDE", img: "/images/5.jpg" },
-  { name: "Sasi", role: "Frontend Dev", img: "/images/16.jpg" },
-  { name: "Rakesh", role: "QA", img: "/images/26.jpg" },
-  { name: "Kumar", role: "Operations BUG", img: "/images/34.jpg" },
-  { name: "Aman", role: "Research", img: "/images/26.jpg" },
+  
+  { name: "Sasi", role: "Debugging: half my life.", img: "/images/16.jpg" },
+  { name: "Rakesh", role: "slicing through code challenges with precision", img: "/images/26.jpg" },
+  { name: "Kumar", role: "Silencing the bugs, one fix at a time.", img: "/images/34.jpg" },
+  { name: "Maddiboina Lokesh", role: "Software Engineer | R&D", img: "/team/roshini (6) - Copy.png" },
+  { name: "Rajesh", role: "Graphic design", img: "/team/roshini (6) - Copy.png" },
+  { name: "Suvarna", role: "Quickly put the developer on speed dial.", img: "/images/suvarna - Copy.jpg" },
+  
+  { name: "Gayathri", role: "Research", img: "/team/Gayathri - Copy.webp" },
+  { name: "----", role: "Graphic design", img: "/team/roshini (3) - Copy.png" },
+  { name: "Shania", role: "Graphic design", img: "/team/shania mam - Copy.jpg" },
+  { name: "Sushmita", role: "Graphic design", img: "/team/Sushmita - Copy.png" },
+  { name: "Shweta", role: "Graphic design", img: "/team/Shweta - Copy.png" },
 ];
+
 
 export default function TeamSection() {
   const [showTop, setShowTop] = useState(false);
