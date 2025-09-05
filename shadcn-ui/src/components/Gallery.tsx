@@ -133,7 +133,7 @@ const teamMembers = [
   { name: "Manasa Reddy", role: "Senior Human Resource", img: "/team/manasa mam - Copy.png" },
   { name: "Jyothsna", role: "Manager", img: "/images/13.jpg" },
   { name: "Shruthi", role: "Human Resource", img: "/images/36.jpg" },
-  { name: "Srini", role: "Digital Marktring manger", img: "/images/Sinu6.png" },
+  { name: "Srini", role: "Hyderabad Public School ka Property", img: "/images/Sinu6.png" },
   { name: "Pandu Reddy", role: "Aaj mei Khuch Naya Karunga", img: "/images/pandu-reddy.png" },
   { name: "Suvarna", role: "Quickly put the developer on speed dial.", img: "/images/suvarna - Copy.jpg" },
   { name: "Anil", role: "Transforming ideas into digital reality.", img: "/images/anil 1.jpg" },
