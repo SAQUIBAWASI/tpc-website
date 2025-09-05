@@ -159,6 +159,10 @@ const teamMembers = [
   { name: "Suvarna", role: "Quickly put the developer on speed dial.", img: "/images/suvarna - Copy.jpg" },
   
   { name: "Gayathri", role: "Research", img: "/team/Gayathri - Copy.webp" },
+  { name: "----", role: "Graphic design", img: "/team/roshini (3) - Copy.png" },
+  { name: "Shania", role: "Graphic design", img: "/team/shania mam - Copy.jpg" },
+  { name: "Sushmita", role: "Graphic design", img: "/team/Sushmita - Copy.png" },
+  { name: "Shweta", role: "Graphic design", img: "/team/Shweta - Copy.png" },
 ];
 
 const partners = [
