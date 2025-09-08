@@ -38,7 +38,7 @@ export default function TestimonialSection() {
         {/* Left Image */}
         <div className="relative flex items-center justify-center overflow-hidden">
           <img
-            src="/images/GateCT.jpg"
+            src="/team/mysore4.jpeg"
             alt="Left"
             className="w-full h-full object-cover rounded-[200px_0_200px_0] shadow-lg"
           />
