@@ -12,6 +12,8 @@ import ServicesSection from '@/components/ServicesSection';
 import Testimonial from '@/components/Testimonial';
 import Location from '@/components/location';
 import { useEffect, useState } from "react";
+import "@fortawesome/fontawesome-free/css/all.min.css";
+
 
 export default function Index() {
   const [showTop, setShowTop] = useState(false);

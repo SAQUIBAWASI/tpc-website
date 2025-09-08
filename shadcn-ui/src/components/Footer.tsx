@@ -92,6 +92,120 @@ export default function LocationSection() {
             <img src="/images/char222.png" alt="Charminar" className="w-80" />
           </div>
         </div>
+        {/* Social Icons and Copyright */}
+      <div style={{ borderTop: '1px solid #222', marginTop: 32, padding: '24px 0 0 0', textAlign: 'center' }}>
+        <div style={{ marginBottom: 16 }}>
+          {/* Use valid URLs for social links */}
+          <a href="https://www.facebook.com/webappdigitalmarketing" style={{
+            display: 'inline-block',
+            margin: '0 8px',
+            background: '#fff',
+            borderRadius: '50%',
+            width: 40,
+            height: 40,
+            lineHeight: '40px',
+            textAlign: 'center',
+            color: '#000',
+            fontSize: 20,
+            verticalAlign: 'middle'
+          }}>
+            <i className="fab fa-facebook-f"></i>
+          </a>
+          <a href="https://x.com/thepatternsco" style={{
+            display: 'inline-block',
+            margin: '0 8px',
+            background: '#fff',
+            borderRadius: '50%',
+            width: 40,
+            height: 40,
+            lineHeight: '40px',
+            textAlign: 'center',
+            color: '#000',
+            fontSize: 20,
+            verticalAlign: 'middle'
+          }}>
+            <i className="fab fa-x-twitter"></i>
+          </a>
+          <a href="https://www.instagram.com/thepatternscompany/" style={{
+            display: 'inline-block',
+            margin: '0 8px',
+            background: '#fff',
+            borderRadius: '50%',
+            width: 40,
+            height: 40,
+            lineHeight: '40px',
+            textAlign: 'center',
+            color: '#000',
+            fontSize: 20,
+            verticalAlign: 'middle'
+          }}>
+            <i className="fab fa-instagram"></i>
+          </a>
+          <a href="https://www.linkedin.com/company/the-patterns-company/mycompany/?viewAsMember=true" style={{
+            display: 'inline-block',
+            margin: '0 8px',
+            background: '#fff',
+            borderRadius: '50%',
+            width: 40,
+            height: 40,
+            lineHeight: '40px',
+            textAlign: 'center',
+            color: '#000',
+            fontSize: 20,
+            verticalAlign: 'middle'
+          }}>
+            <i className="fab fa-linkedin-in"></i>
+          </a>
+          <a href="https://www.google.com/search?q=The+Patterns+Company+-+Best+Digital+Marketing+-+SEO+-+SMO+-+Website+Development-+Services+in+Hyderabad&stick=H4sIAAAAAAAA_xXJQQuCMBQA4FPRz3gEHYOtuUKPZdBFCgo6v82njXTK9hD9O_3S9PJdvs16uxOjMtakSp6E0spIm2ZiPIjKJonQVh61VSh-q-r1IXggMwUf4dK1PfoJ9nCmyJC72jE2UGD4Ejtfz_G83heLxTeZ6Jggp4Garm_J81wUBmcpgvNwm0oKaLD8A5AniNySAAAA&hl=en-GB&mat=CU_2z5hS4XBnElcBezTaAf_x4PgqJKbSbY163tmX3j9wuTU43ZbVKGuLxI99D4SLz6pcBSk2-UoSbZ2YTBktHl9rrf6jbGubMz5bEoiAUT7dsLYqiSmnTfCtvzal5dmB-tg&authuser=0" style={{
+            display: 'inline-block',
+            margin: '0 8px',
+            background: '#fff',
+            borderRadius: '50%',
+            width: 40,
+            height: 40,
+            lineHeight: '40px',
+            textAlign: 'center',
+            color: '#000',
+            fontSize: 20,
+            verticalAlign: 'middle'
+          }}>
+            <i className="fab fa-google"></i>
+          </a>
+          <a href="https://www.youtube.com/@thepatternsstudio" style={{
+            display: 'inline-block',
+            margin: '0 8px',
+            background: '#fff',
+            borderRadius: '50%',
+            width: 40,
+            height: 40,
+            lineHeight: '40px',
+            textAlign: 'center',
+            color: '#000',
+            fontSize: 20,
+            verticalAlign: 'middle'
+          }}>
+            <i className="fab fa-youtube"></i>
+          </a>
+          <a href="https://in.pinterest.com/thepatternsgroup/" style={{
+            display: 'inline-block',
+            margin: '0 8px',
+            background: '#fff',
+            borderRadius: '50%',
+            width: 40,
+            height: 40,
+            lineHeight: '40px',
+            textAlign: 'center',
+            color: '#000',
+            fontSize: 20,
+            verticalAlign: 'middle'
+          }}>
+            <i className="fab fa-pinterest"></i>
+          </a>
+        </div>
+        <div style={{ color: '#32ca32', fontWeight: 500, fontSize: '1rem', marginBottom: 8 }}>
+          <i className="fa fa-copyright"></i> Copy Rights | <a href="/privacy-policy" style={{ color: '#32ca32', textDecoration: 'underline' }}>Privacy Policy</a> , All right reserved. Designed By <span style={{ color: '#32ca32', fontWeight: 'bold' }}>THE PATTERNS COMPANY</span>
+        </div>
+      </div>
       </footer>
     </section>
   );
