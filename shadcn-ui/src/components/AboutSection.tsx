@@ -61,7 +61,7 @@ export default function AboutSection() {
             <div className="relative w-80 h-80 md:w-96 md:h-96">
               <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-green-400 to-purple-400 blur-lg opacity-40 animate-pulse" />
               <img
-                src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=900&q=80"
+                src="/team/about.png"
                 alt="About TPC"
                 className="relative z-10 object-cover w-full h-full rounded-2xl shadow-2xl border-4 border-white"
               />

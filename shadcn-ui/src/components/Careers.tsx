@@ -88,7 +88,7 @@ export default function Careers() {
                     ))}
                   </ul>
                   <a
-                    href="mailto:careers@yourcompany.com?subject=Application%20for%20Job"
+                    href="mailto:AjayManthri@thepatternscompany.com?subject=Application%20for%20Job"
                     className="inline-block px-6 py-3 rounded-lg bg-green-500 hover:bg-green-600 text-white font-semibold shadow-lg transition"
                   >
                     Apply Now
