@@ -306,6 +306,143 @@ function Spec({ label, value, unit }: { label: string; value: string; unit?: str
 }
 
 // Reusable card
+// function DroneCard({
+//   title,
+//   subtitle,
+//   description,
+//   specs,
+//   video,
+//   img,
+//   bgColor,
+//   link,
+// }: {
+//   title: string;
+//   subtitle: string;
+//   description: string;
+//   specs: Array<{ label: string; value: string; unit: string }>;
+//   video?: string;
+//   img: string;
+//   bgColor: string;
+//   link: string;
+// }) {
+//   return (
+//     <motion.div 
+//       initial={{ opacity: 0, y: 24 }}
+//       whileInView={{ opacity: 1, y: 0 }}
+//       viewport={{ once: true }}
+//       transition={{ duration: 0.6 }}
+//       className={`relative grid overflow-hidden rounded-[20px] ${bgColor} p-3 sm:p-4 md:p-5 shadow-xg`}
+//     >
+//       {/* Decorative glyphs (desktop only) */}
+//       <div className="pointer-events-none absolute right-6 top-6 hidden md:block select-none text-black/70">
+//         <div className="flex items-center gap-8 text-sm font-semibold">
+//           <span className="inline-flex items-center gap-1">
+//             <Move size={18} />⌃
+//           </span>
+//           <span className="underline">l‰</span>
+//         </div>
+//       </div>
+
+//       <div className="grid grid-cols-1 gap-8 md:grid-cols-2 items-start">
+//         {/* LEFT SECTION */}
+//         <div className="relative">
+//           <div className="grid gap-5 rounded-[24px] bg-white p-3 md:grid-cols-[260px,1fr] md:p-5">
+//             {/* Specs */}
+//             <div className="relative rounded-[20px] border-2 border-black/15 p-4 max-h-none md:max-h-[300px] overflow-y-visible">
+//               <div className="flex items-center justify-between">
+//                 <div>
+//                   <p className="text-2xl md:text-4xl font-extrabold tracking-tight">
+//                     {subtitle}
+//                   </p>
+//                   <div className="mt-1 w-28 md:w-36 border-y-4 border-black/80 text-center text-xs uppercase tracking-widest">
+//                     service
+//                   </div>
+//                 </div>
+//               </div>
+
+//               <p className="mt-3 text-sm md:text-base leading-snug text-black/80">
+//                 {description}
+//               </p>
+
+//               <div className="mt-3 flex items-center gap-3">
+//                 <button className="grid h-8 w-8 md:h-10 md:w-10 place-items-center rounded-full border-2 border-black/70 bg-white text-black">
+//                   <Minus size={16} />
+//                 </button>
+//                 <button className="grid h-8 w-8 md:h-10 md:w-10 place-items-center rounded-full border-2 border-black/70 bg-white text-black">
+//                   <Plus size={16} />
+//                 </button>
+//               </div>
+
+//               <dl className="mt-4 space-y-4">
+//                 {specs.map((spec, idx) => (
+//                   <Spec
+//                     key={idx}
+//                     label={spec.label}
+//                     value={spec.value}
+//                     unit={spec.unit}
+//                   />
+//                 ))}
+//               </dl>
+//             </div>
+
+//             {/* ✅ Conditional video or image */}
+//             <div className="relative rounded-[20px] border-2 border-black/15 overflow-hidden">
+//               {video ? (
+//                 <video
+//                   src={video}
+//                   autoPlay
+//                   loop
+//                   muted
+//                   playsInline
+//                   className="w-full h-48 md:h-[300px] object-cover"
+//                 />
+//               ) : (
+//                 <img
+//                   src={img}
+//                   alt={title}
+//                   className="w-full h-48 md:h-[300px] object-cover transition-transform duration-500 hover:scale-105"
+//                 />
+//               )}
+//             </div>
+//           </div>
+//         </div>
+
+//         {/* RIGHT SECTION */}
+//         <div className="relative">
+//           <h2 className="text-3xl sm:text-4xl md:text-6xl font-black tracking-tight text-black">
+//             {title}
+//           </h2>
+//           <p className="mt-4 md:mt-6 max-w-xl text-base md:text-lg leading-relaxed text-black/80">
+//             {description}
+//           </p>
+
+//           <div className="mt-6 md:mt-16">
+//             <Button
+//               variant="default"
+//               size="lg"
+//               className="w-full md:w-auto rounded-full bg-black text-white hover:bg-black/90 shadow-md hover:shadow-lg"
+//               asChild
+//             >
+//               <Link
+//                 to={link}
+//                 className="inline-flex items-center justify-center gap-3"
+//               >
+//                 More details
+//                 <ArrowRight
+//                   size={22}
+//                   className="transition-transform duration-300 group-hover:translate-x-1"
+//                 />
+//               </Link>
+//             </Button>
+//           </div>
+//         </div>
+//       </div>
+//     </motion.div>
+//   );
+// }
+
+
+
 function DroneCard({
   title,
   subtitle,
@@ -333,7 +470,7 @@ function DroneCard({
       transition={{ duration: 0.6 }}
       className={`relative grid overflow-hidden rounded-[20px] ${bgColor} p-3 sm:p-4 md:p-5 shadow-xg`}
     >
-      {/* Decorative glyphs (desktop only) */}
+      {/* Decorative glyphs */}
       <div className="pointer-events-none absolute right-6 top-6 hidden md:block select-none text-black/70">
         <div className="flex items-center gap-8 text-sm font-semibold">
           <span className="inline-flex items-center gap-1">
@@ -348,7 +485,7 @@ function DroneCard({
         <div className="relative">
           <div className="grid gap-5 rounded-[24px] bg-white p-3 md:grid-cols-[260px,1fr] md:p-5">
             {/* Specs */}
-            <div className="relative rounded-[20px] border-2 border-black/15 p-4 max-h-none md:max-h-[300px] overflow-y-auto">
+            <div className="relative rounded-[20px] border-2 border-black/15 p-4 max-h-none md:max-h-[300px] overflow-y-visible">
               <div className="flex items-center justify-between">
                 <div>
                   <p className="text-2xl md:text-4xl font-extrabold tracking-tight">
@@ -360,18 +497,21 @@ function DroneCard({
                 </div>
               </div>
 
+              {/* ✅ Remove this description block from the left side */}
+              {/*
               <p className="mt-3 text-sm md:text-base leading-snug text-black/80">
                 {description}
               </p>
+              */}
 
-              <div className="mt-3 flex items-center gap-3">
+              {/* <div className="mt-3 flex items-center gap-3">
                 <button className="grid h-8 w-8 md:h-10 md:w-10 place-items-center rounded-full border-2 border-black/70 bg-white text-black">
                   <Minus size={16} />
                 </button>
                 <button className="grid h-8 w-8 md:h-10 md:w-10 place-items-center rounded-full border-2 border-black/70 bg-white text-black">
                   <Plus size={16} />
                 </button>
-              </div>
+              </div> */}
 
               <dl className="mt-4 space-y-4">
                 {specs.map((spec, idx) => (
@@ -385,7 +525,7 @@ function DroneCard({
               </dl>
             </div>
 
-            {/* ✅ Conditional video or image */}
+            {/* Image or video */}
             <div className="relative rounded-[20px] border-2 border-black/15 overflow-hidden">
               {video ? (
                 <video
@@ -440,6 +580,7 @@ function DroneCard({
     </motion.div>
   );
 }
+
 
 export default function Products() {
   const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.1 });
