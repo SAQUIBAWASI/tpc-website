@@ -31,16 +31,25 @@ import Team from'./components/team';
 import PrivacyPolicy from './components/ui/PrivacyPolicy';
 
 
+import CanvasCursor from './components/CanvasCursor';
+
+
+
 
 const queryClient = new QueryClient();
+
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
       <Toaster />
       <BrowserRouter>
+
+      
+         {/* 👈 Add it once here */}
         {/* ✅ Header har page pe visible hoga */}
         <Header />
+        {/* <CanvasCursor /> */}
         <Helmet>
           <title> Best | Digital | Marketing</title>
            <meta name="description" content="best digital marketing company in hyderabad" />

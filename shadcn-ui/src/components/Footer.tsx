@@ -2,7 +2,7 @@
 import { Link } from "react-router-dom";
 export default function LocationSection() {
   return (
-    <section className="bg-[#7ED957] py-0">
+    <section className="bg-[#7ED957] py-1">
       {/* Top Row - Image + Map */}
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 px-4">
         {/* Image */}
