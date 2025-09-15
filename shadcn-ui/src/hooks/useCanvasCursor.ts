@@ -122,7 +122,7 @@ const useCanvasCursor = () => {
         phase: Math.random() * 2 * Math.PI,
         amplitude: 85,
         frequency: 0.0015,
-        offset: 285,
+        offset: 200,
       });
 
       lines = [];
