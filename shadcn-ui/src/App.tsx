@@ -49,7 +49,7 @@ const App = () => (
          {/* 👈 Add it once here */}
         {/* ✅ Header har page pe visible hoga */}
         <Header />
-        <CanvasCursor />
+        {/* <CanvasCursor /> */}
         <Helmet>
           <title> Best | Digital | Marketing</title>
            <meta name="description" content="best digital marketing company in hyderabad" />
