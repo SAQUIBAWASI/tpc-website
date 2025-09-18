@@ -4,6 +4,9 @@ import { Link } from "react-router-dom";
 import hero from '../tpc vide 1.mp4'
 import mv from '../mv.mp4'
 import r from '../19.mp4'
+import h1 from '../large_view.mp4'
+import h2 from '../mobile-v.mp4'
+import h3 from '../mobile-view.mp4'
 
 export default function HeroSection() {
   return (
@@ -49,7 +52,7 @@ export default function HeroSection() {
         {/* Right Side Video with Half-Circle */}
         <div className="absolute top-0 right-0 w-1/2 h-full overflow-hidden clip-half-right">
           <video autoPlay muted loop playsInline className="w-full h-full object-cover">
-            <source src={r} type="video/mp4" />
+            <source src={h1} type="video/mp4" />
             Your browser does not support the video tag.
           </video>
         </div>
@@ -59,7 +62,7 @@ export default function HeroSection() {
       <div className="md:hidden relative flex items-center justify-center min-h-screen text-center text-white">
         {/* Background video */}
         <video autoPlay muted loop playsInline className="absolute inset-0 w-full h-full object-cover z-0">
-          <source src={hero} type="video/mp4" />
+          <source src={h1} type="video/mp4" />
         </video>
         <div className="absolute inset-0 bg-black/50 z-0"></div>
 
