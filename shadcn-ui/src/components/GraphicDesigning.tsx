@@ -33,10 +33,10 @@ export default function EcommerceHyderabad() {
   
   <div className="relative z-10">
     <h1 className="text-4xl md:text-6xl font-extrabold text-white drop-shadow-lg">
-      Ecommerce in Hyderabad
+      Graphic Design Services in Hyderabad
     </h1>
     <p className="mt-4 text-white font-medium">
-      Home / E-Commerce
+      Home / Graphic Design Services
     </p>
   </div>
 </section>
@@ -69,12 +69,33 @@ export default function EcommerceHyderabad() {
         <section className="bg-gray-50 py-20">
           <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-center">
             <div>
-              <h2 className="text-3xl font-bold mb-6">What is E-Commerce?</h2>
+              <h2 className="text-3xl font-bold mb-6">What is Graphic Designing?</h2>
               <p className="leading-relaxed text-gray-700">
-                The art and practice of creating visual messages via the use of visually requesting text, images, colors, and layout ways of doing things is known as  Graphic Design. It involves creating visually requesting and effective designs to bring across a clearly particular message or idea. The graphic de­signer uses many tools to make graphics. The­y use Adobe software like­ Photoshop, Illustrator, and InDesign. With these tools, the­y make graphics for all kinds of computer things. For example­, they make labels, ads, boxe­s, web designs, and prints. The tools le­t them make nice graphics for many use­s. They carefully think believe elements such as composition, balance, contrast, and system where things or people are in separate levels of importance to create designs that are both beautiful and functional. People­ who make pictures on computers are­ very useful. They he­lp make brand looks good. They also assist companies in te­lling people what they want the­m to know. People like the­ graphic artists make brands easy for people­ to recognize and reme­mber. They collaborate closely with clients or stakeholders to understand their needs and objectives, then translate those into visually compelling designs that resonate with the intended audience. In the end, graphic designing is about using ability to create interesting new things and abilities to do particular job-related tasks well to visually communicate messages and remind people bring out feelings of love, hate, fear, etc. through design. </p>
+                Graphic Designing is the art of visual communication. It goes beyond just creating attractive images — it’s about building powerful visuals that represent your brand’s identity, engage your audience, and communicate your message effectively.<br/>
+
+At The Patterns Company, our graphic design services are tailored to meet both creative and business needs, ensuring every design is purposeful, impactful, and aligned with your goals. </p>
+<div className="bg-black text-white p-6 rounded-lg tp-4 mt-5">
+  <h3 className="text-xl font-semibold mb-4">Tools We Use</h3>
+  <ul className="list-disc pl-5 space-y-1">
+    <li>
+      <strong>Adobe Photoshop &amp; Illustrator</strong> – for high-quality designs.
+    </li>
+    <li>
+      <strong>CorelDRAW &amp; InDesign</strong> – for print materials.
+    </li>
+    <li>
+      <strong>Figma &amp; Canva</strong> – for digital and UI/UX graphics.
+    </li>
+    <li>
+      <strong>After Effects &amp; Premiere Pro</strong> – for motion graphics and videos.
+    </li>
+  </ul>
+</div>
+
+
             </div>
             <img
-              src="/images/ECommerce/gd.jpg"
+              src="/images/gd.png"
               alt="Ecommerce Illustration"
               className="rounded-xl shadow-xl"
             />

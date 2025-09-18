@@ -43,7 +43,7 @@ class About2 extends React.Component {
                 </p>
               </div>
               <Link
-                to="/google-ads"
+                to="/graphic-designing"
                 className="service-btn bg-black text-white px-4 py-2 rounded-lg hover:bg-green-400 transition"
               >
                 Read More
