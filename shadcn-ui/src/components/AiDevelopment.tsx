@@ -179,7 +179,7 @@ export default function AiDevelopment() {
 
       {/* Floating WhatsApp Button */}
       <a
-        href="https://wa.me/91837416160?text=Hello%2C%20I%27m%20interested%20in%20AI%20Development"
+        href="https://wa.me/919392557785?text=Hello%2C%20I%27m%20interested%20in%20AI%20Development"
         className="fixed bottom-6 right-6 z-50 inline-flex items-center justify-center w-14 h-14 rounded-full bg-green-500 hover:bg-green-600 shadow-xl focus:outline-none"
         aria-label="Chat on WhatsApp"
       >

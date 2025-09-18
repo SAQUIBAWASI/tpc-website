@@ -27,16 +27,16 @@ export default function EcommerceHyderabad() {
         {/* ===== HERO ===== */}
         <section
   className="relative h-[300px] flex items-center justify-center text-center bg-cover bg-center"
-  style={{ backgroundImage: "url('/images/ecommerce-bg.jpg')" }}
+  style={{ backgroundImage: "url('/images/ga.jpg')" }}
 >
   <div className="absolute inset-0 bg-black/50" /> {/* dark overlay for text visibility */}
   
   <div className="relative z-10">
     <h1 className="text-4xl md:text-6xl font-extrabold text-white drop-shadow-lg">
-      Ecommerce in Hyderabad
+      Google Ads Services in Hyderabad
     </h1>
     <p className="mt-4 text-white font-medium">
-      Home / E-Commerce
+      Home / Ads
     </p>
   </div>
 </section>
@@ -74,7 +74,7 @@ export default function EcommerceHyderabad() {
                 Google Ads is an online­ way to show ads for stuff. It works by you paying each time someone­ clicks an ad. These ads show up on Google se­arches, other website­s, YouTube videos, and more. You pick words that match what you se­ll. Then your ad pops up when people­ search those words. Google Ads has te­xt ads, picture ads, video ads, and app ads. This lets you re­ach people in many ways and places. You can targe­t who sees your ads too. Google Ads has tools to track how we­ll your ads work. So it helps businesses ge­t their products in front of the right people­. They can drive traffic to their we­bsite and meet the­ir goals.</p>
             </div>
             <img
-              src="/images/ECommerce/E2C.jpg"
+              src="/images/ga1.jpg"
               alt="Ecommerce Illustration"
               className="rounded-xl shadow-xl"
             />

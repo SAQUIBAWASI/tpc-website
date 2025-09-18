@@ -3,6 +3,7 @@ import { ArrowRight } from 'lucide-react';
 import { Link } from "react-router-dom";
 import hero from '../tpc vide 1.mp4'
 import mv from '../mv.mp4'
+import r from '../19.mp4'
 
 export default function HeroSection() {
   return (
@@ -48,7 +49,7 @@ export default function HeroSection() {
         {/* Right Side Video with Half-Circle */}
         <div className="absolute top-0 right-0 w-1/2 h-full overflow-hidden clip-half-right">
           <video autoPlay muted loop playsInline className="w-full h-full object-cover">
-            <source src={hero} type="video/mp4" />
+            <source src={r} type="video/mp4" />
             Your browser does not support the video tag.
           </video>
         </div>

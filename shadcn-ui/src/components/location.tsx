@@ -7,17 +7,56 @@ export default function ContactSection() {
 
   const regionData = {
     India: {
-      text: `T-HuB 2.0, Inorbit Mall Rd, Vittal Rao Nagar, 
-             Knowledge City, Madhapur, Hyderabad, Telangana 500081`,
-      icon: <MapPin className="w-5 h-5 text-green-600 inline mr-2" />,
+      text: [
+        `T-HuB 2.0, Inorbit Mall Rd, Vittal Rao Nagar, 
+         Knowledge City, Madhapur, Hyderabad, Telangana 500081`,
+        `C9XP+MMW, Cyber Hills Colony, VIP Hills, 
+         Silicon Valley, Madhapur, Hyderabad, Telangana 500081`,
+         `ground floor, Prestige Atlanta, 80 Feet Rd, Koramangala 1A Block, Koramangala 3 Block, Koramangala, Bengaluru, Karnataka 560034,
+         `
+      ],
     },
-    Dubai: { text: "Coming Soon", icon: <Clock className="w-5 h-5 text-yellow-600 inline mr-2" /> },
-    Europe: { text: "Coming Soon", icon: <Clock className="w-5 h-5 text-yellow-600 inline mr-2" /> },
-    America: { text: "Coming Soon", icon: <Clock className="w-5 h-5 text-yellow-600 inline mr-2" /> },
+    Dubai: {
+      text: "Coming Soon",
+      icon: <Clock className="w-5 h-5 text-yellow-600 inline mr-2" />,
+    },
+    Europe: {
+      text: "Coming Soon",
+      icon: <Clock className="w-5 h-5 text-yellow-600 inline mr-2" />,
+    },
+    America: {
+      text: "Coming Soon",
+      icon: <Clock className="w-5 h-5 text-yellow-600 inline mr-2" />,
+    },
   };
 
   // ✅ Check if it's mobile
   const isMobile = typeof window !== "undefined" && window.innerWidth < 768;
+
+  // ✅ Reusable Address Renderer
+  const renderAddresses = (region) => {
+    const data = regionData[region];
+    if (Array.isArray(data.text)) {
+      return (
+        <div className="text-sm space-y-2">
+          {data.text.map((addr, idx) => (
+            <p key={idx} className="flex items-start">
+              <MapPin className="w-5 h-5 text-green-600 mr-2 flex-shrink-0" />
+              {addr}
+            </p>
+          ))}
+        </div>
+      );
+    }
+    return (
+      <p className="flex items-start text-sm">
+        {data.icon || (
+          <MapPin className="w-5 h-5 text-green-600 mr-2 flex-shrink-0" />
+        )}
+        {data.text}
+      </p>
+    );
+  };
 
   return (
     <section className="bg-green-400 text-white py-16">
@@ -39,9 +78,7 @@ export default function ContactSection() {
               {!isMobile && activeRegion === region && (
                 <div className="absolute top-full mt-2 left-1/2 -translate-x-1/2 bg-white text-black shadow-lg rounded-lg p-4 w-72 z-50">
                   <h3 className="text-lg font-bold mb-2">{region}</h3>
-                  <p className="text-sm">
-                    {regionData[region].icon} {regionData[region].text}
-                  </p>
+                  {renderAddresses(region)}
                 </div>
               )}
             </div>
@@ -67,9 +104,7 @@ export default function ContactSection() {
         <div className="fixed inset-0 flex items-center justify-center bg-black/60 z-50">
           <div className="bg-white text-black rounded-lg shadow-lg max-w-sm w-11/12 p-6 relative">
             <h3 className="text-2xl font-bold mb-4">{activeRegion}</h3>
-            <p className="mb-6">
-              {regionData[activeRegion].icon} {regionData[activeRegion].text}
-            </p>
+            {renderAddresses(activeRegion)}
             <button
               onClick={() => setActiveRegion(null)}
               className="absolute top-3 right-3 text-black font-bold text-lg"

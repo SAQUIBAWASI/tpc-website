@@ -18,7 +18,7 @@ export default function Header() {
      { name: "AboutUs", href: "/about", isPage: true },
     { name: "Services", href: "" },
     { name: "Career", href: "/career", isPage: true },
-    { name: "Team", href: "/Team", isPage: true },
+    { name: "Gallery", href: "/Team", isPage: true },
     { name: "Blog", href: "/blog", isPage: true },
     { name: "Contact", href: "/contact", isPage: true },
   ];
@@ -46,12 +46,12 @@ export default function Header() {
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-black text-green-400 shadow-md">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-black text-green-401 shadow-md">
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between h-28">
           {/* Logo */}
-          <RouterLink to="/" className="flex items-center space-x-2">
-            <img src="/images/tpc1.png" alt="TPC Logo" className="h-12" />
+          <RouterLink to="/" className="flex items-center space-x-2 ml-5">
+            <img src="/images/tpc1.png" alt="TPC Logo" className="h-16" />
           </RouterLink>
 
           {/* Desktop Nav */}
@@ -70,12 +70,12 @@ export default function Header() {
                 {item.isPage ? (
                   <RouterLink
                     to={item.href}
-                    className="hover:text-green-400 transition-colors"
+                    className="hover:text-green-401 transition-colors"
                   >
                     {item.name}
                   </RouterLink>
                 ) : (
-                  <span className="hover:text-green-400 cursor-pointer">
+                  <span className="hover:text-green-401 cursor-pointer">
                     {item.name}
                   </span>
                 )}
@@ -87,7 +87,7 @@ export default function Header() {
                       <RouterLink
                         key={service.name}
                         to={service.href}
-                        className="block px-4 py-2 hover:bg-green-100 hover:text-green-400"
+                        className="block px-4 py-2 hover:bg-green-100 hover:text-green-401"
                         onClick={() => setIsDesktopServicesOpen(false)}
                       >
                         {service.name}
@@ -101,30 +101,32 @@ export default function Header() {
 
           {/* Right Section */}
           <div className="flex items-center space-x-6">
-            <a href="tel:+15551234567">
-              <Phone className="w-7 h-7 text-white hover:text-green-400 cursor-pointer" />
-            </a>
-            <a
-              href="https://wa.me/15551234567"
+            <a href="tel:+918500693113" className="relative">
+  <span className="absolute inset-0 rounded-full animate-phone-pulse bg-green-401/20"></span>
+  <Phone className="w-7 h-7 text-white hover:text-green-401 cursor-pointer animate-phone-ring relative z-10" />
+</a>
+
+            {/* <a
+              href="https://wa.me/8500693113"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <MessageCircle className="w-7 h-7 text-white hover:text-green-400 cursor-pointer" />
-            </a>
+              <MessageCircle className="w-7 h-7 text-white hover:text-green-401 cursor-pointer" />
+            </a> */}
             <button
               onClick={() => {
                 const query = prompt("Enter search term:");
                 if (query) alert(`Searching for: ${query}`);
               }}
             >
-              <Search className="w-7 h-7 text-white hover:text-green-400 cursor-pointer" />
+              <Search className="w-7 h-7 text-white hover:text-green-401 cursor-pointer" />
             </button>
 
-            <RouterLink to="/contact">
-              <Button className="bg-green-400 hover:bg-green-400 hidden lg:flex">
+            {/* <RouterLink to="/contact">
+              <Button className="bg-green-401 hover:bg-green-401 hidden lg:flex">
                 Get Quote
               </Button>
-            </RouterLink>
+            </RouterLink> */}
 
             {/* Mobile Menu Toggle */}
             <button
@@ -146,7 +148,7 @@ export default function Header() {
                 <div key={item.name}>
                   <p
                     onClick={() => setIsMobileServicesOpen(!isMobileServicesOpen)}
-                    className="block py-2 text-lg hover:text-green-400 cursor-pointer font-semibold"
+                    className="block py-2 text-lg hover:text-green-401 cursor-pointer font-semibold"
                   >
                     {item.name}
                     <span className="absolute right-6">
@@ -165,7 +167,7 @@ export default function Header() {
                         <RouterLink
                           key={service.name}
                           to={service.href}
-                          className="block py-1 hover:text-green-400"
+                          className="block py-1 hover:text-green-401"
                           onClick={() => {
                             setIsMenuOpen(false);
                             setIsMobileServicesOpen(false);
@@ -183,7 +185,7 @@ export default function Header() {
                 <RouterLink
                   key={item.name}
                   to={item.href}
-                  className="block py-2 text-lg hover:text-green-400"
+                  className="block py-2 text-lg hover:text-green-401"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.name}
@@ -193,7 +195,7 @@ export default function Header() {
               return (
                 <span
                   key={item.name}
-                  className="block py-2 text-lg hover:text-green-400"
+                  className="block py-2 text-lg hover:text-green-401"
                 >
                   {item.name}
                 </span>
