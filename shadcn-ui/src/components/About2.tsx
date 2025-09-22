@@ -38,9 +38,9 @@ class About2 extends React.Component {
               <div className="service-title-wrapper">
                 <h2 className="service-title">Branding</h2>
                 <p className="service-description">
-                  Build a strong and memorable <br></br>identity for your
-                  business with our expert branding solutions, <br></br>
-                  from logo design to complete brand strategy.<br></br> complete
+                  Build a strong and memorable identity for your
+                  business with our expert branding solutions, 
+                  from logo design to complete brand strategy. complete
                   brand strategy online.
                 </p>
               </div>
@@ -70,9 +70,9 @@ class About2 extends React.Component {
               <div className="service-title-wrapper">
                 <h2 className="service-title">Web Development</h2>
                 <p className="service-description">
-                  Patterns Company specializes in delivering <br></br>bespoke
-                  Web Development Services Int <br></br>
-                  Hyderabad tailored to your unique<br></br> needs and
+                  Patterns Company specializes in delivering bespoke
+                  Web Development Services Int 
+                  Hyderabad tailored to your unique needs and
                   aspirations.
                 </p>
               </div>
