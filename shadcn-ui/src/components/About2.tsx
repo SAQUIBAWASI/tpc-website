@@ -15,6 +15,8 @@ import ss1 from "../ss1.mp4";
 import ai from "../ai1.jpg";
 import hero from "../tpc vide 1.mp4";
 import kk1 from "../kk1.png";
+import kk2 from "../kk2.png";
+import kk3 from "../kk3.png";
 
 class About2 extends React.Component {
   render() {
@@ -28,7 +30,7 @@ class About2 extends React.Component {
                 <source src={ss1} type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
-              <img src={kk1} alt="Web Design" className="layer" />
+              <img src={kk3} alt="Web Design" className="layer" />
             </div>
 
             {/* Right side - Text */}
