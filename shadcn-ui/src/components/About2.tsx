@@ -17,12 +17,13 @@ import hero from "../tpc vide 1.mp4";
 import kk1 from "../kk1.png";
 import kk2 from "../kk2.png";
 import kk3 from "../kk3.png";
+import kk4 from "../kk6.png";
 
 class About2 extends React.Component {
   render() {
     return (
       <>
-        <div className="container-ser container">
+        <div className="container-ser container pt-5 pb-0">
           <div className="service-content-web">
             {/* Left side - Image */}
             <div className="service-image">
@@ -30,7 +31,7 @@ class About2 extends React.Component {
                 <source src={ss1} type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
-              <img src={kk3} alt="Web Design" className="layer" />
+              <img src={kk4} alt="Web Design" className="layer" />
             </div>
 
             {/* Right side - Text */}
@@ -38,10 +39,9 @@ class About2 extends React.Component {
               <div className="service-title-wrapper">
                 <h2 className="service-title">Branding</h2>
                 <p className="service-description">
-                  Build a strong and memorable identity for your
-                  business with our expert branding solutions, 
-                  from logo design to complete brand strategy. complete
-                  brand strategy online.
+                  Build a strong and memorable identity for your business with
+                  our expert branding solutions, from logo design to complete
+                  brand strategy. complete brand strategy online.
                 </p>
               </div>
               <Link
@@ -54,7 +54,7 @@ class About2 extends React.Component {
           </div>
         </div>
 
-        <div className="container-ser container">
+        <div className="container-ser container pt-5">
           <div className="service-content-web1">
             {/* Left side - Image */}
             <div className="service-image">
@@ -70,15 +70,14 @@ class About2 extends React.Component {
               <div className="service-title-wrapper">
                 <h2 className="service-title">Web Development</h2>
                 <p className="service-description">
-                  Patterns Company specializes in delivering bespoke
-                  Web Development Services Int 
-                  Hyderabad tailored to your unique needs and
-                  aspirations.
+                  Patterns Company specializes in delivering bespoke Web
+                  Development Services Int Hyderabad tailored to your unique
+                  needs and aspirations.
                 </p>
               </div>
               <Link
                 to="/web-development"
-                className="service-btn bg-black text-white px-4 py-2 rounded-lg hover:bg-green-400 transition"
+                className="service-btn bg-black text-white px-4 py-2  rounded-lg hover:bg-green-400 transition"
               >
                 Read More
               </Link>
@@ -86,7 +85,7 @@ class About2 extends React.Component {
           </div>
         </div>
 
-        <div className="container-ser container">
+        <div className="container-ser container pt-5">
           <div className="service-content">
             <div className="service-image">
               <video className="search-video" autoPlay loop muted playsInline>
@@ -118,7 +117,7 @@ class About2 extends React.Component {
           </div>
         </div>
 
-        <div className="container-ser container">
+        <div className="container-ser container pt-5">
           <div className="service-content-social">
             {/* Left side - Image */}
             <div className="service-image">
@@ -148,7 +147,7 @@ class About2 extends React.Component {
           </div>
         </div>
 
-        <div className="container-ser container">
+        <div className="container-ser container pt-5">
           <div className="service-content-Engine">
             {/* Left side - Image */}
             <div className="service-image">
@@ -177,7 +176,7 @@ class About2 extends React.Component {
             </div>
           </div>
         </div>
-        <div className="container-ser container">
+        <div className="container-ser container pt-5 ">
           <div className="service-content-Engine1">
             {/* Left side - Image */}
             <div className="service-image">
@@ -193,12 +192,13 @@ class About2 extends React.Component {
               <div className="service-title-wrapper">
                 <h2 className="service-title">AI Development</h2>
                 <p className="service-description">
-                  Boost your brand presence with engaging social media strategies and content.
+                  Boost your brand presence with engaging social media
+                  strategies and content.
                 </p>
               </div>
               <Link
                 to="/ai-development"
-                className="service-btn bg-black text-white px-4 py-2 rounded-lg hover:bg-green-400 transition"
+                className="service-btn bg-black text-white px-4 py-2 rounded-lg hover:bg-green-400 transition "
               >
                 Read More
               </Link>
