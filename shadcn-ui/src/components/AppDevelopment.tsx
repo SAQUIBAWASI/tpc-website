@@ -17,8 +17,38 @@ export default function AppDevelopment() {
     <div className="bg-black text-white">
       <Header />
       <Helmet>
-        <title>App Development Services | Custom Mobile & Web Applications</title>
+        <title>App Development Company In Hyderabad, India</title>
         <meta name="description" content="Professional app development services to build fast, secure, and user-friendly mobile and web applications tailored to your business needs." />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta 
+          name="keywords" 
+          content="Best App Development Agency in Hyderabad, Best App Development Company In Hyderabad, Best App Development Services In Hyderabad, App Development Company In Hyderabad, App Development Companies In Hyderabad, App Development Services In Hyderabad, App Development Agency In Hyderabad, App Development Services, App Development Company, App Development Agency, Application Development, App Development Near Me, App Development Services Near Me, App Development Company Near Me, App Development Agency Near Me" 
+        />
+        <meta 
+          name="description" 
+          content="Elevate your business with top-notch App Development Company In Hyderabad, India. We transform ideas into seamless digital experiences." 
+        />
+        
+        <link rel="canonical" href="https://thepatternscompany.com/app-development" />
+        
+        {/* Facebook Open Graph Tags */}
+        <meta property="og:title" content="The Patterns Company - Innovative Pattern Design Solutions" />
+        <meta property="og:description" content="The Patterns Company offers unique and innovative pattern design solutions for various applications." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://thepatternscompany.com/app-development" />
+        <meta property="og:image" content="https://thepatternscompany.com/img/appdevelop.jpg" />
+        <meta property="og:site_name" content="The Patterns Company" />
+        <meta property="og:locale" content="en_US" />
+        
+        {/* Twitter Card Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="The Patterns Company - Innovative Pattern Design Solutions" />
+        <meta name="twitter:description" content="The Patterns Company offers unique and innovative pattern design solutions for various applications." />
+        <meta name="twitter:image" content="https://thepatternscompany.com/img/appdevelop.jpg" />
+        <meta name="twitter:site" content="@YourTwitterHandle" />
+        
+        {/* Google Tag Manager */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16661558035"></script>
       </Helmet>
 
       <main className="pt-10">

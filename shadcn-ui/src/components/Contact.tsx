@@ -53,10 +53,56 @@ export default function Contact() {
 
       <Helmet>
         <title>Contact Us | Get in Touch with Our Team</title>
+        <link
+          rel="canonical"
+          href="https://thepatternscompany.com/contact"
+        ></link>
         <meta
           name="description"
           content="Contact our team for digital marketing, web development, AI solutions, graphic design, and e-commerce services. We are here to help your business grow."
         />
+
+        {/* Facebook Open Graph Tags */}
+        <meta
+          property="og:title"
+          content="The Patterns Company - Innovative Pattern Design Solutions"
+        />
+        <meta
+          property="og:description"
+          content="The Patterns Company offers unique and innovative pattern design solutions for various applications."
+        />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:url"
+          content="https://thepatternscompany.com/contact"
+        />
+        <meta
+          property="og:image"
+          content="https://thepatternscompany.com//team/fev.png"
+        />
+        <meta property="og:site_name" content="The Patterns Company" />
+        <meta property="og:locale" content="en_US" />
+
+        {/* Twitter Card Tags (optional but recommended) */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="The Patterns Company - Innovative Pattern Design Solutions"
+        />
+        <meta
+          name="twitter:description"
+          content="The Patterns Company offers unique and innovative pattern design solutions for various applications."
+        />
+        <meta
+          name="twitter:image"
+          content="https://thepatternscompany.com/team/fev.png"
+        />
+        <meta name="twitter:site" content="@YourTwitterHandle" />
+        {/* Google Tag Manager */}
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=AW-16661558035"
+        ></script>
       </Helmet>
 
       <main className="flex-grow pt-20">

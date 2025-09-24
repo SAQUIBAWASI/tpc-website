@@ -1,13 +1,8 @@
 import LocationSection from "@/components/Footer";
 import Header from "@/components/Header";
 import { motion } from "framer-motion";
-import {Helmet} from "react-helmet";
+import { Helmet } from "react-helmet";
 import { useEffect, useState } from "react";
-
-
-
-
-
 
 export default function WebDevelopment() {
   const [showTop, setShowTop] = useState(false);
@@ -21,19 +16,76 @@ export default function WebDevelopment() {
     <div className="bg-gray-500 text-white">
       <Header />
       <Helmet>
-         <title>Web Development Services | Responsive & SEO-Friendly Websites</title>
-           <meta name="description" content="Expert web development services to create fast, secure, and SEO-friendly websites. We deliver responsive solutions tailored for businesses of all sizes." />
+        <title>Top Web Development Services In Hyderabad</title>
+        <meta
+          name="description"
+          content="Expert web development services to create fast, secure, and SEO-friendly websites. We deliver responsive solutions tailored for businesses of all sizes."
+        />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+          name="keywords"
+          content="Best Web Development Agency in Hyderabad, Best Web Development Company In Hyderabad, Best Web Development Services In Hyderabad, Web Development Company In Hyderabad, Web Development Companies In Hyderabad, Web Development Services In Hyderabad, Web Development Agency In Hyderabad, Web Development Services, Web Development Company, Web Development Agency, Web Development, Web Design and Development, Web Design and Development Services, Web Design and Development Company, Web Development Near Me, Web Development Services Near Me, Web Development Company Near Me, Web Development Agency Near Me"
+        />
+        <meta
+          name="description"
+          content="Elevate your brand with Top Web Development Company In Hyderabad. Custom, cutting-edge websites designed to engage and convert your audience."
+        />
+        <link
+          rel="canonical"
+          href="https://thepatternscompany.com/webdevelopment"
+        />
+
+        {/* Facebook Open Graph Tags */}
+        <meta
+          property="og:title"
+          content="The Patterns Company - Innovative Pattern Design Solutions"
+        />
+        <meta
+          property="og:description"
+          content="The Patterns Company offers unique and innovative pattern design solutions for various applications."
+        />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:url"
+          content="https://thepatternscompany.com/webdevelopment"
+        />
+        <meta
+          property="og:image"
+          content="https://thepatternscompany.com/img/webdevelopppp.jpg"
+        />
+        <meta property="og:site_name" content="The Patterns Company" />
+        <meta property="og:locale" content="en_US" />
+
+        {/* Twitter Card Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="The Patterns Company - Innovative Pattern Design Solutions"
+        />
+        <meta
+          name="twitter:description"
+          content="The Patterns Company offers unique and innovative pattern design solutions for various applications."
+        />
+        <meta
+          name="twitter:image"
+          content="https://thepatternscompany.com/img/webdevelopppp.jpg"
+        />
+        <meta name="twitter:site" content="@YourTwitterHandle" />
+
+        {/* Google Tag Manager */}
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=AW-16661558035"
+        ></script>
       </Helmet>
-    
+
       <main className="pt-24">
         {/* ===== HERO (gallery-like grid + big title) ===== */}
         <section className="relative max-w-7xl mx-auto px-6 py-16">
           {/* gallery grid */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 opacity-90">
-            {[
-
-
-            ].map((src, i) => (
+            {[].map((src, i) => (
               <motion.img
                 key={i}
                 src={src}
@@ -75,7 +127,9 @@ export default function WebDevelopment() {
                 transition={{ duration: 0.5, delay: i * 0.15 }}
                 viewport={{ once: true }}
               >
-                <div className="text-4xl font-bold text-green-500">{s.value}</div>
+                <div className="text-4xl font-bold text-green-500">
+                  {s.value}
+                </div>
                 <div className="text-gray-300 mt-2">{s.label}</div>
               </motion.div>
             ))}
@@ -91,14 +145,17 @@ export default function WebDevelopment() {
                 businesses. Setting up a business online is the only way of
                 outshining the competitive market. Technology has made business
                 life easier, and the power of the web is visible in online
-                transactions. <span className="text-green-500 font-semibold">Patterns</span> is the{" "}
+                transactions.{" "}
+                <span className="text-green-500 font-semibold">Patterns</span>{" "}
+                is the{" "}
                 <span className="text-green-500 font-semibold">
                   Top Web Designing Agency in Hyderabad
                 </span>{" "}
                 providing the{" "}
                 <span className="text-green-500 font-semibold">
                   Best Web Development Services in Hyderabad
-                </span>.
+                </span>
+                .
               </p>
 
               <p className="text-gray-300 mt-6 leading-relaxed">
@@ -245,24 +302,24 @@ export default function WebDevelopment() {
           <path d="M26.7 5.3C23.9 2.5 20.2 1 16.3 1 8.6 1 2.3 7.3 2.3 15c0 2.4.6 4.8 1.8 6.9L2 31l9.3-2.1c2 .9 4.3 1.4 6.6 1.4 7.7 0 14-6.3 14-14 0-3.9-1.5-7.6-4.2-10.3zM16 28.6c-2.1 0-4.2-.5-6.1-1.4l-.4-.2-5.5 1.2 1.2-5.4-.3-.4C3.9 20.6 3.3 17.9 3.3 15 3.3 8.9 8.9 3.3 16 3.3c3.1 0 6 1.2 8.2 3.4 2.2 2.2 3.4 5.1 3.4 8.3 0 6.4-5.2 11.6-11.6 11.6z" />
         </svg>
       </a>
-{/* Scroll to Top */}
-{showTop && (
-  <button
-    onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-    className="fixed bottom-24 right-6 z-50 inline-flex items-center justify-center w-12 h-12 rounded-full bg-green-400 hover:bg-green-500 shadow-xl"
-    aria-label="Scroll to top"
-  >
-    <svg viewBox="0 0 24 24" fill="none" className="w-6 h-6">
-      <path
-        d="M6 15l6-6 6 6"
-        stroke="white"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </svg>
-  </button>
-)}
+      {/* Scroll to Top */}
+      {showTop && (
+        <button
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          className="fixed bottom-24 right-6 z-50 inline-flex items-center justify-center w-12 h-12 rounded-full bg-green-400 hover:bg-green-500 shadow-xl"
+          aria-label="Scroll to top"
+        >
+          <svg viewBox="0 0 24 24" fill="none" className="w-6 h-6">
+            <path
+              d="M6 15l6-6 6 6"
+              stroke="white"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+          </svg>
+        </button>
+      )}
       <LocationSection />
     </div>
   );

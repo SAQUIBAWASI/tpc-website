@@ -25,6 +25,7 @@ const teamMembers = [
   { name: "Rakesh", role: "Slicing through code challenges with precision", img: "/images/26.jpg" },
   { name: "Kumar", role: "Silencing the bugs, one fix at a time.", img: "/images/34.jpg" },
   { name: "Maddiboina Lokesh", role: "Software Engineer | R&D", img: "/team/roshini (6) - Copy.png" },
+   { name: "Immadisetty Ganesh", role: "Software Engineer | AI&DS", img: "/team/roshini (6) - Copy.png" },
   { name: "Rajesh", role: "Graphic design", img: "/team/roshini (6) - Copy.png" },
   { name: "Suvarna", role: "Quickly put the developer on speed dial.", img: "/images/suvarna - Copy.jpg" },
   { name: "Gayathri", role: "Research", img: "/team/Gayathri - Copy.webp" },
