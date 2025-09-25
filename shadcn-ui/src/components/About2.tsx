@@ -14,10 +14,12 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import ss1 from "../ss1.mp4";
 import ai from "../ai1.jpg";
 import hero from "../tpc vide 1.mp4";
-import kk1 from "../kk1.png";
-import kk2 from "../kk2.png";
-import kk3 from "../kk3.png";
-import kk4 from "../kk6.png";
+import kk11 from "../kk11.png";
+import kk10 from "../kk10.png";
+import kk9 from "../kk9.png";
+import kk8 from "../kk8.png";
+import kk7 from "../kk7.png";
+import kk12 from "../kk12.png";
 
 class About2 extends React.Component {
   render() {
@@ -31,7 +33,7 @@ class About2 extends React.Component {
                 <source src={ss1} type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
-              <img src={kk4} alt="Web Design" className="layer" />
+              <img src={kk7} alt="Web Design" className="layer" />
             </div>
 
             {/* Right side - Text */}
@@ -62,7 +64,7 @@ class About2 extends React.Component {
                 <source src={hero} type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
-              <img src={kk1} alt="Web Design" className="layer" />
+              <img src={kk8} alt="Web Design" className="layer" />
             </div>
 
             {/* Right side - Text */}
@@ -92,7 +94,7 @@ class About2 extends React.Component {
                 <source src={ss1} type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
-              <img src={kk1} alt="W" className="layer" />
+              <img src={kk9} alt="W" className="layer" />
             </div>
 
             <div className="service-text">
@@ -125,7 +127,7 @@ class About2 extends React.Component {
                 <source src={ss1} type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
-              <img src={kk1} alt="Social Media Marketing" className="layer" />
+              <img src={kk10} alt="Social Media Marketing" className="layer" />
             </div>
 
             {/* Right side - Text */}
@@ -155,7 +157,7 @@ class About2 extends React.Component {
                 <source src={ss1} type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
-              <img src={ai} alt="SEO" className="layer" />
+              <img src={kk11} alt="SEO" className="layer" />
             </div>
 
             {/* Right side - Text */}
@@ -184,7 +186,7 @@ class About2 extends React.Component {
                 <source src={ss1} type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
-              <img src={ai} alt="SEO" className="layer" />
+              <img src={kk12} alt="SEO" className="layer" />
             </div>
 
             {/* Right side - Text */}
