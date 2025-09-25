@@ -16,10 +16,14 @@ import ai from "../ai1.jpg";
 import hero from "../tpc vide 1.mp4";
 import kk11 from "../kk11.png";
 import kk10 from "../kk10.png";
-import kk9 from "../kk9.png";
+import kk19 from "../kk19.png";
 import kk8 from "../kk8.png";
 import kk7 from "../kk7.png";
 import kk12 from "../kk12.png";
+import kk13 from "../kk15.png";
+import kk18 from "../kk18.png";
+import ll2 from "../ll2.png";
+import ll1 from "../ll1.png";
 
 class About2 extends React.Component {
   render() {
@@ -33,7 +37,7 @@ class About2 extends React.Component {
                 <source src={ss1} type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
-              <img src={kk7} alt="Web Design" className="layer" />
+              <img src={ll1} alt="Web Design" className="layer" />
             </div>
 
             {/* Right side - Text */}
@@ -64,7 +68,7 @@ class About2 extends React.Component {
                 <source src={hero} type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
-              <img src={kk8} alt="Web Design" className="layer" />
+              <img src={ll2} alt="Web Design" className="layer" />
             </div>
 
             {/* Right side - Text */}
@@ -87,18 +91,49 @@ class About2 extends React.Component {
           </div>
         </div>
 
+         {/* <div className="container-ser container pt-5">
+          <div className="service-content-web1"> */}
+            {/* Left side - Image */}
+            {/* <div className="service-image">
+              <video className="search-video" autoPlay loop muted playsInline>
+                <source src={hero} type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+              <img src={kk8} alt="Web Design" className="layer" />
+            </div> */}
+
+            {/* Right side - Text */}
+            {/* <div className="service-text">
+              <div className="service-title-wrapper">
+                <h2 style={{color:'white'}} className="service-title">App Development</h2>
+                <p className="service-description">
+                  Patterns Company specializes in delivering bespoke Web
+                  Development Services Int Hyderabad tailored to your unique
+                  needs and aspirations.
+                </p>
+              </div>
+              <Link
+                to="/web-development"
+                className="service-btn bg-black text-white px-4 py-2  rounded-lg hover:bg-green-400 transition"
+              >
+                Read More
+              </Link>
+            </div>
+          </div>
+        </div> */}
+
         <div className="container-ser container pt-5">
           <div className="service-content">
             <div className="service-image">
               <video className="search-video" autoPlay loop muted playsInline>
-                <source src={ss1} type="video/mp4" />
+                <source src={hero} type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
-              <img src={kk9} alt="W" className="layer" />
+              <img src={kk13} alt="W" className="layer" />
             </div>
 
             <div className="service-text">
-              <div className="service-title-wrapper">
+              <div className="service-title-wrapper1s">
                 <h2 className="service-title">App Development</h2>
                 <p className="service-description">
                   Transforming ideas into seamless digital solutions through
@@ -106,9 +141,7 @@ class About2 extends React.Component {
                   Company.
                 </p>
               </div>
-              {/* <a href="/services" className="service-btn">
-                Read More
-              </a> */}
+
               <Link
                 to="/app-development"
                 className="service-btn bg-black text-white px-4 py-2 rounded-lg hover:bg-green-400 transition"
@@ -127,7 +160,7 @@ class About2 extends React.Component {
                 <source src={ss1} type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
-              <img src={kk10} alt="Social Media Marketing" className="layer" />
+              <img src={kk19} alt="Social Media Marketing" className="layer" />
             </div>
 
             {/* Right side - Text */}
@@ -149,27 +182,27 @@ class About2 extends React.Component {
           </div>
         </div>
 
-        <div className="container-ser container pt-5">
-          <div className="service-content-Engine">
-            {/* Left side - Image */}
-            <div className="service-image">
+        {/* <div className="container-ser container pt-5">
+          <div className="service-content-Engine"> */}
+        {/* Left side - Image */}
+        {/* <div className="service-image">
               <video className="search-video" autoPlay loop muted playsInline>
                 <source src={ss1} type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
               <img src={kk11} alt="SEO" className="layer" />
-            </div>
+            </div> */}
 
-            {/* Right side - Text */}
-            <div className="service-text">
+        {/* Right side - Text */}
+        {/* <div className="service-text">
               <div className="service-title-wrapper">
                 <h2 className="service-title">Search Engine Optimization</h2>
                 <p className="service-description">
                   Improve search visibility and drive organic traffic with our
                   expert SEO services.
                 </p>
-              </div>
-              <Link
+              </div> */}
+        {/* <Link
                 to="/digital-marketing"
                 className="service-btn bg-black text-white px-4 py-2 rounded-lg hover:bg-green-400 transition"
               >
@@ -177,7 +210,7 @@ class About2 extends React.Component {
               </Link>
             </div>
           </div>
-        </div>
+        </div> */}
         <div className="container-ser container pt-5 ">
           <div className="service-content-Engine1">
             {/* Left side - Image */}
@@ -186,7 +219,7 @@ class About2 extends React.Component {
                 <source src={ss1} type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
-              <img src={kk12} alt="SEO" className="layer" />
+              <img src={kk18} alt="SEO" className="layer" />
             </div>
 
             {/* Right side - Text */}
