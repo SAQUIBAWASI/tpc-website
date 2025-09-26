@@ -55,7 +55,10 @@ export default function Header() {
           </RouterLink>
 
           {/* Desktop Nav */}
-          <nav className="hidden md:flex space-x-8 text-lg font-medium">
+          {/* <nav className="hidden md:flex space-x-8 text-lg font-medium"> */}
+          <nav className="hidden lg:flex space-x-8 text-lg font-medium">
+
+
             {navItems.map((item) => (
               <div
                 key={item.name}
@@ -129,10 +132,16 @@ export default function Header() {
             </RouterLink> */}
 
             {/* Mobile Menu Toggle */}
-            <button
+            {/* <button
               className="md:hidden p-2"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-            >
+            > */}
+            <button
+  className="lg:hidden p-2"
+  onClick={() => setIsMenuOpen(!isMenuOpen)}
+>
+
+
               {isMenuOpen ? <X className="w-8 h-8" /> : <Menu className="w-8 h-8" />}
             </button>
           </div>
