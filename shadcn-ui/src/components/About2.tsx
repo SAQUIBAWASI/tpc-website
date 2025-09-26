@@ -20,7 +20,7 @@ import kk19 from "../kk19.png";
 import kk8 from "../kk8.png";
 import kk7 from "../kk7.png";
 import kk12 from "../kk12.png";
-import kk13 from "../kk15.png";
+import kk13 from "../kk13.png";
 import kk18 from "../kk18.png";
 import ll2 from "../ll2.png";
 import ll1 from "../ll1.png";
@@ -91,10 +91,10 @@ class About2 extends React.Component {
           </div>
         </div>
 
-         {/* <div className="container-ser container pt-5">
+        {/* <div className="container-ser container pt-5">
           <div className="service-content-web1"> */}
-            {/* Left side - Image */}
-            {/* <div className="service-image">
+        {/* Left side - Image */}
+        {/* <div className="service-image">
               <video className="search-video" autoPlay loop muted playsInline>
                 <source src={hero} type="video/mp4" />
                 Your browser does not support the video tag.
@@ -102,8 +102,8 @@ class About2 extends React.Component {
               <img src={kk8} alt="Web Design" className="layer" />
             </div> */}
 
-            {/* Right side - Text */}
-            {/* <div className="service-text">
+        {/* Right side - Text */}
+        {/* <div className="service-text">
               <div className="service-title-wrapper">
                 <h2 style={{color:'white'}} className="service-title">App Development</h2>
                 <p className="service-description">
