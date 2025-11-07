@@ -24,15 +24,15 @@ const teamMembers = [
   { name: "Sasi", role: "Debugging: half my life.", img: "/images/16.jpg" },
   { name: "Rakesh", role: "Slicing through code challenges with precision", img: "/images/26.jpg" },
   { name: "Kumar", role: "Silencing the bugs, one fix at a time.", img: "/images/34.jpg" },
-  { name: "Maddiboina Lokesh", role: "Software Engineer | R&D", img: "/team/roshini (6) - Copy.png" },
-   { name: "Immadisetty Ganesh", role: "Software Engineer | AI&DS", img: "/team/roshini (6) - Copy.png" },
+  { name: "Maddiboina Lokesh", role: "Software Engineer | R&D", img: "/team/lokesh image 1 (1).jpg" },
+  //  { name: "Immadisetty Ganesh", role: "Software Engineer | AI&DS", img: "/team/roshini (6) - Copy.png" },
   { name: "Rajesh", role: "Graphic design", img: "/team/roshini (6) - Copy.png" },
   { name: "Suvarna", role: "Quickly put the developer on speed dial.", img: "/images/suvarna - Copy.jpg" },
   { name: "Gayathri", role: "Research", img: "/team/Gayathri - Copy.webp" },
   { name: "Sangeetha", role: "BDE", img: "/team/roshini (3) - Copy.png" },
   { name: "Shania", role: "BDE", img: "/team/shania mam - Copy.jpg" },
-  { name: "Sushmita", role: "Graphic design", img: "/team/Sushmita - Copy.png" },
-  { name: "Shweta", role: "Graphic design", img: "/team/Shweta - Copy.png" },
+  // { name: "Sushmita", role: "Graphic design", img: "/team/Sushmita - Copy.png" },
+  // { name: "Shweta", role: "Graphic design", img: "/team/Shweta - Copy.png" },
 ];
 
 const partners = [
