@@ -53,7 +53,7 @@ export default function BlogsSection() {
           <div className="md:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-6">
             <div className="relative group overflow-hidden rounded-xl">
               <img
-                src="/images/digital.jpg"
+                src="/images/blog1.png"
                 alt="E Commerce Website"
                 className="w-full h-64 object-cover group-hover:scale-105 transition"
               />
@@ -61,7 +61,7 @@ export default function BlogsSection() {
 
               <h4 className="absolute bottom-4 left-4 text-xl font-bold text-white">
                 <Link to="/blog" className="hover:underline">
-                  Top 5 Digital Marketing Trends
+                  Our upcoming, next-generation AI model
                 </Link>
               </h4>
 
@@ -69,13 +69,13 @@ export default function BlogsSection() {
 
             <div className="relative group overflow-hidden rounded-xl">
               <img
-                src="/images/blog-2.jpg"
+                src="/images/blog2.jpg"
                 alt="Web Development"
                 className="w-full h-64 object-cover group-hover:scale-105 transition"
               />
               <h4 className="absolute bottom-4 left-4 text-xl font-bold text-white">
                   <Link to="/blog" className="hover:underline">
-                Why Every Business Needs SEO
+                We collaborate with Hariom Pvt Ltd, offering SMM, SEO, and web development services.
                 </Link>
               </h4>
             </div>
