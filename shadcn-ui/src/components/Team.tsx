@@ -4,14 +4,15 @@ import LocationSection from "@/components/Footer";
 import { useEffect, useState } from "react";
 
 const teamMembers = [
-  { name: "Ajay Manthri", role: "Founder & CEO", img: "/team/t1.jpg" },
-  { name: "Manasa Reddy", role: "Senior Human Resource", img: "/team/t2.webp" },
+  { name: "Ajay Manthri", role: "Founder & CEO", img: "/team/t2 (1).png" },
+  { name: "Manasa Reddy", role: "Senior Human Resource", img: "/team/t2 (2).png" },
   { name: "Ramya", role: "Pitch, negotiate, close, celebrate victory.", img: "/team/img2222 - Copy.png" },
   { name: "Anil", role: "Transforming ideas into digital reality.", img: "/team/img11111 - Copy.png" },
   { name: "Pragnya", role: "Embrace the unknown.", img: "/team/t6.jpg" },
   { name: "Shruthi", role: "Human Resource", img: "/team/tt7.jpg" },
   { name: "Roshini", role: "BDE", img: "/team/t3.jpg" },
-  { name: "Sathwika", role: "Stay a head, embrace digital trends.", img: "/team/t4.jpg" },
+  { name: "Sathwika", role: "Stay a head, embrace digital trends.", img: "/team/t4.jpg" },  
+  // /team/t4.jpg
   { name: "Srini", role: "Hyderabad Public School ka Property", img: "/team/t22.jpg" },
   { name: "Pandu Reddy", role: "Aaj mei Khuch Naya Karunga", img: "/team/t9.jpg" },
   { name: "Jyothsna", role: "Manager", img: "/team/t8.jpg" },
@@ -20,7 +21,7 @@ const teamMembers = [
   { name: "Phanindra", role: "Code is poetry in motion.", img: "/team/t12.jpg" },
   { name: "Rani", role: "Visual storytelling in vibrant colors. ", img: "/team/t13.jpg" },
   { name: "Jagadeesh", role: "Keep calm and code on.", img: "/team/t14.jpg" },
-  { name: "Sasi", role: "Debugging: half my life.", img: "/team/t15.jpg" },
+  { name: "Sasi", role: "Debugging: half my life.", img: "/team/t25.png" },
   { name: "Rakesh", role: "slicing through code challenges with precision", img: "/team/t16.jpg" },
   { name: "Kumar", role: "Silencing the bugs, one fix at a time.", img: "/team/t17.jpg" },
   { name: "Maddiboina Lokesh", role: "Software Engineer | R&D", img: "/team/t18.jpg" },

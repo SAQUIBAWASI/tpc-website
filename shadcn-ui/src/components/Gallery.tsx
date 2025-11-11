@@ -12,7 +12,8 @@ const teamMembers = [
   { name: "Pragnya", role: "Embrace the unknown.", img: "/images/47.jpg" },
   { name: "Shruthi", role: "Human Resource", img: "/images/36.jpg" },
   { name: "Roshini", role: "BDE", img: "/team/roshini (1) - Copy.png" },
-  { name: "Sathwika", role: "Stay ahead, embrace digital trends.", img: "/images/5.jpg" },
+  { name: "Sathwika", role: "Stay ahead, embrace digital trends.", img: "/team/sat1.png" },
+  // /images/5.jpg
   { name: "Srini", role: "Hyderabad Public School ka Property", img: "/images/Sinu6.png" },
   { name: "Pandu Reddy", role: "Aaj mei Khuch Naya Karunga", img: "/images/pandu-reddy.png" },
   { name: "Jyothsna", role: "Manager", img: "/images/13.jpg" },
@@ -24,7 +25,7 @@ const teamMembers = [
   { name: "Sasi", role: "Debugging: half my life.", img: "/images/16.jpg" },
   { name: "Rakesh", role: "Slicing through code challenges with precision", img: "/images/26.jpg" },
   { name: "Kumar", role: "Silencing the bugs, one fix at a time.", img: "/images/34.jpg" },
-  { name: "Maddiboina Lokesh", role: "Software Engineer | R&D", img: "/team/lokesh image 1 (1).jpg" },
+  { name: "Maddiboina Lokesh", role: "Software Engineer | R&D", img: "/team/lokesh.png" },
   //  { name: "Immadisetty Ganesh", role: "Software Engineer | AI&DS", img: "/team/roshini (6) - Copy.png" },
   { name: "Rajesh", role: "Graphic design", img: "/team/roshini (6) - Copy.png" },
   { name: "Suvarna", role: "Quickly put the developer on speed dial.", img: "/images/suvarna - Copy.jpg" },
