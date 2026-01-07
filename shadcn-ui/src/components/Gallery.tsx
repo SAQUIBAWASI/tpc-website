@@ -17,7 +17,7 @@ const teamMembers = [
   { name: "Srini", role: "Hyderabad Public School ka Property", img: "/images/Sinu6.png" },
   { name: "Pandu Reddy", role: "Aaj mei Khuch Naya Karunga", img: "/images/pandu-reddy.png" },
   { name: "Jyothsna", role: "Manager", img: "/images/13.jpg" },
-  { name: "Hema", role: "Customer-centric campaigns drive results.", img: "/images/2.jpg" },
+  { name: "Hema", role: "Customer-centric campaigns drive results.", img: "/team/hema.png" },
   { name: "Chandra Kanth", role: "Design. Develop. Debug. Deploy. Repeat.", img: "/images/ck.jpg" },
   { name: "Phanindra", role: "Code is poetry in motion.", img: "/images/pk.jpg" },
   { name: "Rani", role: "Visual storytelling in vibrant colors.", img: "/images/21.jpg" },
