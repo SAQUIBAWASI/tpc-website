@@ -114,7 +114,7 @@
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
 import { Link } from "react-router-dom";
-import h1 from '../large_view.mp4';
+import h1 from '../large_view1.mp4';
 
 export default function HeroSection() {
   return (
